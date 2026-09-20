@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSFiddle 5ayc6v7n</title>
+
+  <style>
+    
+  </style>
+
+  
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A.A.A.M — منصة الألعاب العربية</title>
+<meta name="description" content="A.A.A.M — منصة ألعاب عربية حديثة. اكتشف ألعابًا حقيقية قابلة للعب، مصنفة ومنظمة، بتجربة سريعة وأنيقة.">
+<link rel="canonical" href="https://aaam.games/">
+<meta property="og:title" content="A.A.A.M — منصة الألعاب العربية">
+<meta property="og:description" content="اكتشف والعب ألعابًا حقيقية بتراخيص واضحة على منصة A.A.A.M.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a0d13">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230a0d13"/><text x="32" y="42" font-family="Arial" font-size="26" font-weight="900" fill="%237c5cff" text-anchor="middle">A.A</text></svg>'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"A.A.A.M","url":"https://aaam.games/","inLanguage":"ar"}
+</script>
+<style>
+/* ============ DESIGN TOKENS ============ */
+:root{
+  --bg-0:#0a0d13; --bg-1:#0e1220; --bg-2:#121828;
+  --surface:#151c2c; --surface-2:#1a2234; --surface-3:#202a40;
+  --border:rgba(255,255,255,.07); --border-2:rgba(255,255,255,.12);
+  --accent:#7c5cff; --accent-hover:#9178ff; --accent-active:#6548e0;
+  --accent-soft:rgba(124,92,255,.14);
+  --text-1:#f2f5fa; --text-2:#aab4c8; --text-3:#6b7690;
+  --success:#2ecc71; --warning:#f5a623; --danger:#ef5350;
+  --r-sm:8px; --r-md:12px; --r-lg:16px; --r-xl:22px;
+  --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-8:32px;--sp-10:40px;
+  --shadow-1:0 2px 10px rgba(0,0,0,.25);
+  --shadow-2:0 10px 30px rgba(0,0,0,.35);
+  --shadow-3:0 24px 60px rgba(0,0,0,.55);
+  --t-fast:150ms cubic-bezier(.2,.7,.3,1);
+  --t-med:240ms cubic-bezier(.2,.7,.3,1);
+  --header-h:60px; --sidebar-w:250px;
+  --font:'Tajawal',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font); background:var(--bg-0); color:var(--text-1);
+  min-height:100vh; overflow-x:hidden; line-height:1.6;
+  background-image:
+    radial-gradient(900px 500px at 85% -10%, rgba(124,92,255,.09), transparent 60%),
+    radial-gradient(700px 400px at 0% 110%, rgba(46,204,113,.05), transparent 60%);
+  background-attachment:fixed;
+}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--font);cursor:pointer;border:none;background:none;color:inherit}
+input,select,textarea{font-family:var(--font);color:var(--text-1)}
+img{display:block;max-width:100%}
+::selection{background:var(--accent);color:#fff}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:#2a3450;border-radius:8px;border:2px solid var(--bg-0)}
+::-webkit-scrollbar-track{background:transparent}
+
+/* ============ APP SHELL ============ */
+.shell{display:flex;flex-direction:column;min-height:100vh}
+.main-row{display:flex;flex:1;padding-top:var(--header-h)}
+.content{flex:1;min-width:0;padding:var(--sp-6) clamp(16px,3vw,40px) var(--sp-10);max-width:1720px;margin:0 auto;width:100%}
+@media(max-width:900px){.content{padding:var(--sp-4) 14px 90px}}
+
+/* ============ HEADER ============ */
+.header{
+  position:fixed;inset-inline:0;top:0;height:var(--header-h);z-index:100;
+  display:flex;align-items:center;gap:var(--sp-4);padding:0 clamp(14px,2.5vw,28px);
+  background:rgba(12,15,24,.92);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand-mark{
+  width:36px;height:36px;border-radius:10px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--accent),#4a3aa8);
+  font-weight:900;font-size:12px;letter-spacing:.5px;color:#fff;
+  box-shadow:0 4px 14px rgba(124,92,255,.35);
+}
+.brand-name{font-weight:900;font-size:19px;letter-spacing:1px;white-space:nowrap}
+.brand-name em{font-style:normal;color:var(--accent)}
+.icon-btn{
+  width:38px;height:38px;border-radius:10px;display:grid;place-items:center;
+  color:var(--text-2);transition:var(--t-fast);position:relative;flex-shrink:0;
+}
+.icon-btn:hover{background:var(--surface-2);color:var(--text-1)}
+.icon-btn.active{color:var(--accent);background:var(--accent-soft)}
+.header-actions{display:flex;align-items:center;gap:4px;margin-inline-start:auto}
+.menu-btn{display:none}
+@media(max-width:900px){.menu-btn{display:grid}}
+
+/* ---- Search ---- */
+.search-wrap{position:relative;flex:1;max-width:520px;margin-inline-start:var(--sp-2)}
+.search-box{
+  display:flex;align-items:center;gap:10px;height:42px;padding:0 14px;
+  background:var(--surface);border:1px solid var(--border);border-radius:12px;
+  transition:var(--t-fast);
+}
+.search-box:hover{border-color:var(--border-2)}
+.search-box:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.search-box svg{flex-shrink:0;color:var(--text-3)}
+.search-box input{flex:1;background:none;border:none;outline:none;font-size:14.5px;min-width:0}
+.search-box input::placeholder{color:var(--text-3)}
+.search-drop{
+  position:absolute;top:calc(100% + 8px);inset-inline:0;z-index:120;
+  background:var(--surface-2);border:1px solid var(--border-2);border-radius:14px;
+  box-shadow:var(--shadow-3);overflow:hidden;display:none;
+}
+.search-drop.open{display:block;animation:dropIn var(--t-med)}
+@keyframes dropIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.sd-item{display:flex;align-items:center;gap:12px;padding:10px 14px;cursor:pointer;transition:var(--t-fast)}
+.sd-item:hover,.sd-item.sel{background:var(--surface-3)}
+.sd-item img{width:44px;height:44px;border-radius:9px;object-fit:cover;flex-shrink:0}
+.sd-item .t{font-weight:700;font-size:14px}
+.sd-item .c{font-size:12px;color:var(--text-3)}
+.sd-empty{padding:18px;text-align:center;color:var(--text-3);font-size:14px}
+@media(max-width:560px){.search-wrap{position:static}.search-drop{position:fixed;top:var(--header-h);inset-inline:10px}}
+
+/* ============ SIDEBAR ============ */
+.sidebar{
+  width:var(--sidebar-w);flex-shrink:0;position:sticky;top:var(--header-h);
+  height:calc(100vh - var(--header-h));overflow-y:auto;overflow-x:hidden;
+  background:var(--bg-1);border-inline-end:1px solid var(--border);
+  padding:var(--sp-4) var(--sp-3) var(--sp-6);transition:width var(--t-med);
+  scrollbar-width:thin;
+}
+.side-label{font-size:11px;font-weight:700;color:var(--text-3);letter-spacing:.8px;padding:14px 12px 6px;white-space:nowrap}
+.side-link{
+  display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:10px;
+  color:var(--text-2);font-size:14.5px;font-weight:500;transition:var(--t-fast);
+  white-space:nowrap;position:relative;margin-bottom:2px;
+}
+.side-link svg{flex-shrink:0;width:20px;height:20px}
+.side-link:hover{background:var(--surface);color:var(--text-1)}
+.side-link:hover svg{color:var(--text-1)}
+.side-link.active{background:var(--accent-soft);color:#fff;font-weight:700}
+.side-link.active svg{color:var(--accent)}
+.side-link.active::before{
+  content:'';position:absolute;inset-inline-start:0;top:20%;bottom:20%;width:3px;
+  border-radius:3px;background:var(--accent);
+}
+.side-divider{height:1px;background:var(--border);margin:10px 8px}
+.sidebar.collapsed{width:76px}
+.sidebar.collapsed .side-label,.sidebar.collapsed .side-link span{opacity:0;width:0;overflow:hidden;pointer-events:none}
+.sidebar.collapsed .side-link{justify-content:center;padding:10px}
+.sidebar.collapsed .side-link.active::before{top:15%;bottom:15%}
+.collapse-btn{
+  width:100%;display:flex;align-items:center;gap:10px;padding:9px 12px;margin-top:14px;
+  border-radius:10px;color:var(--text-3);font-size:13px;font-weight:700;transition:var(--t-fast);
+}
+.collapse-btn:hover{background:var(--surface);color:var(--text-1)}
+.sidebar.collapsed .collapse-btn span{display:none}
+.sidebar.collapsed .collapse-btn{justify-content:center}
+/* Mobile drawer */
+@media(max-width:900px){
+  .sidebar{
+    position:fixed;top:0;bottom:0;inset-inline-start:auto;inset-inline-end:0;z-index:200;
+    height:100dvh;width:280px;transform:translateX(-105%);
+    border-inline-end:none;border-inline-start:1px solid var(--border);
+    transition:transform var(--t-med);padding-top:var(--sp-6);
+  }
+  .sidebar.open{transform:none;box-shadow:var(--shadow-3)}
+  .drawer-close{display:grid !important}
+}
+.drawer-close{display:none;width:38px;height:38px;margin:0 8px 8px auto}
+.backdrop{
+  position:fixed;inset:0;z-index:150;background:rgba(4,6,10,.65);backdrop-filter:blur(3px);
+  opacity:0;pointer-events:none;transition:opacity var(--t-med);
+}
+.backdrop.show{opacity:1;pointer-events:auto}
+body.locked{overflow:hidden}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;border-radius:var(--r-xl);overflow:hidden;isolation:isolate;
+  min-height:clamp(300px,38vw,430px);display:flex;align-items:flex-end;
+  border:1px solid var(--border);box-shadow:var(--shadow-2);margin-bottom:var(--sp-8);
+}
+.hero-bg{position:absolute;inset:0;z-index:-2;transition:opacity 600ms ease}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero::after{
+  content:'';position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(to top,rgba(6,8,14,.94) 8%,rgba(6,8,14,.55) 45%,rgba(6,8,14,.15) 75%);
+}
+.hero-body{padding:clamp(18px,3vw,36px);max-width:640px}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;
+  background:rgba(124,92,255,.22);border:1px solid rgba(124,92,255,.45);
+  color:#cfc4ff;padding:4px 12px;border-radius:99px;margin-bottom:12px;
+}
+.hero-title{font-size:clamp(26px,4vw,42px);font-weight:900;line-height:1.25;margin-bottom:8px}
+.hero-desc{color:var(--text-2);font-size:15px;max-width:520px;margin-bottom:18px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.hero-ctas{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.hero-dots{display:flex;gap:6px;padding:0 clamp(18px,3vw,36px) 18px}
+.hero-dots button{width:22px;height:4px;border-radius:4px;background:rgba(255,255,255,.25);transition:var(--t-fast)}
+.hero-dots button.on{background:var(--accent);width:34px}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:11px 22px;border-radius:12px;font-weight:800;font-size:14.5px;
+  transition:var(--t-fast);border:1px solid transparent;white-space:nowrap;
+}
+.btn:active{transform:translateY(1px) scale(.98)}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 20px rgba(124,92,255,.35)}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+.btn-secondary{background:var(--surface-2);border-color:var(--border-2);color:var(--text-1)}
+.btn-secondary:hover{background:var(--surface-3);border-color:rgba(255,255,255,.2)}
+.btn-ghost{color:var(--text-2);padding:8px 14px}
+.btn-ghost:hover{color:var(--text-1);background:var(--surface)}
+.btn-danger{background:rgba(239,83,80,.14);color:#ff8a80;border-color:rgba(239,83,80,.3)}
+.btn[disabled]{opacity:.5;pointer-events:none}
+.btn .spin{width:16px;height:16px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:rot .7s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+.view-all{font-size:13.5px;font-weight:700;color:var(--text-3);display:inline-flex;align-items:center;gap:5px;transition:var(--t-fast)}
+.view-all:hover{color:var(--accent)}
+
+/* ============ SECTIONS ============ */
+.section{margin-bottom:var(--sp-8)}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:var(--sp-4)}
+.section-title{font-size:20px;font-weight:800;display:flex;align-items:center;gap:10px}
+.section-title svg{color:var(--accent)}
+.section-sub{font-size:13px;color:var(--text-3);font-weight:400}
+
+/* ============ GAME CARD ============ */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:var(--sp-4)}
+@media(max-width:520px){.grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}}
+.card{
+  position:relative;background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r-lg);overflow:hidden;transition:transform var(--t-med),box-shadow var(--t-med),border-color var(--t-fast);
+  cursor:pointer;display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-2);border-color:var(--border-2)}
+.card-thumb{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--bg-2)}
+.card-thumb img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-med)}
+.card:hover .card-thumb img{transform:scale(1.05)}
+.card-overlay{
+  position:absolute;inset:0;display:grid;place-items:center;
+  background:linear-gradient(to top,rgba(5,7,12,.65),rgba(5,7,12,.1));
+  opacity:0;transition:var(--t-med);
+}
+.card:hover .card-overlay,.card:focus-within .card-overlay{opacity:1}
+.play-fab{
+  width:52px;height:52px;border-radius:50%;background:var(--accent);color:#fff;
+  display:grid;place-items:center;box-shadow:0 8px 24px rgba(124,92,255,.5);
+  transform:scale(.7);transition:var(--t-med);
+}
+.card:hover .play-fab{transform:scale(1)}
+.card-badge{
+  position:absolute;top:10px;inset-inline-start:10px;z-index:2;
+  font-size:11px;font-weight:800;padding:3px 10px;border-radius:99px;color:#fff;
+}
+.badge-new{background:var(--success)}.badge-hot{background:#e2574c}.badge-feat{background:var(--accent)}.badge-mp{background:#0e9f9f}
+.fav-btn{
+  position:absolute;top:8px;inset-inline-end:8px;z-index:2;width:34px;height:34px;
+  border-radius:10px;display:grid;place-items:center;
+  background:rgba(8,10,16,.55);backdrop-filter:blur(6px);color:#cfd6e4;transition:var(--t-fast);
+}
+.fav-btn:hover{color:#fff;background:rgba(8,10,16,.8)}
+.fav-btn.active{color:#ff5d7a;animation:pop .35s cubic-bezier(.2,1.6,.4,1)}
+@keyframes pop{0%{transform:scale(1)}45%{transform:scale(1.28)}100%{transform:scale(1)}}
+.card-body{padding:12px 14px 14px}
+.card-title{font-size:14.5px;font-weight:800;line-height:1.4;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.card-meta{display:flex;align-items:center;gap:8px;margin-top:5px;font-size:12px;color:var(--text-3)}
+.card-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--text-3)}
+.card-meta .cat{color:var(--text-2);font-weight:700}
+
+/* ============ CAROUSEL ============ */
+.carousel{position:relative}
+.car-track{
+  display:flex;gap:var(--sp-4);overflow-x:auto;scroll-snap-type:x mandatory;
+  padding-bottom:6px;scrollbar-width:none;-ms-overflow-style:none;
+}
+.car-track::-webkit-scrollbar{display:none}
+.car-track>*{flex:0 0 clamp(210px,22vw,260px);scroll-snap-align:start}
+.car-track>.card{width:auto}
+.car-nav{
+  position:absolute;top:-52px;inset-inline-end:0;display:flex;gap:8px;
+}
+.car-arrow{
+  width:34px;height:34px;border-radius:10px;background:var(--surface-2);
+  border:1px solid var(--border);color:var(--text-2);display:grid;place-items:center;transition:var(--t-fast);
+}
+.car-arrow:hover:not([disabled]){background:var(--surface-3);color:#fff;border-color:var(--border-2)}
+.car-arrow[disabled]{opacity:.35;cursor:default}
+@media(max-width:700px){.car-nav{display:none}}
+
+/* ============ CATEGORY TILES ============ */
+.cat-tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:var(--sp-3)}
+.cat-tile{
+  display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;
+  background:var(--surface);border:1px solid var(--border);transition:var(--t-fast);
+}
+.cat-tile:hover{border-color:var(--accent);transform:translateY(-2px);background:var(--surface-2)}
+.cat-tile .ic{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;flex-shrink:0}
+.cat-tile .n{font-weight:800;font-size:14px}
+.cat-tile .c{font-size:11.5px;color:var(--text-3)}
+
+/* ============ PAGES ============ */
+.page-head{margin-bottom:var(--sp-6)}
+.crumbs{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-3);margin-bottom:10px;flex-wrap:wrap}
+.crumbs a:hover{color:var(--accent)}
+.page-title{font-size:clamp(24px,3vw,32px);font-weight:900}
+.page-desc{color:var(--text-2);font-size:14.5px;margin-top:6px;max-width:640px}
+.toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:var(--sp-4) 0 var(--sp-5)}
+.toolbar .count{font-size:13px;color:var(--text-3)}
+.select{
+  height:40px;padding:0 14px;border-radius:10px;background:var(--surface-2);
+  border:1px solid var(--border-2);font-size:13.5px;font-weight:700;outline:none;cursor:pointer;
+}
+.select option{background:var(--surface-2)}
+.chip-row{display:flex;gap:8px;flex-wrap:wrap}
+.chip{
+  padding:7px 15px;border-radius:99px;font-size:13px;font-weight:700;
+  background:var(--surface);border:1px solid var(--border);color:var(--text-2);transition:var(--t-fast);
+}
+.chip:hover{border-color:var(--border-2);color:var(--text-1)}
+.chip.on{background:var(--accent-soft);border-color:var(--accent);color:#cfc4ff}
+
+/* ============ GAME PAGE ============ */
+.player-wrap{
+  position:relative;border-radius:var(--r-lg);overflow:hidden;background:#05070c;
+  border:1px solid var(--border);aspect-ratio:16/9;box-shadow:var(--shadow-2);margin:var(--sp-4) 0 var(--sp-6);
+}
+.player-wrap:fullscreen{aspect-ratio:auto;border-radius:0;border:none}
+.player-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.player-cover{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:20px}
+.player-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4;z-index:0}
+.player-cover::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(4,6,10,.9),rgba(4,6,10,.45));z-index:1}
+.player-cover>*{position:relative;z-index:2}
+.player-load-note{font-size:13px;color:var(--text-2)}
+.player-bar{
+  position:absolute;bottom:0;inset-inline:0;z-index:5;display:flex;align-items:center;gap:8px;
+  padding:10px 14px;background:linear-gradient(to top,rgba(4,6,10,.85),transparent);opacity:0;transition:var(--t-fast);
+}
+.player-wrap:hover .player-bar,.player-wrap.fs .player-bar{opacity:1}
+.game-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:var(--sp-4)}
+.game-head h1{font-size:clamp(22px,3vw,30px);font-weight:900}
+.game-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.game-desc{color:var(--text-2);font-size:15px;max-width:760px;margin-bottom:var(--sp-6)}
+.meta-panel{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--sp-3);
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
+  padding:var(--sp-5);margin-bottom:var(--sp-6);
+}
+.meta-item .k{font-size:12px;color:var(--text-3);margin-bottom:3px}
+.meta-item .v{font-size:14px;font-weight:700}
+.meta-item .v a{color:var(--accent)}
+.rights-box{
+  background:rgba(46,204,113,.06);border:1px solid rgba(46,204,113,.2);
+  border-radius:var(--r-md);padding:14px 18px;font-size:13px;color:var(--text-2);margin-bottom:var(--sp-6);
+}
+.rights-box b{color:var(--success)}
+.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:var(--sp-6)}
+.tag{font-size:12.5px;font-weight:700;padding:5px 13px;border-radius:99px;background:var(--surface-2);border:1px solid var(--border);color:var(--text-2)}
+.related-title{font-size:19px;font-weight:800;margin:var(--sp-8) 0 var(--sp-4)}
+
+
+/* ============ GAME PLAYER (مشغّل صفحة اللعبة — مدمج داخليًا) ============ */
+.player-wrap iframe{background:#000}
+.load-note{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;color:var(--text-3);font-size:14px;text-align:center;padding:16px;background:#05070c;transition:opacity .4s;}
+.spin{width:18px;height:18px;border:2px solid rgba(255,255,255,.25);border-top-color:var(--accent);border-radius:50%;animation:rot .8s linear infinite;display:inline-block;vertical-align:-4px;}
+.player-bar span{margin-inline-start:auto;font-size:12px;color:var(--text-2);}
+@media (pointer:coarse){.player-bar{opacity:1}}
+/* ============ FORMS ============ */
+.form-card{
+  max-width:640px;background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r-xl);padding:clamp(20px,3vw,34px);
+}
+.field{margin-bottom:var(--sp-4)}
+.field label{display:block;font-size:13.5px;font-weight:700;margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;padding:11px 14px;border-radius:11px;font-size:14px;outline:none;
+  background:var(--bg-2);border:1px solid var(--border-2);transition:var(--t-fast);
+}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.field .err{display:none;font-size:12.5px;color:#ff8a80;margin-top:5px}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:var(--danger)}
+.field.invalid .err{display:block}
+.form-note{font-size:12.5px;color:var(--text-3);margin-top:var(--sp-3)}
+
+/* ============ MODAL / TOAST ============ */
+.modal-bd{position:fixed;inset:0;z-index:300;background:rgba(4,6,10,.7);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:18px}
+.modal-bd.open{display:flex;animation:fadeIn var(--t-fast)}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.modal{
+  width:min(520px,100%);max-height:88vh;overflow-y:auto;background:var(--surface-2);
+  border:1px solid var(--border-2);border-radius:var(--r-xl);padding:clamp(20px,3vw,30px);
+  box-shadow:var(--shadow-3);animation:modalIn var(--t-med);
+}
+@keyframes modalIn{from{opacity:0;transform:scale(.96) translateY(8px)}to{opacity:1;transform:none}}
+.modal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--sp-4)}
+.modal-head h3{font-size:18px;font-weight:800}
+.toasts{position:fixed;bottom:20px;inset-inline-start:20px;z-index:400;display:flex;flex-direction:column;gap:10px;max-width:min(360px,calc(100vw - 40px))}
+.toast{
+  display:flex;align-items:center;gap:10px;padding:13px 16px;border-radius:13px;
+  background:var(--surface-3);border:1px solid var(--border-2);box-shadow:var(--shadow-3);
+  font-size:13.5px;font-weight:700;animation:toastIn var(--t-med);
+}
+.toast.out{animation:toastOut var(--t-med) forwards}
+@keyframes toastIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes toastOut{to{opacity:0;transform:translateY(12px)}}
+.toast.success{border-inline-start:3px solid var(--success)}
+.toast.error{border-inline-start:3px solid var(--danger)}
+.toast.info{border-inline-start:3px solid var(--accent)}
+
+/* ============ EMPTY / 404 / LEGAL ============ */
+.empty{
+  text-align:center;padding:var(--sp-10) var(--sp-4);color:var(--text-3);
+  border:1px dashed var(--border-2);border-radius:var(--r-xl);
+}
+.empty .big{font-size:46px;margin-bottom:12px}
+.empty h3{color:var(--text-1);font-size:19px;margin-bottom:6px}
+.empty p{font-size:14px;margin-bottom:18px}
+.e404{text-align:center;padding:clamp(40px,8vw,90px) 20px}
+.e404 .code{font-size:clamp(70px,14vw,130px);font-weight:900;line-height:1;
+  background:linear-gradient(135deg,var(--accent),#4a3aa8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.e404 h2{font-size:24px;font-weight:900;margin:14px 0 8px}
+.e404 p{color:var(--text-2);margin-bottom:24px}
+.legal{max-width:760px}
+.legal h2{font-size:21px;font-weight:800;margin:var(--sp-8) 0 var(--sp-3)}
+.legal p,.legal li{color:var(--text-2);font-size:14.5px;margin-bottom:10px}
+.legal ul{padding-inline-start:22px}
+
+/* ============ NOTIF DROPDOWN ============ */
+.notif-drop{
+  position:fixed;top:calc(var(--header-h) + 6px);inset-inline-end:clamp(14px,2.5vw,28px);z-index:140;
+  width:300px;background:var(--surface-2);border:1px solid var(--border-2);border-radius:14px;
+  box-shadow:var(--shadow-3);display:none;overflow:hidden;
+}
+.notif-drop.open{display:block;animation:dropIn var(--t-med)}
+.notif-head{padding:12px 16px;font-weight:800;font-size:14px;border-bottom:1px solid var(--border)}
+.notif-body{padding:22px 16px;text-align:center;color:var(--text-3);font-size:13px}
+
+/* ============ FOOTER ============ */
+.footer{border-top:1px solid var(--border);background:var(--bg-1);margin-top:auto}
+.footer-inner{
+  max-width:1400px;margin:0 auto;padding:var(--sp-8) clamp(16px,3vw,40px) var(--sp-6);
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:var(--sp-8);
+}
+@media(max-width:820px){.footer-inner{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.footer-inner{grid-template-columns:1fr}}
+.footer h4{font-size:14px;font-weight:800;margin-bottom:14px;color:var(--text-1)}
+.footer a{display:block;font-size:13.5px;color:var(--text-3);padding:4px 0;transition:var(--t-fast)}
+.footer a:hover{color:var(--accent)}
+.footer-about{color:var(--text-3);font-size:13.5px;max-width:320px;margin-top:10px}
+.footer-bottom{
+  border-top:1px solid var(--border);padding:16px;text-align:center;
+  font-size:12.5px;color:var(--text-3);
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+}
+</style>
+<base target="_self">
+<base target="_blank">
+</head>
+<body>
+<div class="shell">
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="فتح القائمة">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <a class="brand" href="#/" aria-label="A.A.A.M — الرئيسية">
+      <span class="brand-mark">A.A</span>
+      <span class="brand-name">A.A.A.<em>M</em></span>
+    </a>
+    <div class="search-wrap">
+      <div class="search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+        <input id="searchInput" type="text" placeholder="ابحث عن الألعاب..." autocomplete="off" role="combobox" aria-expanded="false" aria-label="البحث عن الألعاب">
+      </div>
+      <div class="search-drop" id="searchDrop" role="listbox"></div>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" id="favBtn" aria-label="المفضلة" title="المفضلة">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+      </button>
+      <button class="icon-btn" id="notifBtn" aria-label="الإشعارات" title="الإشعارات">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="notif-drop" id="notifDrop">
+    <div class="notif-head">الإشعارات</div>
+    <div class="notif-body">لا توجد إشعارات جديدة.<br>نحترم تركيزك — لا نرسل إشعارات مزعجة.</div>
+  </div>
+
+  <div class="main-row">
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar" aria-label="التنقل الرئيسي">
+      <button class="icon-btn drawer-close" id="drawerClose" aria-label="إغلاق القائمة">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <nav id="sideNav"></nav>
+      <button class="collapse-btn" id="collapseBtn" aria-label="طي القائمة الجانبية">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="11 17 6 12 11 7"/><polyline points="18 17 13 12 18 7"/></svg>
+        <span>طي القائمة</span>
+      </button>
+    </aside>
+    <div class="backdrop" id="backdrop"></div>
+
+    <!-- ================= MAIN ================= -->
+    <main class="content" id="page" tabindex="-1"></main>
+  </div>
+
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <a class="brand" href="#/"><span class="brand-mark">A.A</span><span class="brand-name">A.A.A.<em>M</em></span></a>
+        <p class="footer-about">منصة ألعاب عربية حديثة. نُشغّل ألعاب HTML5 حقيقية عبر منصة GameDistribution بتراخيص توزيع رسمية — كل ذلك داخل نفس الصفحة.</p>
+      </div>
+      <div>
+        <h4>المنصة</h4>
+        <a href="#/new">الجديدة</a><a href="#/trending">الرائجة</a><a href="#/featured">المختارة</a><a href="#/multiplayer">تعدد اللاعبين</a><a href="#/about">عن المنصة</a>
+      </div>
+      <div>
+        <h4>الحساب</h4>
+        <a href="#/favorites">المفضلة</a><a href="#/recent">آخر ما لعبت</a><a href="#/submit-game">أرسل لعبتك</a><a href="#/report">الإبلاغ عن مشكلة</a>
+      </div>
+      <div>
+        <h4>قانوني</h4>
+        <a href="#/privacy">سياسة الخصوصية</a><a href="#/terms">شروط الاستخدام</a><a href="#/copyright">حقوق المحتوى</a><a href="#/contact">تواصل معنا</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 A.A.A.M — جميع الحقوق محفوظة. الألعاب الخارجية ملك لمطوريها وموزعة عبر GameDistribution وفق تراخيصها الموثقة.</div>
+  </footer>
+</div>
+
+<!-- ================= MODAL / TOASTS ================= -->
+<div class="modal-bd" id="modalBd">
+  <div class="modal" role="dialog" aria-modal="true" id="modalBox"></div>
+</div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script>
+/* =====================================================
+   A.A.A.M — بيانات الألعاب المدمجة داخل الملف الواحد
+   الألعاب حقيقية من GameDistribution بروابط التضمين الرسمية
+   ===================================================== */
+/* ---------- Categories ---------- */
+const CATEGORIES = [
+  {id:'action',  name:'أكشن',     hue:8,   desc:'ألعاب أكشن سريعة تختبر سرعة ردود أفعالك ودقتك.'},
+  {id:'puzzle',  name:'ألغاز',    hue:265, desc:'ألغاز وتحديات ذهنية تناسب محبي التفكير والتخطيط.'},
+  {id:'skill',   name:'مهارات',   hue:190, desc:'ألعاب مهارات تركز على الدقة والتوقيت والتحكم.'},
+  {id:'casual',  name:'كاجوال',   hue:150, desc:'ألعاب خفيفة وممتعة يمكن لعبها في أي وقت.'},
+  {id:'strategy',name:'إستراتيجية',hue:45, desc:'ألعاب تخطيط وتفكير استراتيجي خطوة بخطوة.'},
+  {id:'arcade',  name:'أركيد',    hue:330, desc:'ألعاب أركيد كلاسيكية الطابع بروح حديثة.'},
+  {id:'racing',  name:'سباق',     hue:215, desc:'ألعاب سرعة وسباقات تحبس الأنفاس.'},
+  {id:'sports',  name:'رياضة',    hue:140, desc:'ألعاب رياضية: كرة قدم وتنس وكرة طاولة وأكثر.'},
+  {id:'cooking', name:'طبخ',      hue:25,  desc:'ألعاب طبخ وتحضير أشهى الأطباق والحلويات.'},
+  {id:'fashion', name:'موضة وتلبيس',hue:320, desc:'ألعاب موضة وتنسيق إطلالات وأزياء للبنات.'},
+];
+
+/* ---------- Rights helper (GameDistribution — official embed source) ---------- */
+function gdRights(url){
+  return { sourceUrl:url, developer:'GameDistribution', licenseName:'GameDistribution Distribution License', licenseUrl:'https://gamedistribution.com', embedAllowed:true, attributionRequired:true, attributionText:'اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر توزيع GameDistribution الرسمي', verified:true, verificationDate:'2026-09-19', type:'iframe' };
+}
+
+/* ---------- Games Catalog ---------- */
+/* ملاحظة: الألعاب أدناه ألعاب HTML5 حقيقية من منصة GameDistribution وتُشغَّل من مصادرها الرسمية. */
+const GAMES = [
+  { id:1, slug:"soccer-euro-cup-2025", title:"Soccer Euro Cup 2025", category:"sports", tags:["كرة قدم", "بطولة", "رياضة"],
+    desc:"شارك في بطولة أوروبا لكرة القدم 2025 وسدّد أهدافًا حاسمة لتقود منتخبك إلى المجد.",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-02", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/608b965aa08644ceabb138d27d8661af/?gd_sdk_referrer_url=https://gamedistribution.com/games/soccer-euro-cup-2025/",
+    thumbnail:"https://img.gamedistribution.com/608b965aa08644ceabb138d27d8661af-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/608b965aa08644ceabb138d27d8661af/?gd_sdk_referrer_url=https://gamedistribution.com/games/soccer-euro-cup-2025/") },
+  { id:2, slug:"3d-soccer-champions", title:"3D Soccer Champions", category:"sports", tags:["كرة قدم", "ثلاثي الأبعاد"],
+    desc:"كرة قدم ثلاثية الأبعاد بأسلوب الأبطال: تحكم كامل باللاعبين وتسديدات واقعية ومباريات مشوقة.",
+    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-03", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/a14422bfdbf246648318620d01defd08/?gd_sdk_referrer_url=https://gamedistribution.com/games/3d-soccer-champions/",
+    thumbnail:"https://img.gamedistribution.com/a14422bfdbf246648318620d01defd08-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/a14422bfdbf246648318620d01defd08/?gd_sdk_referrer_url=https://gamedistribution.com/games/3d-soccer-champions/") },
+  { id:3, slug:"fast-tennis", title:"Fast Tennis", category:"sports", tags:["تنس", "سرعة"],
+    desc:"تنس سريع الإيقاع يختبر سرعة ردود أفعالك ودقة ضرباتك في الملعب.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-17", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/934fcdff6a9c41fdb33a4ae6e8ba2d62/?gd_sdk_referrer_url=https://gamedistribution.com/games/fast-tennis/",
+    thumbnail:"https://img.gamedistribution.com/934fcdff6a9c41fdb33a4ae6e8ba2d62-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/934fcdff6a9c41fdb33a4ae6e8ba2d62/?gd_sdk_referrer_url=https://gamedistribution.com/games/fast-tennis/") },
+  { id:4, slug:"tennis-pro-3d", title:"Tennis Pro 3D", category:"sports", tags:["تنس", "ثلاثي الأبعاد"],
+    desc:"تنس احترافي بثلاثة أبعاد مع لعب واقعي ومنافسات قوية على أرضية الملعب.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-17", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/9516118519c248299568900c7829b18e/?gd_sdk_referrer_url=https://gamedistribution.com/games/tennis-pro-3d/",
+    thumbnail:"https://img.gamedistribution.com/9516118519c248299568900c7829b18e-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/9516118519c248299568900c7829b18e/?gd_sdk_referrer_url=https://gamedistribution.com/games/tennis-pro-3d/") },
+  { id:5, slug:"ping-pong-air", title:"Ping Pong Air", category:"sports", tags:["كرة طاولة", "رد فعل"],
+    desc:"كرة الطاولة الهوائية: ردّ سريع وتوقيت مثالي لتسجيل النقاط ضد خصمك.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-16", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/b64c9ff2281d4c4c8a5c8c0c9e2da004/?gd_sdk_referrer_url=https://gamedistribution.com/games/ping-pong-air/",
+    thumbnail:"https://img.gamedistribution.com/b64c9ff2281d4c4c8a5c8c0c9e2da004-512x512.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/b64c9ff2281d4c4c8a5c8c0c9e2da004/?gd_sdk_referrer_url=https://gamedistribution.com/games/ping-pong-air/") },
+  { id:6, slug:"monster-truck-sky-racing", title:"Monster Truck Sky Racing", category:"racing", tags:["شاحنات", "قفز", "سرعة"],
+    desc:"سباق شاحنات وحشية في السماء — قفزات مجنونة وسرعات خيالية فوق المنصات المعلقة.",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-02", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/ab6d7d06d41f411db21dbe5c61a25c52/?gd_sdk_referrer_url=https://gamedistribution.com/games/monster-truck-sky-racing/",
+    thumbnail:"https://img.gamedistribution.com/ab6d7d06d41f411db21dbe5c61a25c52-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/ab6d7d06d41f411db21dbe5c61a25c52/?gd_sdk_referrer_url=https://gamedistribution.com/games/monster-truck-sky-racing/") },
+  { id:7, slug:"3d-super-rolling-ball-race", title:"3D Super Rolling Ball Race", category:"racing", tags:["كرات", "ثلاثي الأبعاد"],
+    desc:"سباق كرات متدحرجة ثلاثية الأبعاد: انزلق بين العقبات وكن أول من يصل إلى خط النهاية.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-15", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/c77c8b1ffef242609915d126535b0ca9/?gd_sdk_referrer_url=https://gamedistribution.com/games/3d-super-rolling-ball-race/",
+    thumbnail:"https://img.gamedistribution.com/c77c8b1ffef242609915d126535b0ca9-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/c77c8b1ffef242609915d126535b0ca9/?gd_sdk_referrer_url=https://gamedistribution.com/games/3d-super-rolling-ball-race/") },
+  { id:8, slug:"two-supra-drifters", title:"Two Supra Drifters", category:"racing", tags:["انجراف", "سيارات"],
+    desc:"انجراف مزدوج بسيارات سبورت أسطورية على المضمار — أظهر مهارتك في الانزلاق.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-15", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/10f0beef65fe40ccae23194fd95782a8/?gd_sdk_referrer_url=https://gamedistribution.com/games/two-supra-drifters/",
+    thumbnail:"https://img.gamedistribution.com/10f0beef65fe40ccae23194fd95782a8-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/10f0beef65fe40ccae23194fd95782a8/?gd_sdk_referrer_url=https://gamedistribution.com/games/two-supra-drifters/") },
+  { id:9, slug:"racing-car-destroying-zombie", title:"Racing Car Destroying Zombie", category:"racing", tags:["زومبي", "سباق"],
+    desc:"اسحق الزومبي بسيارتك السباق في سباق ملحمي مليء بالدمار والإثارة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-14", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/e5b1ceb6771f4109a4eded908659a1e5/?gd_sdk_referrer_url=https://gamedistribution.com/games/racing-car-destroying-zombie/",
+    thumbnail:"https://img.gamedistribution.com/e5b1ceb6771f4109a4eded908659a1e5-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/e5b1ceb6771f4109a4eded908659a1e5/?gd_sdk_referrer_url=https://gamedistribution.com/games/racing-car-destroying-zombie/") },
+  { id:10, slug:"car-physics-btr-80", title:"Car Physics BTR 80", category:"racing", tags:["قيادة", "فيزياء"],
+    desc:"قيادة واقعية بفيزياء دقيقة لمركبة BTR-80 عبر مسارات صعبة ومليئة بالتحديات.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-14", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/f937de7df75e4fbda19f9117923fa92d/?gd_sdk_referrer_url=https://gamedistribution.com/games/car-physics-btr-80/",
+    thumbnail:"https://img.gamedistribution.com/f937de7df75e4fbda19f9117923fa92d-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/f937de7df75e4fbda19f9117923fa92d/?gd_sdk_referrer_url=https://gamedistribution.com/games/car-physics-btr-80/") },
+  { id:11, slug:"space-racing-3d", title:"Space Racing 3D", category:"racing", tags:["فضاء", "سرعة"],
+    desc:"سباق فضائي ثلاثي الأبعاد بين النجوم والمذنبات بسرعات مذهلة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-13", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/bc656640350c4257a5100511ddbb6992/?gd_sdk_referrer_url=https://gamedistribution.com/games/space-racing-3d/",
+    thumbnail:"https://img.gamedistribution.com/bc656640350c4257a5100511ddbb6992-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/bc656640350c4257a5100511ddbb6992/?gd_sdk_referrer_url=https://gamedistribution.com/games/space-racing-3d/") },
+  { id:12, slug:"top-burger-cooking", title:"Top Burger Cooking", category:"cooking", tags:["طبخ", "برغر"],
+    desc:"حضّر أشهى البرغر وقدّمه لعملائك قبل انتهاء الوقت في مطعمك الخاص.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-13", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/321cbe0eabd94d83be81b80c02cf7ddb/?gd_sdk_referrer_url=https://gamedistribution.com/games/top-burger-cooking/",
+    thumbnail:"https://img.gamedistribution.com/321cbe0eabd94d83be81b80c02cf7ddb-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/321cbe0eabd94d83be81b80c02cf7ddb/?gd_sdk_referrer_url=https://gamedistribution.com/games/top-burger-cooking/") },
+  { id:13, slug:"bbq-skewers", title:"BBQ Skewers", category:"cooking", tags:["شواء", "طبخ"],
+    desc:"شوّي أسياخ لحم متبلة على الفحم وقدّمها في وقتها لأجواء شواء مثالية.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-12", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/c63e62bd900943ea8eb8501993cde634/?gd_sdk_referrer_url=https://gamedistribution.com/games/bbq-skewers/",
+    thumbnail:"https://img.gamedistribution.com/c63e62bd900943ea8eb8501993cde634-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/c63e62bd900943ea8eb8501993cde634/?gd_sdk_referrer_url=https://gamedistribution.com/games/bbq-skewers/") },
+  { id:14, slug:"pony-cooking-rainbow-cake", title:"Pony Cooking Rainbow Cake", category:"cooking", tags:["كيك", "ألوان"],
+    desc:"اخبز كعكة قوس قزح الملونة مع المهور اللطيفة في مطبخ ممتع.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-12", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/3424762f6da04c8699a1d90bfb06b7b8/?gd_sdk_referrer_url=https://gamedistribution.com/games/pony-cooking-rainbow-cake/",
+    thumbnail:"https://img.gamedistribution.com/3424762f6da04c8699a1d90bfb06b7b8.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/3424762f6da04c8699a1d90bfb06b7b8/?gd_sdk_referrer_url=https://gamedistribution.com/games/pony-cooking-rainbow-cake/") },
+  { id:15, slug:"pretty-box-bakery-game", title:"Pretty Box Bakery Game", category:"cooking", tags:["مخبز", "تصميم"],
+    desc:"صمّم علب حلويات أنيقة وقدّمها في مخبزك الخاص بأسلوب جميل ومميز.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-11", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/44fe478397c14c398d0e2cfcc6a9d841/?gd_sdk_referrer_url=https://gamedistribution.com/games/pretty-box-bakery-game/",
+    thumbnail:"https://img.gamedistribution.com/44fe478397c14c398d0e2cfcc6a9d841-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/44fe478397c14c398d0e2cfcc6a9d841/?gd_sdk_referrer_url=https://gamedistribution.com/games/pretty-box-bakery-game/") },
+  { id:16, slug:"first-date-love-cupcake", title:"First Date Love Cupcake", category:"cooking", tags:["كب كيك", "رومانسي"],
+    desc:"حضّر كب كيك رومانسيًا لموعد أول مثالي يخطف القلوب.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-11", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/31a9d850f4844bd29147b61d5f16152f/?gd_sdk_referrer_url=https://gamedistribution.com/games/first-date-love-cupcake/",
+    thumbnail:"https://img.gamedistribution.com/31a9d850f4844bd29147b61d5f16152f-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/31a9d850f4844bd29147b61d5f16152f/?gd_sdk_referrer_url=https://gamedistribution.com/games/first-date-love-cupcake/") },
+  { id:17, slug:"vsco-girl-aesthetic", title:"VSCO Girl Aesthetic", category:"fashion", tags:["موضة", "تنسيق"],
+    desc:"انسقي إطلالة فتاة VSCO بأسلوب جمالي هادئ وعصري يعكس ذوقك الرفيع.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-10", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/f548c6c6b3144d8586c4f3b5180ebb2c/?gd_sdk_referrer_url=https://gamedistribution.com/games/vsco-girl-aesthetic/",
+    thumbnail:"https://img.gamedistribution.com/f548c6c6b3144d8586c4f3b5180ebb2c-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/f548c6c6b3144d8586c4f3b5180ebb2c/?gd_sdk_referrer_url=https://gamedistribution.com/games/vsco-girl-aesthetic/") },
+  { id:18, slug:"summer-beach-girl", title:"Summer Beach Girl", category:"fashion", tags:["صيف", "شاطئ"],
+    desc:"جهّزي فتاة الشاطئ ليوم صيفي مشمس بإطلالة منعشة وأنيقة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-10", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/76ed046b8d5c41bd9ce3de1b28ded250/?gd_sdk_referrer_url=https://gamedistribution.com/games/summer-beach-girl/",
+    thumbnail:"https://img.gamedistribution.com/76ed046b8d5c41bd9ce3de1b28ded250-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/76ed046b8d5c41bd9ce3de1b28ded250/?gd_sdk_referrer_url=https://gamedistribution.com/games/summer-beach-girl/") },
+  { id:19, slug:"vacation-summer-dress-up", title:"Vacation Summer Dress Up", category:"fashion", tags:["إجازة", "أزياء"],
+    desc:"اختاري أزياء الإجازة الصيفية الأجمل لرحلة لا تُنسى مليئة بالمرح.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-09", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/d40e63a4772541cc9f8818aeadf5fb0d/?gd_sdk_referrer_url=https://gamedistribution.com/games/vacation-summer-dress-up/",
+    thumbnail:"https://img.gamedistribution.com/d40e63a4772541cc9f8818aeadf5fb0d-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/d40e63a4772541cc9f8818aeadf5fb0d/?gd_sdk_referrer_url=https://gamedistribution.com/games/vacation-summer-dress-up/") },
+  { id:20, slug:"instadiva-kylie-dress-up", title:"Instadiva Kylie Dress Up", category:"fashion", tags:["مشاهير", "أزياء"],
+    desc:"أطلقي إطلالة المشاهير مع أزياء كايلي الأنيقة والعصرية.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-09", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/fe5efa880e0c4246ae13934933300b4d/?gd_sdk_referrer_url=https://gamedistribution.com/games/instadiva-kylie-dress-up/",
+    thumbnail:"https://img.gamedistribution.com/fe5efa880e0c4246ae13934933300b4d-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/fe5efa880e0c4246ae13934933300b4d/?gd_sdk_referrer_url=https://gamedistribution.com/games/instadiva-kylie-dress-up/") },
+  { id:21, slug:"princess-dress-up-run", title:"Princess Dress Up Run", category:"fashion", tags:["أميرة", "جري"],
+    desc:"اجمعي الفساتين أثناء الجري وتحوّلي إلى أميرة في نهاية المضمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-08", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/cd175ea55efa4e83b6fd63bdbb7881a2/?gd_sdk_referrer_url=https://gamedistribution.com/games/princess-dress-up-run/",
+    thumbnail:"https://img.gamedistribution.com/cd175ea55efa4e83b6fd63bdbb7881a2-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/cd175ea55efa4e83b6fd63bdbb7881a2/?gd_sdk_referrer_url=https://gamedistribution.com/games/princess-dress-up-run/") },
+  { id:22, slug:"ellie-and-friends-venice-carnival", title:"Ellie and Friends Venice Carnival", category:"fashion", tags:["كرنفال", "بندقية"],
+    desc:"انطلقي مع إيلي وأصدقائها إلى كرنفال البندقية بأزياء تنكرية خلابة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-08", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/4e33bc0b312646d0a2fb6d2a86171b8d/?gd_sdk_referrer_url=https://www.gamedistribution.com/games/ellie-and-friends-venice-carnival/",
+    thumbnail:"https://img.gamedistribution.com/4e33bc0b312646d0a2fb6d2a86171b8d-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/4e33bc0b312646d0a2fb6d2a86171b8d/?gd_sdk_referrer_url=https://www.gamedistribution.com/games/ellie-and-friends-venice-carnival/") },
+  { id:23, slug:"ellie-and-ben-christmas-eve", title:"Ellie and Ben Christmas Eve", category:"fashion", tags:["عيد الميلاد", "أجواء"],
+    desc:"ساعدي إيلي وبن في الاستعداد لأمسية عيد الميلاد السحرية المليئة بالفرح.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-07", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/d3b2230575e14473823dcb3db1029329/?gd_sdk_referrer_url=https://gamedistribution.com/games/ellie-and-ben-christmas-eve/",
+    thumbnail:"https://img.gamedistribution.com/d3b2230575e14473823dcb3db1029329-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/d3b2230575e14473823dcb3db1029329/?gd_sdk_referrer_url=https://gamedistribution.com/games/ellie-and-ben-christmas-eve/") },
+  { id:24, slug:"venetian-love-affair", title:"Venetian Love Affair", category:"fashion", tags:["رومانسي", "بندقية"],
+    desc:"قصة حب في أزقة البندقية مع أزياء إيطالية راقية وأجواء ساحرة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-07", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/bf0fdf67072044b5831b4a5528ef4211/?gd_sdk_referrer_url=https://aaam.games/",
+    thumbnail:"https://img.gamedistribution.com/bf0fdf67072044b5831b4a5528ef4211-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/bf0fdf67072044b5831b4a5528ef4211/?gd_sdk_referrer_url=https://aaam.games/") },
+  { id:25, slug:"legend-street-fighter", title:"Legend Street Fighter", category:"action", tags:["قتال", "كلاسيك"],
+    desc:"قاتل في أزقة المدينة بأسلوب ألعاب القتال الكلاسيكية الأسطورية.",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-06", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/8eb89008c65948a381c5159890dff9d3/?gd_sdk_referrer_url=https://gamedistribution.com/games/legend-street-fighter/",
+    thumbnail:"https://img.gamedistribution.com/8eb89008c65948a381c5159890dff9d3-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/8eb89008c65948a381c5159890dff9d3/?gd_sdk_referrer_url=https://gamedistribution.com/games/legend-street-fighter/") },
+  { id:26, slug:"serious-head", title:"Serious Head", category:"action", tags:["تصويب", "مهارة"],
+    desc:"مغامرة تصويب سريعة مع بطل غريب — أصب أهدافك واجمع النقاط في مستويات مليئة بالتحدي.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-06", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/72819ef0b4404b5a8d9bd4530f34938a/?gd_sdk_referrer_url=https://gamedistribution.com/games/serious-head/",
+    thumbnail:"https://img.gamedistribution.com/72819ef0b4404b5a8d9bd4530f34938a-512x512.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/72819ef0b4404b5a8d9bd4530f34938a/?gd_sdk_referrer_url=https://gamedistribution.com/games/serious-head/") },
+  { id:27, slug:"xtreme-space-shooter", title:"Xtreme Space Shooter", category:"action", tags:["فضاء", "تصويب"],
+    desc:"تصويب فضائي مكثف: دمّر أسراب الغزاة وارتقِ بسفينتك لتصبح بطل المجرة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-05", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/37c901fdb2874d9ab3150ace3c8ad7d6/?gd_sdk_referrer_url=https://gamedistribution.com/games/xtreme-space-shooter/",
+    thumbnail:"https://img.gamedistribution.com/37c901fdb2874d9ab3150ace3c8ad7d6-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/37c901fdb2874d9ab3150ace3c8ad7d6/?gd_sdk_referrer_url=https://gamedistribution.com/games/xtreme-space-shooter/") },
+  { id:28, slug:"space-blast", title:"Space Blast", category:"action", tags:["فضاء", "انفجارات"],
+    desc:"فجّر الأجرام الفضائية في انفجارات ملونة مبهرة وسرعة فائقة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-05", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/84306950ffed41d5a7c05093e0092e84/?gd_sdk_referrer_url=https://gamedistribution.com/games/space-blast-1/",
+    thumbnail:"https://img.gamedistribution.com/84306950ffed41d5a7c05093e0092e84-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/84306950ffed41d5a7c05093e0092e84/?gd_sdk_referrer_url=https://gamedistribution.com/games/space-blast-1/") },
+  { id:29, slug:"american-block-sniper-online", title:"American Block Sniper Online", category:"action", tags:["قنص", "بكسل"],
+    desc:"قنص بأسلوب المكعبات في ساحات قتال مليئة بالإثارة والتحديات.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-04", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/a7d9f4abf49c425f9a5ee8de6800e631/?gd_sdk_referrer_url=https://gamedistribution.com/games/american-block-sniper-online/",
+    thumbnail:"https://img.gamedistribution.com/a7d9f4abf49c425f9a5ee8de6800e631-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/a7d9f4abf49c425f9a5ee8de6800e631/?gd_sdk_referrer_url=https://gamedistribution.com/games/american-block-sniper-online/") },
+  { id:30, slug:"forest-survivor-rougelike", title:"Forest Survivor Rougelike", category:"action", tags:["بقاء", "موجات"],
+    desc:"انجُ في الغابة ضد أمواج الأعداء في مغامرة روجلايك مليئة بالترقيات والمخاطر.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-04", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/6a739956a35f4584944baf5224e485a2/?gd_sdk_referrer_url=https://gamedistribution.com/games/forest-survivor-rougelike/",
+    thumbnail:"https://img.gamedistribution.com/6a739956a35f4584944baf5224e485a2-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/6a739956a35f4584944baf5224e485a2/?gd_sdk_referrer_url=https://gamedistribution.com/games/forest-survivor-rougelike/") },
+  { id:31, slug:"dino-survival-3d-simulator", title:"Dino Survival: 3D Simulator", category:"action", tags:["ديناصور", "بقاء"],
+    desc:"عش حياة الديناصور في محاكاة بقاء ثلاثية الأبعاد مليئة بالمغامرات.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-03", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/4eeda043a7084082ba5c76a9488d3b5b/?gd_sdk_referrer_url=https://gamedistribution.com/games/dino-survival%3A-3d-simulator/",
+    thumbnail:"https://img.gamedistribution.com/4eeda043a7084082ba5c76a9488d3b5b-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/4eeda043a7084082ba5c76a9488d3b5b/?gd_sdk_referrer_url=https://gamedistribution.com/games/dino-survival%3A-3d-simulator/") },
+  { id:32, slug:"building-mods-for-minecraft", title:"Building Mods For Minecraft", category:"casual", tags:["بناء", "مكعبات"],
+    desc:"ابنِ عوالم مكعبة إبداعية بأسلوب ماين كرافت وأطلق خيالك بلا حدود.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-03", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/2691c4b1c55a417bb620c7ce1e662be1/?gd_sdk_referrer_url=https://www.gamedistribution.com/games/building-mods-for-minecraft/",
+    thumbnail:"https://img.gamedistribution.com/2691c4b1c55a417bb620c7ce1e662be1-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/2691c4b1c55a417bb620c7ce1e662be1/?gd_sdk_referrer_url=https://www.gamedistribution.com/games/building-mods-for-minecraft/") },
+  { id:33, slug:"obby-pinata-party", title:"Obby Pinata Party", category:"casual", tags:["أوبي", "قفز"],
+    desc:"قفز وتحدَّ عوائق الأوبي في حفلة البيناتا الملونة المرحة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-02", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/294f2eb8d15e4bfa81d876150ed75b8a/?gd_sdk_referrer_url=https://gamedistribution.com/games/obby-pinata-party/",
+    thumbnail:"https://img.gamedistribution.com/294f2eb8d15e4bfa81d876150ed75b8a-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/294f2eb8d15e4bfa81d876150ed75b8a/?gd_sdk_referrer_url=https://gamedistribution.com/games/obby-pinata-party/") },
+  { id:34, slug:"fun-obby-extreme", title:"Fun Obby Extreme", category:"casual", tags:["باركور", "أوبي"],
+    desc:"باركور أوبي متطرف: قفزات دقيقة ومنصات مليئة بالمخاطر تختبر صبرك ومهارتك.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-02", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/0dbdd15e5a884c1faefc4eda167a4182/?gd_sdk_referrer_url=https://gamedistribution.com/games/obby-parkour-extreme/",
+    thumbnail:"https://img.gamedistribution.com/0dbdd15e5a884c1faefc4eda167a4182-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/0dbdd15e5a884c1faefc4eda167a4182/?gd_sdk_referrer_url=https://gamedistribution.com/games/obby-parkour-extreme/") },
+  { id:35, slug:"digital-circus-run", title:"Digital Circus Run", category:"arcade", tags:["جري", "سيرك"],
+    desc:"اجرِ في عالم السيرك الرقمي واجمع العملات مع شخصيات مذهلة ومسارات ملونة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-01", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/9702002f5c7b455ea08cbdae6e7fa04f/?gd_sdk_referrer_url=https://gamedistribution.com/games/merge-circus-run/",
+    thumbnail:"https://img.gamedistribution.com/9702002f5c7b455ea08cbdae6e7fa04f-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/9702002f5c7b455ea08cbdae6e7fa04f/?gd_sdk_referrer_url=https://gamedistribution.com/games/merge-circus-run/") },
+  { id:36, slug:"monster-dash", title:"Monster Dash", category:"arcade", tags:["وحوش", "جري"],
+    desc:"اركض بلا توقف مع الوحوش المرحة عبر مسارات مليئة بالعوائق والمفاجآت.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-01", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/636437be4a784663b32fb59a14ec8fbb/?gd_sdk_referrer_url=https://gamedistribution.com/games/monster-dash/",
+    thumbnail:"https://img.gamedistribution.com/636437be4a784663b32fb59a14ec8fbb-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/636437be4a784663b32fb59a14ec8fbb/?gd_sdk_referrer_url=https://gamedistribution.com/games/monster-dash/") },
+  { id:37, slug:"maze-mania", title:"Maze Mania", category:"puzzle", tags:["متاهة", "وقت"],
+    desc:"اهرب من المتاهات المجنونة قبل نفاد الوقت واعثر على المخرج الأسرع.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-31", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/1e84d5ae582a4a538c1fe35552e716d0/?gd_sdk_referrer_url=https://gamedistribution.com/games/maze-mania/",
+    thumbnail:"https://img.gamedistribution.com/1e84d5ae582a4a538c1fe35552e716d0-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/1e84d5ae582a4a538c1fe35552e716d0/?gd_sdk_referrer_url=https://gamedistribution.com/games/maze-mania/") },
+  { id:38, slug:"bubble-it-jam", title:"Bubble it jam", category:"puzzle", tags:["فقاعات", "ألوان"],
+    desc:"أطلق الفقاعات المتشابهة وادمج الألوان لتحقق أعلى النقاط في لعبة الفقاعات الممتعة.",
+    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-04", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/80ec39f00e274fd8a1f5e37515e2150d/?gd_sdk_referrer_url=https://gamedistribution.com/games/bubble-it-jam/",
+    thumbnail:"https://img.gamedistribution.com/80ec39f00e274fd8a1f5e37515e2150d-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/80ec39f00e274fd8a1f5e37515e2150d/?gd_sdk_referrer_url=https://gamedistribution.com/games/bubble-it-jam/") },
+  { id:39, slug:"omg-word-sushi", title:"OMG Word Sushi", category:"puzzle", tags:["كلمات", "سوشي"],
+    desc:"كوّن الكلمات من أطباق السوشي في لعبة كلمات شهية تتحدى ذكاءك.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-30", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/76afe8444410450eb7bcd6bbfde4af87/?gd_sdk_referrer_url=https://gamedistribution.com/games/omg-word-sushi/",
+    thumbnail:"https://img.gamedistribution.com/76afe8444410450eb7bcd6bbfde4af87-512x384.png",
+    rights:gdRights("https://html5.gamedistribution.com/76afe8444410450eb7bcd6bbfde4af87/?gd_sdk_referrer_url=https://gamedistribution.com/games/omg-word-sushi/") },
+  { id:40, slug:"cat-challenge", title:"Cat Challenge", category:"puzzle", tags:["قطط", "تحدي"],
+    desc:"تحدَّ ألغاز القطط اللطيفة في مستويات ممتعة تناسب جميع الأعمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-30", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/95171c72f15a4690b282f12faf4171f2/?gd_sdk_referrer_url=https://gamedistribution.com/games/cat-challenge/",
+    thumbnail:"https://img.gamedistribution.com/95171c72f15a4690b282f12faf4171f2-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/95171c72f15a4690b282f12faf4171f2/?gd_sdk_referrer_url=https://gamedistribution.com/games/cat-challenge/") },
+  { id:41, slug:"logic-slide", title:"LOGic Slide", category:"puzzle", tags:["منطق", "انزلاق"],
+    desc:"حرّك القطع بذكاء لحل ألغاز الانزلاق المنطقية خطوة بخطوة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-29", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/ed5ed952531b4e2a9191f8720f22c22e/?gd_sdk_referrer_url=https://gamedistribution.com/games/logic-slide/",
+    thumbnail:"https://img.gamedistribution.com/ed5ed952531b4e2a9191f8720f22c22e-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/ed5ed952531b4e2a9191f8720f22c22e/?gd_sdk_referrer_url=https://gamedistribution.com/games/logic-slide/") },
+  { id:42, slug:"block-puzzle-tropical-story", title:"Block Puzzle Tropical Story", category:"puzzle", tags:["مكعبات", "استوائي"],
+    desc:"ألغاز المكعبات في أجواء استوائية مليئة بالقصص والمغامرات.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-29", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/75af86ecca154417b93a7beaecda551e/?gd_sdk_referrer_url=https://gamedistribution.com/games/block-puzzle-tropical-story/",
+    thumbnail:"https://img.gamedistribution.com/75af86ecca154417b93a7beaecda551e-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/75af86ecca154417b93a7beaecda551e/?gd_sdk_referrer_url=https://gamedistribution.com/games/block-puzzle-tropical-story/") },
+  { id:43, slug:"plant-merge-zombie-war", title:"Plant Merge: Zombie War", category:"strategy", tags:["زومبي", "دمج"],
+    desc:"ادمج النباتات وقُد جيوشها لصد أمواج الزومبي في حرب إستراتيجية ممتعة.",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-04", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/9190c99d4aae4e0085a6059478ee3520/?gd_sdk_referrer_url=https://gamedistribution.com/games/plant-merge%3A-zombie-war/",
+    thumbnail:"https://img.gamedistribution.com/9190c99d4aae4e0085a6059478ee3520-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/9190c99d4aae4e0085a6059478ee3520/?gd_sdk_referrer_url=https://gamedistribution.com/games/plant-merge%3A-zombie-war/") },
+  { id:44, slug:"pinball-vs-zombie", title:"Pinball VS Zombie", category:"arcade", tags:["بينبول", "زومبي"],
+    desc:"بينبول ضد الزومبي: ارتد بالكرة وسحق الأعداء في لعبة أركيد مجنونة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-28", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/5cdec698c5ce4e66af14ea5b3968ef08/?gd_sdk_referrer_url=https://gamedistribution.com/games/pinball-vs-zombie/",
+    thumbnail:"https://img.gamedistribution.com/5cdec698c5ce4e66af14ea5b3968ef08-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/5cdec698c5ce4e66af14ea5b3968ef08/?gd_sdk_referrer_url=https://gamedistribution.com/games/pinball-vs-zombie/") },
+  { id:45, slug:"inspector-cat", title:"Inspector Cat", category:"puzzle", tags:["تحقيق", "قط"],
+    desc:"ساعد المفتش قط في حل الألغاز والتحقيقات الغامضة بذكاء وتركيز.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-27", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/c04f402aeb1d43eb8636799451f873b8/?gd_sdk_referrer_url=https://gamedistribution.com/games/inspector-cat/",
+    thumbnail:"https://img.gamedistribution.com/c04f402aeb1d43eb8636799451f873b8-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/c04f402aeb1d43eb8636799451f873b8/?gd_sdk_referrer_url=https://gamedistribution.com/games/inspector-cat/") },
+  { id:46, slug:"music-line-v", title:"Music Line v", category:"skill", tags:["موسيقى", "إيقاع"],
+    desc:"تبع الخط الموسيقي واعبر المسارات الإيقاعية بإحساس دقيق وتوقيت مثالي.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-27", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/b90559fb23a945eb9d5012c2d268da33/?gd_sdk_referrer_url=https://gamedistribution.com/games/music-line-v1/",
+    thumbnail:"https://img.gamedistribution.com/b90559fb23a945eb9d5012c2d268da33.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/b90559fb23a945eb9d5012c2d268da33/?gd_sdk_referrer_url=https://gamedistribution.com/games/music-line-v1/") },
+  { id:47, slug:"alien-chase-swing-and-fly", title:"Alien Chase - Swing and Fly", category:"skill", tags:["فضاء", "تأرجح"],
+    desc:"تأرجح وطِر في مطاردة فضائية مجنونة تختبر تحكمك ودقتك.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-26", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/630be762a6114c858dfaf5d7b3c93c80/?gd_sdk_referrer_url=https://gamedistribution.com/games/alien-chase-swing-and-fly/",
+    thumbnail:"https://img.gamedistribution.com/630be762a6114c858dfaf5d7b3c93c80-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/630be762a6114c858dfaf5d7b3c93c80/?gd_sdk_referrer_url=https://gamedistribution.com/games/alien-chase-swing-and-fly/") },
+  { id:48, slug:"cosmo-void", title:"Cosmo Void", category:"action", tags:["فضاء", "سرعة"],
+    desc:"انطلق عبر الفراغ الكوني وتجنب المخاطر في سباق فضائي سريع الإيقاع.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-26", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/f30771a05eb84a67a794e85bc39621e7/?gd_sdk_referrer_url=https://gamedistribution.com/games/cosmo-void/",
+    thumbnail:"https://img.gamedistribution.com/f30771a05eb84a67a794e85bc39621e7-512x384.jpg",
+    rights:gdRights("https://html5.gamedistribution.com/f30771a05eb84a67a794e85bc39621e7/?gd_sdk_referrer_url=https://gamedistribution.com/games/cosmo-void/") },
+  { id:49, slug:"spot-the-spot", title:"Spot The Spot", category:"puzzle", tags:["فروقات", "تركيز"],
+    desc:"اعثر على الفروقات الخفية بين الصور قبل انتهاء الوقت واختبر قوة ملاحظتك.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-25", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/34bb2f625ba5402fbb5aa2537775cbf9/?gd_sdk_referrer_url=https://gamedistribution.com/games/spot-the-spot/",
+    thumbnail:"https://img.gamedistribution.com/34bb2f625ba5402fbb5aa2537775cbf9-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/34bb2f625ba5402fbb5aa2537775cbf9/?gd_sdk_referrer_url=https://gamedistribution.com/games/spot-the-spot/") },
+  { id:50, slug:"stickman-tennis", title:"Stickman Tennis", category:"sports", tags:["تنس", "عصي"],
+    desc:"تنس مع شخصيات العصي — ضربات سريعة ومنافسات مشوقة على الملعب.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-25", type:'iframe',
+    gameUrl:"https://html5.gamedistribution.com/eb5d6ed752e241519e37da7e5aa520a9/?gd_sdk_referrer_url=https://gamedistribution.com/games/stickman-tennis/",
+    thumbnail:"https://img.gamedistribution.com/eb5d6ed752e241519e37da7e5aa520a9-512x384.jpeg",
+    rights:gdRights("https://html5.gamedistribution.com/eb5d6ed752e241519e37da7e5aa520a9/?gd_sdk_referrer_url=https://gamedistribution.com/games/stickman-tennis/") },
+];
+
+/* ---------- Thumbnails (original generated art — owned by A.A.A.M) ---------- */
+function hashStr(s){let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return Math.abs(h);}
+function thumbURI(g){
+  const cat=CATEGORIES.find(c=>c.id===g.category)||CATEGORIES[0];
+  const h=cat.hue, h2=(h+60)%360, r=hashStr(g.slug);
+  const shapes=[
+    `<circle cx="${120+(r%160)}" cy="${70+(r%90)}" r="46" fill="hsl(${h2},70%,55%,.30)"/>`,
+    `<rect x="${30+(r%200)}" y="${100+(r%60)}" width="90" height="90" rx="20" fill="hsl(${h},80%,60%,.22)" transform="rotate(${(r%40)-20} 200 120)"/>`,
+    `<path d="M0 ${150+(r%50)} Q 160 ${60+(r%80)} 480 ${140+(r%40)} V 360 H 0 Z" fill="hsl(${h},75%,50%,.14)"/>`,
+  ].join('');
+  const initial=g.title.trim()[0]||'A';
+  const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="hsl(${h},60%,16%)"/><stop offset="1" stop-color="hsl(${h2},55%,10%)"/></linearGradient></defs>
+  <rect width="480" height="360" fill="url(#g)"/>${shapes}
+  <text x="434" y="330" font-family="Arial" font-size="190" font-weight="900" fill="hsl(${h},80%,72%,.16)" text-anchor="end">${initial}</text>
+  <text x="30" y="322" font-family="Arial" font-size="34" font-weight="900" fill="rgba(255,255,255,.92)">${g.title}</text></svg>`;
+  return 'data:image/svg+xml;utf8,'+encodeURIComponent(svg);
+}
+GAMES.forEach(g=>{ g.fallback=thumbURI(g); g.cover=g.thumbnail; });
+
+/* ---------- Storage ---------- */
+const store={
+  get(k,d){ try{const v=localStorage.getItem('aaam_'+k);return v?JSON.parse(v):d;}catch(e){return d;} },
+  set(k,v){ try{localStorage.setItem('aaam_'+k,JSON.stringify(v));}catch(e){} }
+};
+/* ---------- مشترك: أدوات مساعدة ---------- */
+const bySlug=s=>GAMES.find(g=>g.slug===s);
+const catName=id=>(CATEGORIES.find(c=>c.id===id)||{}).name||'عام';
+const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+window.AAAM={GAMES,CATEGORIES,bySlug,catName,esc,store};
+</script>
+<script>
+'use strict';
+/* =====================================================
+   A.A.A.M — Application Core
+   ===================================================== */
+
+const SITE = { name:'A.A.A.M', description:'منصة الألعاب العربية', accent:'#7c5cff' };
+
+let favs=new Set(store.get('favorites',[]));
+let recent=store.get('recent',[]);
+function toggleFav(slug){
+  if(favs.has(slug)){favs.delete(slug);toast('تمت إزالة اللعبة من المفضلة','info');}
+  else{favs.add(slug);toast('تمت إضافة اللعبة إلى المفضلة','success');}
+  store.set('favorites',[...favs]);
+  document.querySelectorAll(`[data-fav="${slug}"]`).forEach(b=>{
+    b.classList.toggle('active',favs.has(slug));
+    b.setAttribute('aria-pressed',favs.has(slug));
+  });
+  const c=document.querySelector('#favCount'); if(c) c.textContent=favs.size;
+}
+function addRecent(slug){
+  recent=[slug,...recent.filter(s=>s!==slug)].slice(0,12);
+  store.set('recent',recent);
+}
+
+/* ---------- Helpers ---------- */
+const $=(s,r=document)=>r.querySelector(s);
+const $$=(s,r=document)=>[...r.querySelectorAll(s)];
+function toast(msg,type='success'){
+  const t=document.createElement('div');t.className='toast '+type;t.textContent=msg;
+  $('#toasts').appendChild(t);
+  setTimeout(()=>{t.classList.add('out');setTimeout(()=>t.remove(),260);},2800);
+}
+const ICONS={
+  home:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 10.5 12 3l9 7.5V21h-6v-6h-6v6H3z"/></svg>',
+  clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>',
+  fire:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22c4.4 0 7-2.8 7-6.5 0-3-1.8-5-3-7-1 1.5-2 2-3 2 .5-3-1-6.5-4-8 .3 4-4 6-4 11C5 19.2 7.6 22 12 22z"/></svg>',
+  star:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>',
+  users:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.4 3.4-5 6.5-5s5.7 1.6 6.5 5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17.5 14.5c2.3.3 3.8 1.6 4.4 4"/></svg>',
+  grid:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>',
+  heart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>',
+  history:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg>',
+  send:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>',
+  info:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8h.01"/></svg>',
+  mail:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
+  play:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>',
+  warn:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17.5h.01"/></svg>',
+  chevL:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="14 6 8 12 14 18"/></svg>',
+  chevR:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="10 6 16 12 10 18"/></svg>',
+  share:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>',
+  expand:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>',
+  trophy:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 21h8M12 17v4M7 4h10v6a5 5 0 0 1-10 0z"/><path d="M7 6H4a2 2 0 0 0 2 4h1M17 6h3a2 2 0 0 1-2 4h-1"/></svg>',
+  gamepad:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 12h4M8 10v4M15 11h.01M17.5 13h.01"/><path d="M7 6h10a5 5 0 0 1 5 6c-.4 3-1.5 5-3.2 5-1.2 0-1.8-.7-2.8-2H8c-1 1.3-1.6 2-2.8 2C3.5 17 2.4 15 2 12a5 5 0 0 1 5-6z"/></svg>',
+};
+
+/* ---------- Sidebar ---------- */
+function buildSidebar(active){
+  const groups=[
+    {label:'القائمة الرئيسية', items:[
+      {href:'#/', icon:'home', label:'الرئيسية', key:'home'},
+      {href:'#/new', icon:'clock', label:'الجديدة', key:'new'},
+      {href:'#/trending', icon:'fire', label:'الرائجة', key:'trending'},
+      {href:'#/featured', icon:'star', label:'المختارة', key:'featured'},
+    ]},
+    {label:'التصنيفات', items:CATEGORIES.map(c=>({href:'#/category/'+c.id, icon:'gamepad', label:c.name, key:'cat:'+c.id}))},
+    {label:'حسابك', items:[
+      {href:'#/favorites', icon:'heart', label:'المفضلة', key:'favorites'},
+      {href:'#/recent', icon:'history', label:'آخر ما لعبت', key:'recent'},
+    ]},
+    {label:'المنصة', items:[
+      {href:'#/submit-game', icon:'send', label:'أرسل لعبتك', key:'submit'},
+      {href:'#/about', icon:'info', label:'عن المنصة', key:'about'},
+      {href:'#/contact', icon:'mail', label:'تواصل معنا', key:'contact'},
+    ]},
+  ];
+  $('#sideNav').innerHTML=groups.map(g=>`
+    <div class="side-label">${g.label}</div>
+    ${g.items.map(i=>`<a class="side-link ${active===i.key?'active':''}" href="${i.href}" title="${esc(i.label)}">${ICONS[i.icon]}<span>${esc(i.label)}</span></a>`).join('')}
+    <div class="side-divider"></div>`).join('');
+}
+
+/* ---------- Card / Carousel / Grid components ---------- */
+function badgeFor(g){
+  if(g.addedAt>='2026-09-08') return '<span class="card-badge badge-new">جديدة</span>';
+  if(g.trending) return '<span class="card-badge badge-hot">رائجة</span>';
+  if(g.featured) return '<span class="card-badge badge-feat">مميزة</span>';
+  return '';
+}
+function gameCard(g){
+  return `
+  <article class="card" data-slug="${g.slug}" tabindex="0" role="link" aria-label="${esc(g.title)}">
+    <div class="card-thumb">
+      <img src="${g.thumbnail}" data-fb="${g.fallback}" alt="صورة لعبة ${esc(g.title)}" loading="lazy" width="480" height="360">
+      ${badgeFor(g)}
+      <button class="fav-btn ${favs.has(g.slug)?'active':''}" data-fav="${g.slug}" aria-pressed="${favs.has(g.slug)}" aria-label="إضافة ${esc(g.title)} إلى المفضلة" title="المفضلة">${ICONS.heart}</button>
+      <div class="card-overlay"><span class="play-fab" aria-hidden="true">${ICONS.play}</span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">${esc(g.title)}</div>
+      <div class="card-meta"><span class="cat">${esc(catName(g.category))}</span><span class="dot"></span><span>${g.tags.slice(0,2).map(esc).join(' · ')}</span></div>
+    </div>
+  </article>`;
+}
+function gameGrid(list){ return `<div class="grid">${list.map(gameCard).join('')}</div>`; }
+function carousel(list){
+  const id='car'+Math.random().toString(36).slice(2,8);
+  return `
+  <div class="carousel" id="${id}">
+    <div class="car-nav">
+      <button class="car-arrow" data-dir="-1" aria-label="السابق">${ICONS.chevR}</button>
+      <button class="car-arrow" data-dir="1" aria-label="التالي">${ICONS.chevL}</button>
+    </div>
+    <div class="car-track">${list.map(gameCard).join('')}</div>
+  </div>`;
+}
+function initCarousels(){
+  $$('.carousel').forEach(car=>{
+    const track=$('.car-track',car);
+    const arrows=$$('.car-arrow',car);
+    const upd=()=>{
+      const max=track.scrollWidth-track.clientWidth-4;
+      arrows[0].disabled=track.scrollLeft<=2;
+      arrows[1].disabled=track.scrollLeft>=max;
+    };
+    arrows.forEach(b=>b.addEventListener('click',()=>{
+      track.scrollBy({left:(+b.dataset.dir)*track.clientWidth*0.8,behavior:'smooth'});
+    }));
+    track.addEventListener('scroll',upd,{passive:true}); upd();
+    setTimeout(upd,300);
+  });
+}
+function bindCards(root=document){
+  $$('.card',root).forEach(c=>{
+    const go=()=>{showGameVideoAd();location.hash='#/game/'+encodeURIComponent(c.dataset.slug);};
+    c.addEventListener('click',e=>{
+      if(e.target.closest('.fav-btn'))return;
+      go();
+    });
+    c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});
+  });
+  $$('.fav-btn',root).forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();toggleFav(b.dataset.fav);}));
+  $$('img[data-fb]',root).forEach(im=>{im.onerror=()=>{im.onerror=null;im.src=im.dataset.fb;};});
+}
+
+/* ---------- Section ---------- */
+function section(title,icon,inner,viewAllHref,sub=''){
+  return `<section class="section">
+    <div class="section-head">
+      <h2 class="section-title">${icon?ICONS[icon]:''}${esc(title)} ${sub?`<span class="section-sub">${esc(sub)}</span>`:''}</h2>
+      ${viewAllHref?`<a class="view-all" href="${viewAllHref}">عرض الكل ${ICONS.chevL}</a>`:''}
+    </div>${inner}
+  </section>`;
+}
+
+/* ---------- Pages ---------- */
+function pageHome(){
+  const featured=GAMES.filter(g=>g.featured);
+  const trending=GAMES.filter(g=>g.trending);
+  const news=[...GAMES].sort((a,b)=>b.addedAt.localeCompare(a.addedAt));
+  const cont=recent.map(bySlug).filter(Boolean).slice(0,6);
+  const heroList=featured.slice(0,3);
+  const hero=heroList[0];
+  setTimeout(()=>initHero(heroList),0);
+  return `
+  <div class="hero" id="hero">
+    <div class="hero-bg" id="heroBg"><img src="${hero.cover}" data-fb="${hero.fallback}" onerror="this.onerror=null;this.src=this.dataset.fb" alt="" fetchpriority="high"></div>
+    <div class="hero-body">
+      <span class="hero-badge">${ICONS.star} لعبة مميزة — ${esc(catName(hero.category))}</span>
+      <h1 class="hero-title" id="heroTitle">${esc(hero.title)}</h1>
+      <p class="hero-desc" id="heroDesc">${esc(hero.desc)}</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#/game/${hero.slug}">${ICONS.play} العب الآن</a>
+        <button class="btn btn-secondary" data-fav="${hero.slug}">${ICONS.heart} المفضلة</button>
+      </div>
+    </div>
+    <div class="hero-dots" id="heroDots">${heroList.map((_,i)=>`<button class="${i===0?'on':''}" aria-label="شريحة ${i+1}"></button>`).join('')}</div>
+  </div>
+  ${cont.length?section('أكمل اللعب','history',carousel(cont),'#/recent'):''}
+  ${section('الرائجة الآن','fire',carousel(trending),'#/trending')}
+  ${section('وصل حديثًا','clock',carousel(news.slice(0,8)),'#/new')}
+  ${section('تصنيفات المنصة','grid',`<div class="cat-tiles">${CATEGORIES.map(c=>{
+      const n=GAMES.filter(g=>g.category===c.id).length;
+      return `<a class="cat-tile" href="#/category/${c.id}">
+        <span class="ic" style="background:hsl(${c.hue},60%,18%);color:hsl(${c.hue},80%,65%)">${ICONS.gamepad}</span>
+        <span><span class="n">${esc(c.name)}</span><br><span class="c">${n} ${n===1?'لعبة':'ألعاب'}</span></span></a>`;
+    }).join('')}</div>`,'#/')}
+  ${section('جميع الألعاب','grid',gameGrid(GAMES),'#/')}
+  `;
+}
+let heroTimer=null, heroIdx=0;
+function initHero(list){
+  clearInterval(heroTimer);
+  if(!list.length||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  heroIdx=0;
+  const bg=$('#heroBg'),t=$('#heroTitle'),d=$('#heroDesc'),dots=$$('#heroDots button');
+  heroTimer=setInterval(()=>{
+    heroIdx=(heroIdx+1)%list.length;
+    const g=list[heroIdx];
+    bg.style.opacity=0;
+    setTimeout(()=>{bg.innerHTML=`<img src="${g.cover}" data-fb="${g.fallback}" onerror="this.onerror=null;this.src=this.dataset.fb" alt="">`;bg.style.opacity=1;},350);
+    t.textContent=g.title;d.textContent=g.desc;
+    dots.forEach((b,i)=>b.classList.toggle('on',i===heroIdx));
+  },6000);
+  dots.forEach((b,i)=>b.addEventListener('click',()=>{
+    clearInterval(heroTimer);heroIdx=i;const g=list[i];
+    bg.style.opacity=0;setTimeout(()=>{bg.innerHTML=`<img src="${g.cover}" data-fb="${g.fallback}" onerror="this.onerror=null;this.src=this.dataset.fb" alt="">`;bg.style.opacity=1;},200);
+    t.textContent=g.title;d.textContent=g.desc;
+    dots.forEach((x,j)=>x.classList.toggle('on',j===i));
+    initHero(list);
+  }));
+}
+
+function pageList(title,icon,list,desc,viewAll=null){
+  return `
+  <div class="page-head">
+    <h1 class="page-title">${icon?ICONS[icon]:''} ${esc(title)}</h1>
+    ${desc?`<p class="page-desc">${esc(desc)}</p>`:''}
+  </div>
+  ${list.length?gameGrid(list):emptyState('لا توجد ألعاب هنا بعد','استكشف الألعاب وابدأ اللعب الآن','#/','استكشف الألعاب')}`;
+}
+function emptyState(h,p,href,btn){
+  return `<div class="empty"><div class="big">🎮</div><h3>${esc(h)}</h3><p>${esc(p)}</p><a class="btn btn-primary" href="${href}">${esc(btn)}</a></div>`;
+}
+
+function pageCategory(slug){
+  const c=CATEGORIES.find(x=>x.id===slug);
+  if(!c) return page404();
+  const list=GAMES.filter(g=>g.category===slug);
+  return `
+  <div class="page-head">
+    <nav class="crumbs"><a href="#/">الرئيسية</a> ${ICONS.chevL} <span>${esc(c.name)}</span></nav>
+    <h1 class="page-title">ألعاب ${esc(c.name)}</h1>
+    <p class="page-desc">${esc(c.desc)}</p>
+  </div>
+  <div class="toolbar"><span class="count">${list.length} ${list.length===1?'لعبة':'ألعاب'}</span></div>
+  ${list.length?gameGrid(list):emptyState('لا توجد ألعاب في هذا التصنيف بعد','جرّب تصنيفًا آخر','#/','العودة للرئيسية')}`;
+}
+
+function pageSearch(q){
+  const query=(q||'').trim();
+  const res=query?GAMES.filter(g=>
+    g.title.includes(query)||g.tags.some(t=>t.includes(query))||catName(g.category).includes(query)
+  ):[];
+  return `
+  <div class="page-head">
+    <h1 class="page-title">نتائج البحث عن «${esc(query)}»</h1>
+  </div>
+  <div class="toolbar"><span class="count">${res.length} ${res.length===1?'نتيجة':'نتائج'}</span></div>
+  ${query?(res.length?gameGrid(res):emptyState('لم نجد ألعابًا مطابقة','جرّب كلمات أخرى، أو تصفح التصنيفات','#/','استكشف الألعاب'))
+    :emptyState('اكتب كلمة بحث','ابحث باسم اللعبة أو التصنيف','#/','العودة للرئيسية')}`;
+}
+
+/* ---------- GAME VIDEO AD (Gamemonetize) — يظهر عند نقر أي لعبة ---------- */
+function closeGameVideoAd(){
+  const w=document.getElementById('gmVideoWrap');
+  if(w) w.remove();
+  document.body.classList.remove('locked');
+}
+function showGameVideoAd(){
+  if(document.getElementById('gmVideoWrap')) return;
+  const wrap=document.createElement('div');
+  wrap.id='gmVideoWrap';
+  wrap.style.cssText='position:fixed;inset:0;z-index:500;background:rgba(4,6,10,.82);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:18px;';
+  wrap.innerHTML=`
+    <div style="position:relative;width:min(720px,100%);">
+      <!-- مكان ظهور مشغل الفيديو على موقعك -->
+      <div id="gamemonetize-video"></div>
+      <button id="gmSkipBtn" type="button" style="position:absolute;top:10px;inset-inline-end:10px;z-index:2;display:none;padding:8px 18px;border-radius:99px;background:rgba(10,13,19,.9);color:#fff;font-weight:800;font-size:13px;border:1px solid rgba(255,255,255,.25);cursor:pointer;font-family:var(--font);">تخطي الإعلان ✕</button>
+    </div>`;
+  document.body.appendChild(wrap);
+  document.body.classList.add('locked');
+  /* كود البرمجة الخاص بالمنصة */
+  window.VIDEO_OPTIONS = {
+      gameid : "4kci7og3klgj0ivy2wz3gdvd9dth5e7n",
+      width  : "100%",
+      height : "480px",
+      color  : "#3f007e",
+      getAds  : "true" // تم تعديلها هنا لتفعيل الإعلانات والربح
+  };
+  (function (a, b, c) {
+      var d = a.getElementsByTagName(b)[0];
+      if (!a.getElementById(c)) {
+          a = a.createElement(b);
+          a.id = c;
+          a.src = "https://gamemonetize.com";
+          d.parentNode.insertBefore(a, d);
+      }
+  })(document, "script", "gamemonetize-video-api");
+  const skipBtn=document.getElementById('gmSkipBtn');
+  setTimeout(()=>{ if(skipBtn) skipBtn.style.display='block'; }, 5000);
+  if(skipBtn) skipBtn.addEventListener('click', closeGameVideoAd);
+  wrap.addEventListener('click', e=>{ if(e.target===wrap && skipBtn && skipBtn.style.display==='block') closeGameVideoAd(); });
+}
+
+/* ---------- INLINE GAMES (A.A.A.M Originals) ---------- */
+let cleanupFns=[];
+function onCleanup(fn){cleanupFns.push(fn);}
+function runCleanup(){cleanupFns.forEach(f=>{try{f()}catch(e){}});cleanupFns=[];}
+
+
+/* ---------- Legal / Static pages ---------- */
+function pageAbout(){
+  return `<div class="page-head"><h1 class="page-title">${ICONS.info} عن منصة A.A.A.M</h1></div>
+  <div class="legal">
+    <p>A.A.A.M منصة ألعاب عربية حديثة تهدف إلى تقديم تجربة اكتشاف ولعب استثنائية باللغة العربية وبتصميم داكن أنيق يراعي الأداء والسرعة.</p>
+    <h2>ماذا نقدم؟</h2>
+    <ul>
+      <li>ألعاب HTML5 حقيقية مشهورة تُشغَّل مباشرة داخل المنصة في نفس الصفحة.</li>
+      <li>ألعاب HTML5 حقيقية من منصة GameDistribution بتراخيص توزيع رسمية مع ذكر المصدر في صفحة كل لعبة.</li>
+      <li>تصنيفات منظمة، بحث فوري، مفضلة، وسجل لعب محلي على جهازك.</li>
+    </ul>
+    <h2>مبدأ الحقوق</h2>
+    <p>لا ننشر أي لعبة خارجية إلا بعد توثيق مصدرها الرسمي وترخيص توزيعها. ننشر فقط الألعاب التي تسمح بالتشغيل داخل المنصة بتراخيصها الموثقة. إن كان لديك ملاحظة حول أي محتوى، استخدم صفحة <a href="#/report" style="color:var(--accent)">الإبلاغ عن مشكلة</a>.</p>
+  </div>`;
+}
+function pageLegal(kind){
+  const pages={
+    privacy:{t:'سياسة الخصوصية',b:`<p>نحترم خصوصيتك. لا تجمع A.A.A.M أي بيانات شخصية لتصفح المنصة.</p>
+      <h2>ما الذي نخزنه؟</h2>
+      <ul><li>المفضلة وسجل اللعب — تُحفظ محليًا على جهازك فقط (LocalStorage) ولا تُرسل إلى أي خادم.</li><li>تفضيلات العرض مثل حالة القائمة الجانبية.</li></ul>
+      <h2>الألعاب الخارجية</h2>
+      <p>الألعاب المضمنة عبر iframe تعمل على مواقع مطوريها وقد تخضع لسياسات الخصوصية الخاصة بهم. ننصحك بمراجعة سياساتهم.</p>
+      <h2>التواصل</h2>
+      <p>عند استخدام نموذج التواصل أو الإبلاغ، تُستخدم بياناتك للرد على طلبك فقط ولا تُباع أو تُشارك.</p>
+      <p style="color:var(--text-3);font-size:13px">هذه الصفحة توضيحية وليست استشارة قانونية.</p>`},
+    terms:{t:'شروط الاستخدام',b:`<p>باستخدامك A.A.A.M فأنت توافق على الشروط التالية.</p>
+      <h2>الاستخدام المقبول</h2>
+      <ul><li>المنصة مقدمة للتسلية الشخصية.</li><li>يُمنع إساءة استخدام نماذج الإرسال أو الإبلاغ.</li><li>يُمنع محاولة تعطيل المنصة أو التحايل على أنظمة الحماية.</li></ul>
+      <h2>الملكية الفكرية</h2>
+      <p>الألعاب الأصلية والهوية البصرية لـ A.A.A.M ملك للمنصة. الألعاب الخارجية ملك لمطوريها ومنشورة بموجب تراخيصها الموثقة في صفحة كل لعبة.</p>
+      <h2>إخلاء مسؤولية</h2>
+      <p>تُقدَّم المنصة "كما هي". نعمل على توثيق حقوق المحتوى بدقة، لكن لا يمكن ضمان خلو أي نظام من الأخطاء بشكل مطلق — لذلك نوفر قناة إبلاغ سريعة لمعالجة أي ملاحظة.</p>`},
+    copyright:{t:'سياسة حقوق المحتوى',b:`<p>تلتزم A.A.A.M بمنهج محافظ وواضح بشأن حقوق المحتوى.</p>
+      <h2>قواعد النشر</h2>
+      <ul><li>لا ننشر لعبة خارجية دون مصدر رسمي موثق.</li><li>لا ننشر دون ترخيص مؤكد من المصدر الرسمي (لا نفترض ولا نخمّن).</li><li>لا نضمّن لعبة إلا إذا كان تضمينها مسموحًا بها، وإلا نوجّهك لموقع المطور.</li><li>لا ننشر ألعابًا مقرصنة أو معدلة دون إذن.</li></ul>
+      <h2>النسبة والإسناد</h2>
+      <p>عندما يتطلب الترخيص ذكر المصدر، نعرضه بوضوح في صفحة اللعبة مع رابط الترخيص والمطور وتاريخ التحقق.</p>
+      <h2>الإبلاغ والإزالة</h2>
+      <p>إذا كنت صاحب حقوق ولديك ملاحظة على أي محتوى، أبلغنا عبر صفحة <a href="#/report" style="color:var(--accent)">الإبلاغ</a> مع ذكر اللعبة والمشكلة، وسنراجع المحتوى فورًا وقد نعطّله أو نزيله حتى انتهاء المراجعة.</p>`},
+  };
+  const p=pages[kind];
+  return `<div class="page-head"><h1 class="page-title">${p.t}</h1></div><div class="legal">${p.b}</div>`;
+}
+
+function formPage(title,desc,fieldsHTML,submitLabel,note,onSubmit){
+  setTimeout(()=>{
+    const form=$('#mainForm'); if(!form)return;
+    form.addEventListener('submit',e=>{
+      e.preventDefault();
+      let ok=true;
+      $$('.field',form).forEach(f=>{
+        const inp=$('input,select,textarea',f);
+        const req=inp.hasAttribute('required');
+        let valid=!req||inp.value.trim().length>0;
+        if(valid&&inp.type==='email')valid=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inp.value);
+        f.classList.toggle('invalid',!valid);
+        if(!valid)ok=false;
+      });
+      if(!ok)return;
+      const btn=$('button[type=submit]',form);
+      btn.disabled=true;btn.innerHTML='<span class="spin"></span> جاري الإرسال...';
+      setTimeout(()=>{
+        btn.disabled=false;btn.textContent=submitLabel;
+        form.reset();$$('.field',form).forEach(f=>f.classList.remove('invalid'));
+        onSubmit();
+      },900);
+    });
+    $$('.field input,.field select,.field textarea',form).forEach(i=>i.addEventListener('input',()=>i.closest('.field').classList.remove('invalid')));
+  },0);
+  return `<div class="page-head"><h1 class="page-title">${title}</h1><p class="page-desc">${desc}</p></div>
+  <form class="form-card" id="mainForm" novalidate>${fieldsHTML}
+    <button class="btn btn-primary" type="submit" style="width:100%;margin-top:6px">${submitLabel}</button>
+    ${note?`<p class="form-note">${note}</p>`:''}
+  </form>`;
+}
+const F=(label,inner)=>`<div class="field"><label>${label}</label>${inner}<div class="err">هذا الحقل مطلوب بصيغة صحيحة</div></div>`;
+const input=(type,ph,name,req=true)=>`<input type="${type}" placeholder="${ph}" name="${name}" ${req?'required':''}>`;
+
+function pageContact(){
+  return formPage('تواصل معنا','يسعدنا سماع رأيك واستفساراتك. نرد عادة خلال 48 ساعة.',
+    F('الاسم',input('text','اسمك الكامل','name'))+
+    F('البريد الإلكتروني',input('email','example@mail.com','email'))+
+    F('الموضوع',`<select name="subject" required><option value="">اختر الموضوع...</option><option>استفسار عام</option><option>ملاحظة تقنية</option><option>حقوق محتوى</option><option>اقتراح</option><option>أخرى</option></select>`)+
+    F('الرسالة',`<textarea name="msg" placeholder="اكتب رسالتك هنا..." required></textarea>`),
+    'إرسال الرسالة','بإرسالك توافق على التواصل معك بخصوص طلبك فقط.',
+    ()=>toast('تم إرسال رسالتك بنجاح — سنعاود التواصل قريبًا','success'));
+}
+function pageSubmit(){
+  return formPage('أرسل لعبتك','هل طوّرت لعبة وتريد نشرها على A.A.A.M؟ املأ النموذج وسيراجعها فريقنا. لا تُنشر أي لعبة تلقائيًا.',
+    F('اسم اللعبة',input('text','اسم اللعبة','gname'))+
+    F('اسم المطور / الاستوديو',input('text','مطور اللعبة','dev'))+
+    F('رابط اللعبة',input('url','https://...','gurl'))+
+    F('رابط المصدر (مستودع الكود)',input('url','https://github.com/...','src'))+
+    F('الترخيص',`<select name="lic" required><option value="">اختر الترخيص...</option><option>MIT</option><option>GPL</option><option>CC0 / ملك عام</option><option>Apache 2.0</option><option>ترخيص مخصص (موثق)</option></select>`)+
+    F('رابط الترخيص',input('url','https://.../LICENSE','licurl'))+
+    F('التصنيف',`<select name="cat" required><option value="">اختر التصنيف...</option>${CATEGORIES.map(c=>`<option>${c.name}</option>`).join('')}</select>`)+
+    F('وصف قصير',`<textarea name="desc" placeholder="عرّفنا بلعبتك..." required></textarea>`)+
+    F('بريدك الإلكتروني',input('email','example@mail.com','email'))+
+    `<div class="field"><label style="display:flex;align-items:center;gap:8px;font-weight:500;font-size:13.5px"><input type="checkbox" required style="width:auto"> أؤكد أنني أملك حقوق هذه اللعبة أو أن ترخيصها يسمح بإعادة النشر والتضمين</label></div>`,
+    'إرسال اللعبة للمراجعة','جميع الإرسالات تخضع للمراجعة اليدوية قبل النشر.',
+    ()=>toast('استلمنا طلبك — ستصلك النتيجة بعد المراجعة','info'));
+}
+function pageReport(){
+  return formPage('الإبلاغ عن مشكلة','ساعدنا في الحفاظ على منصة نظيفة وموثوقة.',
+    F('اللعبة (إن وجدت)',`<select name="game"><option value="">— عام —</option>${GAMES.map(g=>`<option>${g.title}</option>`).join('')}</select>`,)+
+    F('نوع المشكلة',`<select name="reason" required><option value="">اختر نوع المشكلة...</option><option>مشكلة تقنية في اللعبة</option><option>اللعبة لا تعمل / غير متاحة</option><option>معلومات خاطئة</option><option>قلق بشأن حقوق النشر</option><option>أخرى</option></select>`)+
+    F('وصف المشكلة',`<textarea name="msg" placeholder="اشرح المشكلة بالتفصيل..." required></textarea>`)+
+    F('بريدك الإلكتروني (اختياري)',input('email','example@mail.com','email',false)),
+    'إرسال البلاغ','سيتم مراجعة البلاغ ومعالجته — المحتوى المخالف يُعطَّل فورًا.',
+    ()=>toast('تم استلام بلاغك — شكرًا لمساعدتنا','success'));
+}
+function pageFavorites(){
+  const list=[...favs].map(bySlug).filter(Boolean);
+  return `<div class="page-head"><h1 class="page-title">${ICONS.heart} المفضلة <span class="section-sub" id="favCount">${favs.size}</span></h1></div>
+  ${list.length?gameGrid(list):emptyState('مفضلتك فارغة','اضغط على رمز القلب في أي لعبة لإضافتها هنا','#/','استكشف الألعاب')}`;
+}
+function pageRecent(){
+  const list=recent.map(bySlug).filter(Boolean);
+  return `<div class="page-head"><h1 class="page-title">${ICONS.history} آخر ما لعبت</h1></div>
+  ${list.length?gameGrid(list):emptyState('لم تلعب أي لعبة بعد','ابدأ الآن وستظهر ألعابك هنا تلقائيًا','#/','استكشف الألعاب')}`;
+}
+function page404(){
+  return `<div class="e404">
+    <div class="code">404</div>
+    <h2>يبدو أن هذه اللعبة خرجت من الخريطة!</h2>
+    <p>الصفحة التي تبحث عنها غير موجودة أو ربما نُقلت.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-primary" href="#/">العودة للرئيسية</a>
+      <a class="btn btn-secondary" href="#/trending">استكشف الألعاب</a>
+    </div></div>`;
+}
+
+/* ---------- Modal ---------- */
+function openModal(html){
+  $('#modalBox').innerHTML=html;
+  $('#modalBd').classList.add('open');
+  document.body.classList.add('locked');
+  const c=$('#modalClose'); if(c)c.onclick=closeModal;
+}
+function closeModal(){$('#modalBd').classList.remove('open');document.body.classList.remove('locked');}
+$('#modalBd').addEventListener('click',e=>{if(e.target.id==='modalBd')closeModal();});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){closeModal();closeDrawer();hideSearchDrop();}
+});
+
+
+/* ---------- GAME PAGE (صفحة اللعبة — مدمجة داخليًا بكل تفاصيلها) ---------- */
+function initGamePage(g){
+  const frame=$('#gameFrame'), note=$('#loadNote'), wrap=$('#playerWrap');
+  if(!frame) return;
+  const showNote=html=>{note.innerHTML=html;note.style.display='flex';note.style.opacity='1';};
+  const hideNote=()=>{note.style.opacity='0';setTimeout(()=>{note.style.display='none';},420);};
+  /* بناء رابط التشغيل ووضعه مباشرة في iframe.src — بلا redirect ولا روابط خارجية.
+     gd_sdk_referrer_url يُضبط ليكون رابط صفحة اللعبة — وهذا الاستخدام الرسمي الموثق من GameDistribution */
+  let playUrl=g.gameUrl;
+  try{
+    const u=new URL(g.gameUrl);
+    u.searchParams.set('gd_sdk_referrer_url', location.href);
+    playUrl=u.toString();
+  }catch(e){}
+  frame.title=g.title;
+  const onLoad=()=>hideNote();
+  frame.addEventListener('load',onLoad);
+  frame.src=playUrl;   /* اللعبة تُحمَّل داخل iframe فقط */
+  /* إذا لم تُزل شاشة التحميل خلال 25 ثانية: رسالة عدم التوفر (بدون أي رابط خارجي) */
+  const to=setTimeout(()=>{
+    if(note.style.display!=='none'){
+      showNote('<div style="text-align:center"><div style="font-size:36px;margin-bottom:8px">⚠️</div>'
+        +'<b>هذه اللعبة غير متاحة للتشغيل داخل الموقع حاليًا.</b><br>'
+        +'<span style="font-size:12.5px">قد يقيّد المصدر تشغيل هذه اللعبة على هذا النطاق.</span><br><br>'
+        +'<button class="btn btn-secondary" id="retryBtn">إعادة المحاولة</button>&nbsp;'
+        +'<a class="btn btn-primary" href="#/">استكشف ألعابًا أخرى</a></div>');
+      const rb=document.getElementById('retryBtn');
+      if(rb) rb.addEventListener('click',()=>{showNote('<span><span class="spin"></span>&nbsp; جاري تحميل اللعبة...</span>');frame.src='about:blank';setTimeout(()=>{frame.src=playUrl;},80);});
+    }
+  },25000);
+  /* أزرار التحكم: ملء الشاشة + إعادة التحميل */
+  const fsBtn=$('#fsBtn'), reloadBtn=$('#reloadBtn');
+  const onFs=()=>{if(document.fullscreenElement){document.exitFullscreen();}else if(wrap.requestFullscreen){wrap.requestFullscreen();}};
+  const onReload=()=>{frame.src='about:blank';setTimeout(()=>{frame.src=playUrl;},80);};
+  const onFsChange=()=>wrap.classList.toggle('fs',!!document.fullscreenElement);
+  if(fsBtn)fsBtn.addEventListener('click',onFs);
+  if(reloadBtn)reloadBtn.addEventListener('click',onReload);
+  document.addEventListener('fullscreenchange',onFsChange);
+  /* تنظيف كامل عند مغادرة الصفحة (يُستدعى من route() عبر runCleanup) */
+  onCleanup(()=>{
+    clearTimeout(to);
+    frame.removeEventListener('load',onLoad);
+    document.removeEventListener('fullscreenchange',onFsChange);
+    frame.src='about:blank';
+  });
+}
+function pageGame(slug){
+  const g=bySlug(slug);
+  if(!g) return page404();
+  /* تسجيل اللعبة في سجل اللعب (نفس مفتاح التخزين المستخدم في بقية المنصة) */
+  addRecent(g.slug);
+  const r=g.rights||{};
+  const related=GAMES.filter(x=>x.slug!==g.slug&&(x.category===g.category||x.tags.some(t=>g.tags.includes(t)))).slice(0,6);
+  setTimeout(()=>initGamePage(g),0);
+  return `
+  <nav class="crumbs">
+    <a href="#/">الرئيسية</a> <span>‹</span>
+    <a href="#/category/${g.category}">${esc(catName(g.category))}</a> <span>‹</span>
+    <span>${esc(g.title)}</span>
+  </nav>
+  <div class="game-head">
+    <div>
+      <h1>${esc(g.title)}</h1>
+      <div class="card-meta" style="margin-top:6px"><span class="cat">${esc(catName(g.category))}</span><span class="dot"></span><span>${esc(g.tags.join(' · '))}</span></div>
+    </div>
+    <div class="game-actions">
+      <button class="btn btn-ghost" id="backBtn">‹ رجوع</button>
+      <button class="btn btn-secondary" id="shareBtn">${ICONS.share} مشاركة</button>
+      <button class="btn btn-danger" id="reportBtn">${ICONS.warn} إبلاغ</button>
+    </div>
+  </div>
+  <!-- مشغّل اللعبة: الرابط يوضع مباشرة في iframe.src — لا redirect ولا روابط خارجية -->
+  <div class="player-wrap" id="playerWrap">
+    <iframe id="gameFrame"
+      title="${esc(g.title)}"
+      width="100%" height="100%"
+      frameborder="0" scrolling="no"
+      allowfullscreen
+      allow="fullscreen; autoplay; gamepad; pointer-lock; encrypted-media; picture-in-picture"></iframe>
+    <div class="load-note" id="loadNote"><span><span class="spin"></span>&nbsp; جاري تحميل اللعبة...</span></div>
+    <div class="player-bar">
+      <button class="icon-btn" id="fsBtn" title="ملء الشاشة" aria-label="ملء الشاشة" style="color:#fff">${ICONS.expand}</button>
+      <button class="icon-btn" id="reloadBtn" title="إعادة تحميل اللعبة" aria-label="إعادة تحميل اللعبة" style="color:#fff">&#8635;</button>
+      <span>${esc(g.title)} — A.A.A.M</span>
+    </div>
+  </div>
+  <p class="game-desc">${esc(g.desc)}</p>
+  <div class="meta-panel">
+    <div class="meta-item"><div class="k">المطور</div><div class="v">${esc(r.developer||'—')}</div></div>
+    <div class="meta-item"><div class="k">الترخيص</div><div class="v">${esc(r.licenseName||'—')}</div></div>
+    <div class="meta-item"><div class="k">تاريخ الإضافة</div><div class="v">${esc(g.addedAt||'—')}</div></div>
+    <div class="meta-item"><div class="k">مصدر التشغيل</div><div class="v" style="direction:ltr;text-align:end">${esc((r.sourceUrl||g.gameUrl).replace(/^https?:\/\//,''))}</div></div>
+  </div>
+  <div class="rights-box">✅ <b>لعبة حقيقية موثقة:</b> ${esc(r.attributionText||'اللعبة حقيقية وتعمل مباشرة داخل هذه الصفحة.')}${r.verified?' — تم التحقق من المصدر والترخيص بتاريخ '+esc(r.verificationDate)+'.':''}</div>
+  <div class="tag-row">${g.tags.map(t=>'<span class="tag">'+esc(t)+'</span>').join('')}</div>
+  <h2 class="related-title">🎮 ألعاب مشابهة</h2>
+  <div class="grid">${related.map(gameCard).join('')}</div>`;
+}
+
+/* ---------- Router ---------- */
+function setMeta(title,desc){
+  document.title=title+' — '+SITE.name;
+  const m=document.querySelector('meta[name="description"]'); if(m&&desc)m.setAttribute('content',desc);
+}
+let currentCleanup=null;
+function route(){
+  runCleanup();
+  clearInterval(heroTimer);
+  const hash=location.hash||'#/';
+  const parts=hash.replace(/^#\//,'').split('/');
+  const page=$('#page');
+  
+  let html='', active='home';
+  window.scrollTo({top:0});
+  switch(parts[0]){
+    case 'game': { const gg=bySlug(parts[1]||''); html=gg?pageGame(parts[1]):page404(); setMeta(gg?gg.title:'صفحة غير موجودة', gg?('العب '+gg.title+' مباشرة داخل A.A.A.M'):'404'); break; }
+    case '': html=pageHome(); active='home'; setMeta('منصة الألعاب العربية','اكتشف والعب ألعابًا حقيقية على A.A.A.M'); break;
+    case 'new': html=pageList('الجديدة','clock',[...GAMES].sort((a,b)=>b.addedAt.localeCompare(a.addedAt)),'آخر الألعاب المضافة للمنصة مرتبة حسب تاريخ الإضافة.'); active='new'; setMeta('الجديدة','أحدث الألعاب على A.A.A.M'); break;
+    case 'trending': html=pageList('الرائجة','fire',GAMES.filter(g=>g.trending),'الألعاب الأكثر رواجًا لدى مجتمع المنصة (بيانات تجريبية للعرض).'); active='trending'; setMeta('الرائجة','ألعاب رائجة على A.A.A.M'); break;
+    case 'featured': html=pageList('المختارة','star',GAMES.filter(g=>g.featured),'مختارات فريق A.A.A.M من أفضل الألعاب على المنصة.'); active='featured'; setMeta('المختارة','ألعاب مختارة بعناية على A.A.A.M'); break;
+    case 'multiplayer': html=pageList('تعدد اللاعبين','users',GAMES.filter(g=>g.multiplayer),'لا توجد ألعاب جماعية متاحة حاليًا — ننشر فقط ألعابًا حقيقية مرخصة تسمح بالتشغيل داخل المنصة.'); active='multiplayer'; setMeta('تعدد اللاعبين','ألعاب جماعية على A.A.A.M'); break;
+    case 'favorites': html=pageFavorites(); active='favorites'; setMeta('المفضلة','ألعابك المفضلة على A.A.A.M'); break;
+    case 'recent': html=pageRecent(); active='recent'; setMeta('آخر ما لعبت','سجل ألعابك على A.A.A.M'); break;
+    case 'search': html=pageSearch(decodeURIComponent(parts[1]||'')); setMeta('البحث','ابحث في ألعاب A.A.A.M'); break;
+    case 'category': html=pageCategory(parts[1]); active='cat:'+parts[1]; setMeta(catName(parts[1]),'ألعاب '+catName(parts[1])+' على A.A.A.M'); break;
+    case 'about': html=pageAbout(); active='about'; setMeta('عن المنصة','تعرّف على A.A.A.M'); break;
+    case 'privacy': html=pageLegal('privacy'); setMeta('سياسة الخصوصية','خصوصيتك على A.A.A.M'); break;
+    case 'terms': html=pageLegal('terms'); setMeta('شروط الاستخدام','شروط استخدام A.A.A.M'); break;
+    case 'copyright': html=pageLegal('copyright'); setMeta('سياسة حقوق المحتوى','حقوق المحتوى في A.A.A.M'); break;
+    case 'contact': html=pageContact(); active='contact'; setMeta('تواصل معنا','تواصل مع فريق A.A.A.M'); break;
+    case 'submit-game': html=pageSubmit(); active='submit'; setMeta('أرسل لعبتك','انشر لعبتك على A.A.A.M'); break;
+    case 'report': html=pageReport(); setMeta('الإبلاغ عن مشكلة','أبلغ عن مشكلة في A.A.A.M'); break;
+    default: html=page404(); setMeta('صفحة غير موجودة','404');
+  }
+  buildSidebar(active);
+  page.innerHTML=html;
+  page.focus({preventScroll:true});
+  bindCards(page);
+  initCarousels();
+  /* page-specific binds */
+  $$('[data-fav]',page).forEach(b=>b.addEventListener('click',()=>{
+    toggleFav(b.dataset.fav);
+    const txt=b.querySelector('[data-favtxt]'); if(txt)txt.textContent=favs.has(b.dataset.fav)?'في المفضلة':'المفضلة';
+  }));
+  const bb=$('#backBtn',page);
+  if(bb)bb.onclick=()=>{if(history.length>1)history.back();else location.hash='#/';};
+  const sh=$('#shareBtn',page);
+  if(sh)sh.onclick=async()=>{
+    const url=location.href;
+    if(navigator.share){try{await navigator.share({title:document.title,url});}catch(e){}}
+    else{try{await navigator.clipboard.writeText(url);toast('تم نسخ رابط اللعبة','success');}catch(e){toast('تعذر النسخ','error');}}
+  };
+  const rp=$('#reportBtn',page);
+  if(rp)rp.onclick=()=>{
+    const g=bySlug(parts[1]);
+    openModal(`<div class="modal-head"><h3>الإبلاغ عن «${esc(g.title)}»</h3><button class="icon-btn" id="modalClose" aria-label="إغلاق">✕</button></div>
+      <form id="repForm">
+      <div class="field"><label>نوع المشكلة</label><select required id="repReason"><option value="">اختر...</option><option>مشكلة تقنية في اللعبة</option><option>اللعبة لا تعمل</option><option>معلومات خاطئة</option><option>قلق بشأن حقوق النشر</option><option>أخرى</option></select><div class="err">مطلوب</div></div>
+      <div class="field"><label>وصف المشكلة</label><textarea required id="repMsg" placeholder="اشرح المشكلة..."></textarea><div class="err">مطلوب</div></div>
+      <button class="btn btn-danger" type="submit" style="width:100%">إرسال البلاغ</button></form>`);
+    $('#repForm').onsubmit=e=>{e.preventDefault();
+      if(!$('#repReason').value||!$('#repMsg').value.trim())return;
+      closeModal();toast('تم استلام بلاغك — شكرًا لمساعدتنا','success');};
+  };
+  closeDrawer();
+}
+window.addEventListener('hashchange',route);
+
+/* ---------- Search ---------- */
+const sInput=$('#searchInput'),sDrop=$('#searchDrop');
+let sSel=-1,sItems=[];
+function hideSearchDrop(){sDrop.classList.remove('open');sInput.setAttribute('aria-expanded','false');sSel=-1;}
+function doSearch(q){
+  q=q.trim();
+  if(q.length<2){hideSearchDrop();return;}
+  sItems=GAMES.filter(g=>g.title.includes(q)||g.tags.some(t=>t.includes(q))||catName(g.category).includes(q)).slice(0,6);
+  sSel=-1;
+  sDrop.innerHTML=sItems.length
+    ? sItems.map((g,i)=>`<div class="sd-item" data-i="${i}" role="option"><img src="${g.thumbnail}" data-fb="${g.fallback}" alt="" width="44" height="44"><div><div class="t">${esc(g.title)}</div><div class="c">${esc(catName(g.category))} · ${esc(g.rights.developer)}</div></div></div>`).join('')
+    : `<div class="sd-empty">لم نجد ألعابًا مطابقة<br><span style="font-size:12px">جرّب: ${CATEGORIES.slice(0,4).map(c=>`<a href="#/category/${c.id}" style="color:var(--accent);font-weight:700">${c.name}</a>`).join(' · ')}</span></div>`;
+  sDrop.classList.add('open');sInput.setAttribute('aria-expanded','true');
+  $$('img[data-fb]',sDrop).forEach(im=>{im.onerror=()=>{im.onerror=null;im.src=im.dataset.fb;};});
+  $$('.sd-item',sDrop).forEach(el=>el.addEventListener('mousedown',e=>{e.preventDefault();location.hash='#/game/'+encodeURIComponent(sItems[+el.dataset.i].slug);hideSearchDrop();sInput.blur();}));
+}
+sInput.addEventListener('input',()=>doSearch(sInput.value));
+sInput.addEventListener('keydown',e=>{
+  if(!sDrop.classList.contains('open'))return;
+  const items=$$('.sd-item',sDrop);
+  if(e.key==='ArrowDown'||e.key==='ArrowUp'){
+    e.preventDefault();
+    sSel=e.key==='ArrowDown'?(sSel+1)%items.length:(sSel-1+items.length)%items.length;
+    items.forEach((el,i)=>el.classList.toggle('sel',i===sSel));
+  }else if(e.key==='Enter'){
+    e.preventDefault();
+    if(sSel>=0&&sItems[sSel]){location.hash='#/game/'+sItems[sSel].slug;hideSearchDrop();sInput.blur();}
+    else{location.hash='#/search/'+encodeURIComponent(sInput.value.trim());hideSearchDrop();sInput.blur();}
+  }else if(e.key==='Escape'){hideSearchDrop();}
+});
+sInput.addEventListener('blur',()=>setTimeout(hideSearchDrop,150));
+
+/* ---------- Drawer / Sidebar ---------- */
+const sidebar=$('#sidebar'),backdrop=$('#backdrop');
+function openDrawer(){sidebar.classList.add('open');backdrop.classList.add('show');document.body.classList.add('locked');}
+function closeDrawer(){sidebar.classList.remove('open');backdrop.classList.remove('show');document.body.classList.remove('locked');}
+$('#menuBtn').addEventListener('click',openDrawer);
+$('#drawerClose').addEventListener('click',closeDrawer);
+backdrop.addEventListener('click',closeDrawer);
+$('#collapseBtn').addEventListener('click',()=>{
+  if(innerWidth<=900)return;
+  sidebar.classList.toggle('collapsed');
+  store.set('sb_collapsed',sidebar.classList.contains('collapsed'));
+});
+if(store.get('sb_collapsed',false)&&innerWidth>900)sidebar.classList.add('collapsed');
+
+/* ---------- Notifications ---------- */
+const notifDrop=$('#notifDrop');
+$('#notifBtn').addEventListener('click',e=>{
+  e.stopPropagation();
+  notifDrop.classList.toggle('open');
+  hideSearchDrop();
+});
+document.addEventListener('click',e=>{
+  if(!e.target.closest('#notifDrop')&&!e.target.closest('#notifBtn'))notifDrop.classList.remove('open');
+});
+$('#favBtn').addEventListener('click',()=>location.hash='#/favorites');
+
+/* ---------- Boot ---------- */
+route();
+</script>
+</body>
+</html>
+
+  <script>
+    
+  </script>
+</body>
+</html>
