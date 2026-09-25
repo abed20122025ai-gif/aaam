@@ -1,37 +1,35 @@
 <!DOCTYPE html>
-<html>
-
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JSFiddle 5ayc6v7n</title>
-
-  <style>
-    
-  </style>
-
-  
-</head>
-<body>
-  <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A.A.A.M — منصة الألعاب العربية</title>
-<meta name="description" content="A.A.A.M — منصة ألعاب عربية حديثة. اكتشف ألعابًا حقيقية قابلة للعب، مصنفة ومنظمة، بتجربة سريعة وأنيقة.">
+<title>AAM — منصة الألعاب العربية</title>
+<meta name="description" content="AAM — منصة ألعاب عربية حديثة. اكتشف ألعابًا حقيقية قابلة للعب، مصنفة ومنظمة، بتجربة سريعة وأنيقة.">
 <link rel="canonical" href="https://aaam.games/">
-<meta property="og:title" content="A.A.A.M — منصة الألعاب العربية">
-<meta property="og:description" content="اكتشف والعب ألعابًا حقيقية بتراخيص واضحة على منصة A.A.A.M.">
+<meta property="og:title" content="AAM — منصة الألعاب العربية">
+<meta property="og:description" content="اكتشف والعب ألعابًا حقيقية بتراخيص واضحة على منصة AAM.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="file:///C:/Users/mado/Downloads/Neon%20Crown%20Gaming%20Emblem.png">
 <meta name="theme-color" content="#0a0d13">
-<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230a0d13"/><text x="32" y="42" font-family="Arial" font-size="26" font-weight="900" fill="%237c5cff" text-anchor="middle">A.A</text></svg>'>
+<link rel="icon" href="file:///C:/Users/mado/Downloads/Neon%20Crown%20Gaming%20Emblem.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://www.madkidgames.com" crossorigin>
+<link rel="preconnect" href="https://www.rocketgames.io" crossorigin>
+<link rel="dns-prefetch" href="https://www.rocketgames.io">
+<link rel="preconnect" href="https://img.rocketgames.io" crossorigin>
+<link rel="prefetch" href="https://www.madkidgames.com/full/subway-surfers">
+<link rel="prefetch" href="https://www.madkidgames.com/full/angry-birds-2">
+<link rel="prefetch" href="https://www.madkidgames.com/full/johnny-trigger-action-shooter">
+<link rel="prefetch" href="https://www.madkidgames.com/full/brain-on-dot-physics">
+<link rel="prefetch" href="https://www.madkidgames.com/full/pixel-path">
+<link rel="prefetch" href="https://www.madkidgames.com/full/plants-vs-zombies">
+<link rel="prefetch" href="https://www.rocketgames.io/embed/going-balls">
+<link rel="prefetch" href="https://www.rocketgames.io/embed/fallzone-io">
+<link rel="dns-prefetch" href="https://www.madkidgames.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"A.A.A.M","url":"https://aaam.games/","inLanguage":"ar"}
+{"@context":"https://schema.org","@type":"WebSite","name":"AAM","url":"https://aaam.games/","inLanguage":"ar"}
 </script>
 <style>
 /* ============ DESIGN TOKENS ============ */
@@ -95,6 +93,7 @@ img{display:block;max-width:100%}
 }
 .brand-name{font-weight:900;font-size:19px;letter-spacing:1px;white-space:nowrap}
 .brand-name em{font-style:normal;color:var(--accent)}
+.brand-logo{width:38px;height:38px;border-radius:10px;object-fit:cover;box-shadow:0 4px 14px rgba(124,92,255,.35);flex-shrink:0;background:var(--bg-1)}
 .icon-btn{
   width:38px;height:38px;border-radius:10px;display:grid;place-items:center;
   color:var(--text-2);transition:var(--t-fast);position:relative;flex-shrink:0;
@@ -274,7 +273,9 @@ body.locked{overflow:hidden}
   background:rgba(8,10,16,.55);backdrop-filter:blur(6px);color:#cfd6e4;transition:var(--t-fast);
 }
 .fav-btn:hover{color:#fff;background:rgba(8,10,16,.8)}
-.fav-btn.active{color:#ff5d7a;animation:pop .35s cubic-bezier(.2,1.6,.4,1)}
+.fav-btn.active{color:#ff3355;animation:favGlow .55s cubic-bezier(.2,1.6,.4,1)}
+.fav-btn.active svg{fill:#ff3355;stroke:#ff3355;filter:drop-shadow(0 0 7px rgba(255,51,85,.9)) drop-shadow(0 0 16px rgba(255,51,85,.45))}
+@keyframes favGlow{0%{transform:scale(1)}40%{transform:scale(1.4);filter:drop-shadow(0 0 18px rgba(255,51,85,1))}100%{transform:scale(1)}}
 @keyframes pop{0%{transform:scale(1)}45%{transform:scale(1.28)}100%{transform:scale(1)}}
 .card-body{padding:12px 14px 14px}
 .card-title{font-size:14.5px;font-weight:800;line-height:1.4;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
@@ -350,7 +351,7 @@ body.locked{overflow:hidden}
   position:absolute;bottom:0;inset-inline:0;z-index:5;display:flex;align-items:center;gap:8px;
   padding:10px 14px;background:linear-gradient(to top,rgba(4,6,10,.85),transparent);opacity:0;transition:var(--t-fast);
 }
-.player-wrap:hover .player-bar,.player-wrap.fs .player-bar{opacity:1}
+.player-wrap:hover .player-bar{opacity:1}
 .game-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:var(--sp-4)}
 .game-head h1{font-size:clamp(22px,3vw,30px);font-weight:900}
 .game-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
@@ -379,6 +380,10 @@ body.locked{overflow:hidden}
 .spin{width:18px;height:18px;border:2px solid rgba(255,255,255,.25);border-top-color:var(--accent);border-radius:50%;animation:rot .8s linear infinite;display:inline-block;vertical-align:-4px;}
 .player-bar span{margin-inline-start:auto;font-size:12px;color:var(--text-2);}
 @media (pointer:coarse){.player-bar{opacity:1}}
+/* ملء الشاشة: إخفاء كل شيء داخل المشغّل — يبقى الإطار فقط */
+.player-wrap:fullscreen .player-bar,.player-wrap.fs .player-bar{display:none}
+.player-wrap:fullscreen .load-note{display:none !important}
+.player-wrap:fullscreen::after,.player-wrap:fullscreen::before{display:none}
 /* ============ FORMS ============ */
 .form-card{
   max-width:640px;background:var(--surface);border:1px solid var(--border);
@@ -481,9 +486,8 @@ body.locked{overflow:hidden}
     <button class="icon-btn menu-btn" id="menuBtn" aria-label="فتح القائمة">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
-    <a class="brand" href="#/" aria-label="A.A.A.M — الرئيسية">
-      <span class="brand-mark">A.A</span>
-      <span class="brand-name">A.A.A.<em>M</em></span>
+    <a class="brand" href="#/" aria-label="AAM — الرئيسية">
+      <img class="brand-logo" src="file:///C:/Users/mado/Downloads/Neon%20Crown%20Gaming%20Emblem.png" alt="AAM" onerror="this.onerror=null;this.style.display='none';var m=this.parentElement.querySelector('.brand-mark');if(m)m.style.display='grid'"><span class="brand-mark" style="display:none">AAM</span><span class="brand-name">AAM</span>
     </a>
     <div class="search-wrap">
       <div class="search-box">
@@ -531,8 +535,8 @@ body.locked{overflow:hidden}
   <footer class="footer">
     <div class="footer-inner">
       <div>
-        <a class="brand" href="#/"><span class="brand-mark">A.A</span><span class="brand-name">A.A.A.<em>M</em></span></a>
-        <p class="footer-about">منصة ألعاب عربية حديثة. نُشغّل ألعاب HTML5 حقيقية عبر منصة GameDistribution بتراخيص توزيع رسمية — كل ذلك داخل نفس الصفحة.</p>
+        <a class="brand" href="#/"><img class="brand-logo" src="file:///C:/Users/mado/Downloads/Neon%20Crown%20Gaming%20Emblem.png" alt="AAM" onerror="this.onerror=null;this.style.display='none';var m=this.parentElement.querySelector('.brand-mark');if(m)m.style.display='grid'"><span class="brand-mark" style="display:none">AAM</span><span class="brand-name">AAM</span></a>
+        <p class="footer-about">منصة ألعاب عربية حديثة. نُشغّل ألعاب HTML5 حقيقية عبر منصة MadKid Games بتراخيص توزيع رسمية — كل ذلك داخل نفس الصفحة.</p>
       </div>
       <div>
         <h4>المنصة</h4>
@@ -547,7 +551,7 @@ body.locked{overflow:hidden}
         <a href="#/privacy">سياسة الخصوصية</a><a href="#/terms">شروط الاستخدام</a><a href="#/copyright">حقوق المحتوى</a><a href="#/contact">تواصل معنا</a>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 A.A.A.M — جميع الحقوق محفوظة. الألعاب الخارجية ملك لمطوريها وموزعة عبر GameDistribution وفق تراخيصها الموثقة.</div>
+    <div class="footer-bottom">© 2026 AAM — جميع الحقوق محفوظة. الألعاب الخارجية ملك لمطوريها وموزعة عبر MadKid Games وفق تراخيصها الموثقة.</div>
   </footer>
 </div>
 
@@ -559,8 +563,8 @@ body.locked{overflow:hidden}
 
 <script>
 /* =====================================================
-   A.A.A.M — بيانات الألعاب المدمجة داخل الملف الواحد
-   الألعاب حقيقية من GameDistribution بروابط التضمين الرسمية
+   AAM — بيانات الألعاب المدمجة داخل الملف الواحد
+   الألعاب حقيقية من MadKid Games بروابط التضمين الرسمية
    ===================================================== */
 /* ---------- Categories ---------- */
 const CATEGORIES = [
@@ -576,317 +580,677 @@ const CATEGORIES = [
   {id:'fashion', name:'موضة وتلبيس',hue:320, desc:'ألعاب موضة وتنسيق إطلالات وأزياء للبنات.'},
 ];
 
-/* ---------- Rights helper (GameDistribution — official embed source) ---------- */
-function gdRights(url){
-  return { sourceUrl:url, developer:'GameDistribution', licenseName:'GameDistribution Distribution License', licenseUrl:'https://gamedistribution.com', embedAllowed:true, attributionRequired:true, attributionText:'اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر توزيع GameDistribution الرسمي', verified:true, verificationDate:'2026-09-19', type:'iframe' };
-}
 
 /* ---------- Games Catalog ---------- */
-/* ملاحظة: الألعاب أدناه ألعاب HTML5 حقيقية من منصة GameDistribution وتُشغَّل من مصادرها الرسمية. */
-const GAMES = [
-  { id:1, slug:"soccer-euro-cup-2025", title:"Soccer Euro Cup 2025", category:"sports", tags:["كرة قدم", "بطولة", "رياضة"],
-    desc:"شارك في بطولة أوروبا لكرة القدم 2025 وسدّد أهدافًا حاسمة لتقود منتخبك إلى المجد.",
-    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-02", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/608b965aa08644ceabb138d27d8661af/?gd_sdk_referrer_url=https://gamedistribution.com/games/soccer-euro-cup-2025/",
-    thumbnail:"https://img.gamedistribution.com/608b965aa08644ceabb138d27d8661af-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/608b965aa08644ceabb138d27d8661af/?gd_sdk_referrer_url=https://gamedistribution.com/games/soccer-euro-cup-2025/") },
-  { id:2, slug:"3d-soccer-champions", title:"3D Soccer Champions", category:"sports", tags:["كرة قدم", "ثلاثي الأبعاد"],
-    desc:"كرة قدم ثلاثية الأبعاد بأسلوب الأبطال: تحكم كامل باللاعبين وتسديدات واقعية ومباريات مشوقة.",
-    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-03", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/a14422bfdbf246648318620d01defd08/?gd_sdk_referrer_url=https://gamedistribution.com/games/3d-soccer-champions/",
-    thumbnail:"https://img.gamedistribution.com/a14422bfdbf246648318620d01defd08-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/a14422bfdbf246648318620d01defd08/?gd_sdk_referrer_url=https://gamedistribution.com/games/3d-soccer-champions/") },
-  { id:3, slug:"fast-tennis", title:"Fast Tennis", category:"sports", tags:["تنس", "سرعة"],
-    desc:"تنس سريع الإيقاع يختبر سرعة ردود أفعالك ودقة ضرباتك في الملعب.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-17", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/934fcdff6a9c41fdb33a4ae6e8ba2d62/?gd_sdk_referrer_url=https://gamedistribution.com/games/fast-tennis/",
-    thumbnail:"https://img.gamedistribution.com/934fcdff6a9c41fdb33a4ae6e8ba2d62-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/934fcdff6a9c41fdb33a4ae6e8ba2d62/?gd_sdk_referrer_url=https://gamedistribution.com/games/fast-tennis/") },
-  { id:4, slug:"tennis-pro-3d", title:"Tennis Pro 3D", category:"sports", tags:["تنس", "ثلاثي الأبعاد"],
-    desc:"تنس احترافي بثلاثة أبعاد مع لعب واقعي ومنافسات قوية على أرضية الملعب.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-17", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/9516118519c248299568900c7829b18e/?gd_sdk_referrer_url=https://gamedistribution.com/games/tennis-pro-3d/",
-    thumbnail:"https://img.gamedistribution.com/9516118519c248299568900c7829b18e-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/9516118519c248299568900c7829b18e/?gd_sdk_referrer_url=https://gamedistribution.com/games/tennis-pro-3d/") },
-  { id:5, slug:"ping-pong-air", title:"Ping Pong Air", category:"sports", tags:["كرة طاولة", "رد فعل"],
-    desc:"كرة الطاولة الهوائية: ردّ سريع وتوقيت مثالي لتسجيل النقاط ضد خصمك.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-16", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/b64c9ff2281d4c4c8a5c8c0c9e2da004/?gd_sdk_referrer_url=https://gamedistribution.com/games/ping-pong-air/",
-    thumbnail:"https://img.gamedistribution.com/b64c9ff2281d4c4c8a5c8c0c9e2da004-512x512.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/b64c9ff2281d4c4c8a5c8c0c9e2da004/?gd_sdk_referrer_url=https://gamedistribution.com/games/ping-pong-air/") },
-  { id:6, slug:"monster-truck-sky-racing", title:"Monster Truck Sky Racing", category:"racing", tags:["شاحنات", "قفز", "سرعة"],
-    desc:"سباق شاحنات وحشية في السماء — قفزات مجنونة وسرعات خيالية فوق المنصات المعلقة.",
-    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-02", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/ab6d7d06d41f411db21dbe5c61a25c52/?gd_sdk_referrer_url=https://gamedistribution.com/games/monster-truck-sky-racing/",
-    thumbnail:"https://img.gamedistribution.com/ab6d7d06d41f411db21dbe5c61a25c52-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/ab6d7d06d41f411db21dbe5c61a25c52/?gd_sdk_referrer_url=https://gamedistribution.com/games/monster-truck-sky-racing/") },
-  { id:7, slug:"3d-super-rolling-ball-race", title:"3D Super Rolling Ball Race", category:"racing", tags:["كرات", "ثلاثي الأبعاد"],
-    desc:"سباق كرات متدحرجة ثلاثية الأبعاد: انزلق بين العقبات وكن أول من يصل إلى خط النهاية.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-15", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/c77c8b1ffef242609915d126535b0ca9/?gd_sdk_referrer_url=https://gamedistribution.com/games/3d-super-rolling-ball-race/",
-    thumbnail:"https://img.gamedistribution.com/c77c8b1ffef242609915d126535b0ca9-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/c77c8b1ffef242609915d126535b0ca9/?gd_sdk_referrer_url=https://gamedistribution.com/games/3d-super-rolling-ball-race/") },
-  { id:8, slug:"two-supra-drifters", title:"Two Supra Drifters", category:"racing", tags:["انجراف", "سيارات"],
-    desc:"انجراف مزدوج بسيارات سبورت أسطورية على المضمار — أظهر مهارتك في الانزلاق.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-15", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/10f0beef65fe40ccae23194fd95782a8/?gd_sdk_referrer_url=https://gamedistribution.com/games/two-supra-drifters/",
-    thumbnail:"https://img.gamedistribution.com/10f0beef65fe40ccae23194fd95782a8-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/10f0beef65fe40ccae23194fd95782a8/?gd_sdk_referrer_url=https://gamedistribution.com/games/two-supra-drifters/") },
-  { id:9, slug:"racing-car-destroying-zombie", title:"Racing Car Destroying Zombie", category:"racing", tags:["زومبي", "سباق"],
-    desc:"اسحق الزومبي بسيارتك السباق في سباق ملحمي مليء بالدمار والإثارة.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-14", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/e5b1ceb6771f4109a4eded908659a1e5/?gd_sdk_referrer_url=https://gamedistribution.com/games/racing-car-destroying-zombie/",
-    thumbnail:"https://img.gamedistribution.com/e5b1ceb6771f4109a4eded908659a1e5-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/e5b1ceb6771f4109a4eded908659a1e5/?gd_sdk_referrer_url=https://gamedistribution.com/games/racing-car-destroying-zombie/") },
-  { id:10, slug:"car-physics-btr-80", title:"Car Physics BTR 80", category:"racing", tags:["قيادة", "فيزياء"],
-    desc:"قيادة واقعية بفيزياء دقيقة لمركبة BTR-80 عبر مسارات صعبة ومليئة بالتحديات.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-14", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/f937de7df75e4fbda19f9117923fa92d/?gd_sdk_referrer_url=https://gamedistribution.com/games/car-physics-btr-80/",
-    thumbnail:"https://img.gamedistribution.com/f937de7df75e4fbda19f9117923fa92d-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/f937de7df75e4fbda19f9117923fa92d/?gd_sdk_referrer_url=https://gamedistribution.com/games/car-physics-btr-80/") },
-  { id:11, slug:"space-racing-3d", title:"Space Racing 3D", category:"racing", tags:["فضاء", "سرعة"],
-    desc:"سباق فضائي ثلاثي الأبعاد بين النجوم والمذنبات بسرعات مذهلة.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-13", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/bc656640350c4257a5100511ddbb6992/?gd_sdk_referrer_url=https://gamedistribution.com/games/space-racing-3d/",
-    thumbnail:"https://img.gamedistribution.com/bc656640350c4257a5100511ddbb6992-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/bc656640350c4257a5100511ddbb6992/?gd_sdk_referrer_url=https://gamedistribution.com/games/space-racing-3d/") },
-  { id:12, slug:"top-burger-cooking", title:"Top Burger Cooking", category:"cooking", tags:["طبخ", "برغر"],
-    desc:"حضّر أشهى البرغر وقدّمه لعملائك قبل انتهاء الوقت في مطعمك الخاص.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-13", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/321cbe0eabd94d83be81b80c02cf7ddb/?gd_sdk_referrer_url=https://gamedistribution.com/games/top-burger-cooking/",
-    thumbnail:"https://img.gamedistribution.com/321cbe0eabd94d83be81b80c02cf7ddb-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/321cbe0eabd94d83be81b80c02cf7ddb/?gd_sdk_referrer_url=https://gamedistribution.com/games/top-burger-cooking/") },
-  { id:13, slug:"bbq-skewers", title:"BBQ Skewers", category:"cooking", tags:["شواء", "طبخ"],
-    desc:"شوّي أسياخ لحم متبلة على الفحم وقدّمها في وقتها لأجواء شواء مثالية.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-12", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/c63e62bd900943ea8eb8501993cde634/?gd_sdk_referrer_url=https://gamedistribution.com/games/bbq-skewers/",
-    thumbnail:"https://img.gamedistribution.com/c63e62bd900943ea8eb8501993cde634-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/c63e62bd900943ea8eb8501993cde634/?gd_sdk_referrer_url=https://gamedistribution.com/games/bbq-skewers/") },
-  { id:14, slug:"pony-cooking-rainbow-cake", title:"Pony Cooking Rainbow Cake", category:"cooking", tags:["كيك", "ألوان"],
-    desc:"اخبز كعكة قوس قزح الملونة مع المهور اللطيفة في مطبخ ممتع.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-12", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/3424762f6da04c8699a1d90bfb06b7b8/?gd_sdk_referrer_url=https://gamedistribution.com/games/pony-cooking-rainbow-cake/",
-    thumbnail:"https://img.gamedistribution.com/3424762f6da04c8699a1d90bfb06b7b8.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/3424762f6da04c8699a1d90bfb06b7b8/?gd_sdk_referrer_url=https://gamedistribution.com/games/pony-cooking-rainbow-cake/") },
-  { id:15, slug:"pretty-box-bakery-game", title:"Pretty Box Bakery Game", category:"cooking", tags:["مخبز", "تصميم"],
-    desc:"صمّم علب حلويات أنيقة وقدّمها في مخبزك الخاص بأسلوب جميل ومميز.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-11", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/44fe478397c14c398d0e2cfcc6a9d841/?gd_sdk_referrer_url=https://gamedistribution.com/games/pretty-box-bakery-game/",
-    thumbnail:"https://img.gamedistribution.com/44fe478397c14c398d0e2cfcc6a9d841-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/44fe478397c14c398d0e2cfcc6a9d841/?gd_sdk_referrer_url=https://gamedistribution.com/games/pretty-box-bakery-game/") },
-  { id:16, slug:"first-date-love-cupcake", title:"First Date Love Cupcake", category:"cooking", tags:["كب كيك", "رومانسي"],
-    desc:"حضّر كب كيك رومانسيًا لموعد أول مثالي يخطف القلوب.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-11", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/31a9d850f4844bd29147b61d5f16152f/?gd_sdk_referrer_url=https://gamedistribution.com/games/first-date-love-cupcake/",
-    thumbnail:"https://img.gamedistribution.com/31a9d850f4844bd29147b61d5f16152f-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/31a9d850f4844bd29147b61d5f16152f/?gd_sdk_referrer_url=https://gamedistribution.com/games/first-date-love-cupcake/") },
-  { id:17, slug:"vsco-girl-aesthetic", title:"VSCO Girl Aesthetic", category:"fashion", tags:["موضة", "تنسيق"],
-    desc:"انسقي إطلالة فتاة VSCO بأسلوب جمالي هادئ وعصري يعكس ذوقك الرفيع.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-10", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/f548c6c6b3144d8586c4f3b5180ebb2c/?gd_sdk_referrer_url=https://gamedistribution.com/games/vsco-girl-aesthetic/",
-    thumbnail:"https://img.gamedistribution.com/f548c6c6b3144d8586c4f3b5180ebb2c-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/f548c6c6b3144d8586c4f3b5180ebb2c/?gd_sdk_referrer_url=https://gamedistribution.com/games/vsco-girl-aesthetic/") },
-  { id:18, slug:"summer-beach-girl", title:"Summer Beach Girl", category:"fashion", tags:["صيف", "شاطئ"],
-    desc:"جهّزي فتاة الشاطئ ليوم صيفي مشمس بإطلالة منعشة وأنيقة.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-10", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/76ed046b8d5c41bd9ce3de1b28ded250/?gd_sdk_referrer_url=https://gamedistribution.com/games/summer-beach-girl/",
-    thumbnail:"https://img.gamedistribution.com/76ed046b8d5c41bd9ce3de1b28ded250-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/76ed046b8d5c41bd9ce3de1b28ded250/?gd_sdk_referrer_url=https://gamedistribution.com/games/summer-beach-girl/") },
-  { id:19, slug:"vacation-summer-dress-up", title:"Vacation Summer Dress Up", category:"fashion", tags:["إجازة", "أزياء"],
-    desc:"اختاري أزياء الإجازة الصيفية الأجمل لرحلة لا تُنسى مليئة بالمرح.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-09", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/d40e63a4772541cc9f8818aeadf5fb0d/?gd_sdk_referrer_url=https://gamedistribution.com/games/vacation-summer-dress-up/",
-    thumbnail:"https://img.gamedistribution.com/d40e63a4772541cc9f8818aeadf5fb0d-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/d40e63a4772541cc9f8818aeadf5fb0d/?gd_sdk_referrer_url=https://gamedistribution.com/games/vacation-summer-dress-up/") },
-  { id:20, slug:"instadiva-kylie-dress-up", title:"Instadiva Kylie Dress Up", category:"fashion", tags:["مشاهير", "أزياء"],
-    desc:"أطلقي إطلالة المشاهير مع أزياء كايلي الأنيقة والعصرية.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-09", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/fe5efa880e0c4246ae13934933300b4d/?gd_sdk_referrer_url=https://gamedistribution.com/games/instadiva-kylie-dress-up/",
-    thumbnail:"https://img.gamedistribution.com/fe5efa880e0c4246ae13934933300b4d-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/fe5efa880e0c4246ae13934933300b4d/?gd_sdk_referrer_url=https://gamedistribution.com/games/instadiva-kylie-dress-up/") },
-  { id:21, slug:"princess-dress-up-run", title:"Princess Dress Up Run", category:"fashion", tags:["أميرة", "جري"],
-    desc:"اجمعي الفساتين أثناء الجري وتحوّلي إلى أميرة في نهاية المضمار.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-08", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/cd175ea55efa4e83b6fd63bdbb7881a2/?gd_sdk_referrer_url=https://gamedistribution.com/games/princess-dress-up-run/",
-    thumbnail:"https://img.gamedistribution.com/cd175ea55efa4e83b6fd63bdbb7881a2-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/cd175ea55efa4e83b6fd63bdbb7881a2/?gd_sdk_referrer_url=https://gamedistribution.com/games/princess-dress-up-run/") },
-  { id:22, slug:"ellie-and-friends-venice-carnival", title:"Ellie and Friends Venice Carnival", category:"fashion", tags:["كرنفال", "بندقية"],
-    desc:"انطلقي مع إيلي وأصدقائها إلى كرنفال البندقية بأزياء تنكرية خلابة.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-08", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/4e33bc0b312646d0a2fb6d2a86171b8d/?gd_sdk_referrer_url=https://www.gamedistribution.com/games/ellie-and-friends-venice-carnival/",
-    thumbnail:"https://img.gamedistribution.com/4e33bc0b312646d0a2fb6d2a86171b8d-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/4e33bc0b312646d0a2fb6d2a86171b8d/?gd_sdk_referrer_url=https://www.gamedistribution.com/games/ellie-and-friends-venice-carnival/") },
-  { id:23, slug:"ellie-and-ben-christmas-eve", title:"Ellie and Ben Christmas Eve", category:"fashion", tags:["عيد الميلاد", "أجواء"],
-    desc:"ساعدي إيلي وبن في الاستعداد لأمسية عيد الميلاد السحرية المليئة بالفرح.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-07", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/d3b2230575e14473823dcb3db1029329/?gd_sdk_referrer_url=https://gamedistribution.com/games/ellie-and-ben-christmas-eve/",
-    thumbnail:"https://img.gamedistribution.com/d3b2230575e14473823dcb3db1029329-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/d3b2230575e14473823dcb3db1029329/?gd_sdk_referrer_url=https://gamedistribution.com/games/ellie-and-ben-christmas-eve/") },
-  { id:24, slug:"venetian-love-affair", title:"Venetian Love Affair", category:"fashion", tags:["رومانسي", "بندقية"],
-    desc:"قصة حب في أزقة البندقية مع أزياء إيطالية راقية وأجواء ساحرة.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-07", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/bf0fdf67072044b5831b4a5528ef4211/?gd_sdk_referrer_url=https://aaam.games/",
-    thumbnail:"https://img.gamedistribution.com/bf0fdf67072044b5831b4a5528ef4211-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/bf0fdf67072044b5831b4a5528ef4211/?gd_sdk_referrer_url=https://aaam.games/") },
-  { id:25, slug:"legend-street-fighter", title:"Legend Street Fighter", category:"action", tags:["قتال", "كلاسيك"],
-    desc:"قاتل في أزقة المدينة بأسلوب ألعاب القتال الكلاسيكية الأسطورية.",
-    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-06", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/8eb89008c65948a381c5159890dff9d3/?gd_sdk_referrer_url=https://gamedistribution.com/games/legend-street-fighter/",
-    thumbnail:"https://img.gamedistribution.com/8eb89008c65948a381c5159890dff9d3-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/8eb89008c65948a381c5159890dff9d3/?gd_sdk_referrer_url=https://gamedistribution.com/games/legend-street-fighter/") },
-  { id:26, slug:"serious-head", title:"Serious Head", category:"action", tags:["تصويب", "مهارة"],
-    desc:"مغامرة تصويب سريعة مع بطل غريب — أصب أهدافك واجمع النقاط في مستويات مليئة بالتحدي.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-06", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/72819ef0b4404b5a8d9bd4530f34938a/?gd_sdk_referrer_url=https://gamedistribution.com/games/serious-head/",
-    thumbnail:"https://img.gamedistribution.com/72819ef0b4404b5a8d9bd4530f34938a-512x512.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/72819ef0b4404b5a8d9bd4530f34938a/?gd_sdk_referrer_url=https://gamedistribution.com/games/serious-head/") },
-  { id:27, slug:"xtreme-space-shooter", title:"Xtreme Space Shooter", category:"action", tags:["فضاء", "تصويب"],
-    desc:"تصويب فضائي مكثف: دمّر أسراب الغزاة وارتقِ بسفينتك لتصبح بطل المجرة.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-05", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/37c901fdb2874d9ab3150ace3c8ad7d6/?gd_sdk_referrer_url=https://gamedistribution.com/games/xtreme-space-shooter/",
-    thumbnail:"https://img.gamedistribution.com/37c901fdb2874d9ab3150ace3c8ad7d6-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/37c901fdb2874d9ab3150ace3c8ad7d6/?gd_sdk_referrer_url=https://gamedistribution.com/games/xtreme-space-shooter/") },
-  { id:28, slug:"space-blast", title:"Space Blast", category:"action", tags:["فضاء", "انفجارات"],
-    desc:"فجّر الأجرام الفضائية في انفجارات ملونة مبهرة وسرعة فائقة.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-05", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/84306950ffed41d5a7c05093e0092e84/?gd_sdk_referrer_url=https://gamedistribution.com/games/space-blast-1/",
-    thumbnail:"https://img.gamedistribution.com/84306950ffed41d5a7c05093e0092e84-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/84306950ffed41d5a7c05093e0092e84/?gd_sdk_referrer_url=https://gamedistribution.com/games/space-blast-1/") },
-  { id:29, slug:"american-block-sniper-online", title:"American Block Sniper Online", category:"action", tags:["قنص", "بكسل"],
-    desc:"قنص بأسلوب المكعبات في ساحات قتال مليئة بالإثارة والتحديات.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-04", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/a7d9f4abf49c425f9a5ee8de6800e631/?gd_sdk_referrer_url=https://gamedistribution.com/games/american-block-sniper-online/",
-    thumbnail:"https://img.gamedistribution.com/a7d9f4abf49c425f9a5ee8de6800e631-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/a7d9f4abf49c425f9a5ee8de6800e631/?gd_sdk_referrer_url=https://gamedistribution.com/games/american-block-sniper-online/") },
-  { id:30, slug:"forest-survivor-rougelike", title:"Forest Survivor Rougelike", category:"action", tags:["بقاء", "موجات"],
-    desc:"انجُ في الغابة ضد أمواج الأعداء في مغامرة روجلايك مليئة بالترقيات والمخاطر.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-04", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/6a739956a35f4584944baf5224e485a2/?gd_sdk_referrer_url=https://gamedistribution.com/games/forest-survivor-rougelike/",
-    thumbnail:"https://img.gamedistribution.com/6a739956a35f4584944baf5224e485a2-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/6a739956a35f4584944baf5224e485a2/?gd_sdk_referrer_url=https://gamedistribution.com/games/forest-survivor-rougelike/") },
-  { id:31, slug:"dino-survival-3d-simulator", title:"Dino Survival: 3D Simulator", category:"action", tags:["ديناصور", "بقاء"],
-    desc:"عش حياة الديناصور في محاكاة بقاء ثلاثية الأبعاد مليئة بالمغامرات.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-03", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/4eeda043a7084082ba5c76a9488d3b5b/?gd_sdk_referrer_url=https://gamedistribution.com/games/dino-survival%3A-3d-simulator/",
-    thumbnail:"https://img.gamedistribution.com/4eeda043a7084082ba5c76a9488d3b5b-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/4eeda043a7084082ba5c76a9488d3b5b/?gd_sdk_referrer_url=https://gamedistribution.com/games/dino-survival%3A-3d-simulator/") },
-  { id:32, slug:"building-mods-for-minecraft", title:"Building Mods For Minecraft", category:"casual", tags:["بناء", "مكعبات"],
-    desc:"ابنِ عوالم مكعبة إبداعية بأسلوب ماين كرافت وأطلق خيالك بلا حدود.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-03", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/2691c4b1c55a417bb620c7ce1e662be1/?gd_sdk_referrer_url=https://www.gamedistribution.com/games/building-mods-for-minecraft/",
-    thumbnail:"https://img.gamedistribution.com/2691c4b1c55a417bb620c7ce1e662be1-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/2691c4b1c55a417bb620c7ce1e662be1/?gd_sdk_referrer_url=https://www.gamedistribution.com/games/building-mods-for-minecraft/") },
-  { id:33, slug:"obby-pinata-party", title:"Obby Pinata Party", category:"casual", tags:["أوبي", "قفز"],
-    desc:"قفز وتحدَّ عوائق الأوبي في حفلة البيناتا الملونة المرحة.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-02", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/294f2eb8d15e4bfa81d876150ed75b8a/?gd_sdk_referrer_url=https://gamedistribution.com/games/obby-pinata-party/",
-    thumbnail:"https://img.gamedistribution.com/294f2eb8d15e4bfa81d876150ed75b8a-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/294f2eb8d15e4bfa81d876150ed75b8a/?gd_sdk_referrer_url=https://gamedistribution.com/games/obby-pinata-party/") },
-  { id:34, slug:"fun-obby-extreme", title:"Fun Obby Extreme", category:"casual", tags:["باركور", "أوبي"],
-    desc:"باركور أوبي متطرف: قفزات دقيقة ومنصات مليئة بالمخاطر تختبر صبرك ومهارتك.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-02", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/0dbdd15e5a884c1faefc4eda167a4182/?gd_sdk_referrer_url=https://gamedistribution.com/games/obby-parkour-extreme/",
-    thumbnail:"https://img.gamedistribution.com/0dbdd15e5a884c1faefc4eda167a4182-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/0dbdd15e5a884c1faefc4eda167a4182/?gd_sdk_referrer_url=https://gamedistribution.com/games/obby-parkour-extreme/") },
-  { id:35, slug:"digital-circus-run", title:"Digital Circus Run", category:"arcade", tags:["جري", "سيرك"],
-    desc:"اجرِ في عالم السيرك الرقمي واجمع العملات مع شخصيات مذهلة ومسارات ملونة.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-01", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/9702002f5c7b455ea08cbdae6e7fa04f/?gd_sdk_referrer_url=https://gamedistribution.com/games/merge-circus-run/",
-    thumbnail:"https://img.gamedistribution.com/9702002f5c7b455ea08cbdae6e7fa04f-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/9702002f5c7b455ea08cbdae6e7fa04f/?gd_sdk_referrer_url=https://gamedistribution.com/games/merge-circus-run/") },
-  { id:36, slug:"monster-dash", title:"Monster Dash", category:"arcade", tags:["وحوش", "جري"],
-    desc:"اركض بلا توقف مع الوحوش المرحة عبر مسارات مليئة بالعوائق والمفاجآت.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-01", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/636437be4a784663b32fb59a14ec8fbb/?gd_sdk_referrer_url=https://gamedistribution.com/games/monster-dash/",
-    thumbnail:"https://img.gamedistribution.com/636437be4a784663b32fb59a14ec8fbb-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/636437be4a784663b32fb59a14ec8fbb/?gd_sdk_referrer_url=https://gamedistribution.com/games/monster-dash/") },
-  { id:37, slug:"maze-mania", title:"Maze Mania", category:"puzzle", tags:["متاهة", "وقت"],
-    desc:"اهرب من المتاهات المجنونة قبل نفاد الوقت واعثر على المخرج الأسرع.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-31", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/1e84d5ae582a4a538c1fe35552e716d0/?gd_sdk_referrer_url=https://gamedistribution.com/games/maze-mania/",
-    thumbnail:"https://img.gamedistribution.com/1e84d5ae582a4a538c1fe35552e716d0-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/1e84d5ae582a4a538c1fe35552e716d0/?gd_sdk_referrer_url=https://gamedistribution.com/games/maze-mania/") },
-  { id:38, slug:"bubble-it-jam", title:"Bubble it jam", category:"puzzle", tags:["فقاعات", "ألوان"],
-    desc:"أطلق الفقاعات المتشابهة وادمج الألوان لتحقق أعلى النقاط في لعبة الفقاعات الممتعة.",
-    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-04", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/80ec39f00e274fd8a1f5e37515e2150d/?gd_sdk_referrer_url=https://gamedistribution.com/games/bubble-it-jam/",
-    thumbnail:"https://img.gamedistribution.com/80ec39f00e274fd8a1f5e37515e2150d-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/80ec39f00e274fd8a1f5e37515e2150d/?gd_sdk_referrer_url=https://gamedistribution.com/games/bubble-it-jam/") },
-  { id:39, slug:"omg-word-sushi", title:"OMG Word Sushi", category:"puzzle", tags:["كلمات", "سوشي"],
-    desc:"كوّن الكلمات من أطباق السوشي في لعبة كلمات شهية تتحدى ذكاءك.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-30", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/76afe8444410450eb7bcd6bbfde4af87/?gd_sdk_referrer_url=https://gamedistribution.com/games/omg-word-sushi/",
-    thumbnail:"https://img.gamedistribution.com/76afe8444410450eb7bcd6bbfde4af87-512x384.png",
-    rights:gdRights("https://html5.gamedistribution.com/76afe8444410450eb7bcd6bbfde4af87/?gd_sdk_referrer_url=https://gamedistribution.com/games/omg-word-sushi/") },
-  { id:40, slug:"cat-challenge", title:"Cat Challenge", category:"puzzle", tags:["قطط", "تحدي"],
-    desc:"تحدَّ ألغاز القطط اللطيفة في مستويات ممتعة تناسب جميع الأعمار.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-30", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/95171c72f15a4690b282f12faf4171f2/?gd_sdk_referrer_url=https://gamedistribution.com/games/cat-challenge/",
-    thumbnail:"https://img.gamedistribution.com/95171c72f15a4690b282f12faf4171f2-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/95171c72f15a4690b282f12faf4171f2/?gd_sdk_referrer_url=https://gamedistribution.com/games/cat-challenge/") },
-  { id:41, slug:"logic-slide", title:"LOGic Slide", category:"puzzle", tags:["منطق", "انزلاق"],
-    desc:"حرّك القطع بذكاء لحل ألغاز الانزلاق المنطقية خطوة بخطوة.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-29", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/ed5ed952531b4e2a9191f8720f22c22e/?gd_sdk_referrer_url=https://gamedistribution.com/games/logic-slide/",
-    thumbnail:"https://img.gamedistribution.com/ed5ed952531b4e2a9191f8720f22c22e-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/ed5ed952531b4e2a9191f8720f22c22e/?gd_sdk_referrer_url=https://gamedistribution.com/games/logic-slide/") },
-  { id:42, slug:"block-puzzle-tropical-story", title:"Block Puzzle Tropical Story", category:"puzzle", tags:["مكعبات", "استوائي"],
-    desc:"ألغاز المكعبات في أجواء استوائية مليئة بالقصص والمغامرات.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-29", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/75af86ecca154417b93a7beaecda551e/?gd_sdk_referrer_url=https://gamedistribution.com/games/block-puzzle-tropical-story/",
-    thumbnail:"https://img.gamedistribution.com/75af86ecca154417b93a7beaecda551e-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/75af86ecca154417b93a7beaecda551e/?gd_sdk_referrer_url=https://gamedistribution.com/games/block-puzzle-tropical-story/") },
-  { id:43, slug:"plant-merge-zombie-war", title:"Plant Merge: Zombie War", category:"strategy", tags:["زومبي", "دمج"],
-    desc:"ادمج النباتات وقُد جيوشها لصد أمواج الزومبي في حرب إستراتيجية ممتعة.",
-    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-04", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/9190c99d4aae4e0085a6059478ee3520/?gd_sdk_referrer_url=https://gamedistribution.com/games/plant-merge%3A-zombie-war/",
-    thumbnail:"https://img.gamedistribution.com/9190c99d4aae4e0085a6059478ee3520-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/9190c99d4aae4e0085a6059478ee3520/?gd_sdk_referrer_url=https://gamedistribution.com/games/plant-merge%3A-zombie-war/") },
-  { id:44, slug:"pinball-vs-zombie", title:"Pinball VS Zombie", category:"arcade", tags:["بينبول", "زومبي"],
-    desc:"بينبول ضد الزومبي: ارتد بالكرة وسحق الأعداء في لعبة أركيد مجنونة.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-28", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/5cdec698c5ce4e66af14ea5b3968ef08/?gd_sdk_referrer_url=https://gamedistribution.com/games/pinball-vs-zombie/",
-    thumbnail:"https://img.gamedistribution.com/5cdec698c5ce4e66af14ea5b3968ef08-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/5cdec698c5ce4e66af14ea5b3968ef08/?gd_sdk_referrer_url=https://gamedistribution.com/games/pinball-vs-zombie/") },
-  { id:45, slug:"inspector-cat", title:"Inspector Cat", category:"puzzle", tags:["تحقيق", "قط"],
-    desc:"ساعد المفتش قط في حل الألغاز والتحقيقات الغامضة بذكاء وتركيز.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-27", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/c04f402aeb1d43eb8636799451f873b8/?gd_sdk_referrer_url=https://gamedistribution.com/games/inspector-cat/",
-    thumbnail:"https://img.gamedistribution.com/c04f402aeb1d43eb8636799451f873b8-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/c04f402aeb1d43eb8636799451f873b8/?gd_sdk_referrer_url=https://gamedistribution.com/games/inspector-cat/") },
-  { id:46, slug:"music-line-v", title:"Music Line v", category:"skill", tags:["موسيقى", "إيقاع"],
-    desc:"تبع الخط الموسيقي واعبر المسارات الإيقاعية بإحساس دقيق وتوقيت مثالي.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-27", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/b90559fb23a945eb9d5012c2d268da33/?gd_sdk_referrer_url=https://gamedistribution.com/games/music-line-v1/",
-    thumbnail:"https://img.gamedistribution.com/b90559fb23a945eb9d5012c2d268da33.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/b90559fb23a945eb9d5012c2d268da33/?gd_sdk_referrer_url=https://gamedistribution.com/games/music-line-v1/") },
-  { id:47, slug:"alien-chase-swing-and-fly", title:"Alien Chase - Swing and Fly", category:"skill", tags:["فضاء", "تأرجح"],
-    desc:"تأرجح وطِر في مطاردة فضائية مجنونة تختبر تحكمك ودقتك.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-26", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/630be762a6114c858dfaf5d7b3c93c80/?gd_sdk_referrer_url=https://gamedistribution.com/games/alien-chase-swing-and-fly/",
-    thumbnail:"https://img.gamedistribution.com/630be762a6114c858dfaf5d7b3c93c80-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/630be762a6114c858dfaf5d7b3c93c80/?gd_sdk_referrer_url=https://gamedistribution.com/games/alien-chase-swing-and-fly/") },
-  { id:48, slug:"cosmo-void", title:"Cosmo Void", category:"action", tags:["فضاء", "سرعة"],
-    desc:"انطلق عبر الفراغ الكوني وتجنب المخاطر في سباق فضائي سريع الإيقاع.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-26", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/f30771a05eb84a67a794e85bc39621e7/?gd_sdk_referrer_url=https://gamedistribution.com/games/cosmo-void/",
-    thumbnail:"https://img.gamedistribution.com/f30771a05eb84a67a794e85bc39621e7-512x384.jpg",
-    rights:gdRights("https://html5.gamedistribution.com/f30771a05eb84a67a794e85bc39621e7/?gd_sdk_referrer_url=https://gamedistribution.com/games/cosmo-void/") },
-  { id:49, slug:"spot-the-spot", title:"Spot The Spot", category:"puzzle", tags:["فروقات", "تركيز"],
-    desc:"اعثر على الفروقات الخفية بين الصور قبل انتهاء الوقت واختبر قوة ملاحظتك.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-25", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/34bb2f625ba5402fbb5aa2537775cbf9/?gd_sdk_referrer_url=https://gamedistribution.com/games/spot-the-spot/",
-    thumbnail:"https://img.gamedistribution.com/34bb2f625ba5402fbb5aa2537775cbf9-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/34bb2f625ba5402fbb5aa2537775cbf9/?gd_sdk_referrer_url=https://gamedistribution.com/games/spot-the-spot/") },
-  { id:50, slug:"stickman-tennis", title:"Stickman Tennis", category:"sports", tags:["تنس", "عصي"],
-    desc:"تنس مع شخصيات العصي — ضربات سريعة ومنافسات مشوقة على الملعب.",
-    featured:false, trending:false, multiplayer:false, addedAt:"2026-08-25", type:'iframe',
-    gameUrl:"https://html5.gamedistribution.com/eb5d6ed752e241519e37da7e5aa520a9/?gd_sdk_referrer_url=https://gamedistribution.com/games/stickman-tennis/",
-    thumbnail:"https://img.gamedistribution.com/eb5d6ed752e241519e37da7e5aa520a9-512x384.jpeg",
-    rights:gdRights("https://html5.gamedistribution.com/eb5d6ed752e241519e37da7e5aa520a9/?gd_sdk_referrer_url=https://gamedistribution.com/games/stickman-tennis/") },
+/* ملاحظة: الألعاب أدناه ألعاب HTML5 حقيقية من منصة MadKid Games وتُشغَّل من مصادرها الرسمية داخل نفس الصفحة. */
+/* ---------- الألعاب الأكثر رواجًا: في المقدمة والهيدر والتحميل المسبق ---------- */
+const PRIORITY_SLUGS=["subway-surfers", "angry-birds-2", "johnny-trigger-action-shooter", "fallzone-io", "plants-vs-zombies", "going-balls", "brain-on-dot-physics", "pixel-path"];
+
+let GAMES = [
+  { id:1, slug:"subway-surfers", title:"Subway Surfers", category:"arcade", tags:["جري", "مترو", "أركيد"],
+    desc:"اجرِ بأقصى سرعة في شوارع المترو، تفادَ القطارات واجمع العملات الذهبية في أشهر لعبة جري في العالم.",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.madkidgames.com/full/subway-surfers",
+    thumbnail:"https://kimi-web-img.kimi.ai/img/img.rocketgames.io/4746e535fe0b92956f6dd24d2dbf1310628da68b.jpg",
+    rights:{ sourceUrl:"https://www.madkidgames.com/game/subway-surfers", developer:"MadKid Games", licenseName:"MadKid Games Embed", licenseUrl:"https://www.madkidgames.com", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر MadKid Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:2, slug:"brain-on-dot-physics", title:"Brain on Dot Physics", category:"puzzle", tags:["فيزياء", "ألغاز", "ذكاء"],
+    desc:"حل ألغاز الفيزياء الممتعة ووجّه النقطة إلى هدفها بذكاء ودقة في كل مستوى.",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.madkidgames.com/full/brain-on-dot-physics",
+    thumbnail:"https://kimi-web-img.kimi.ai/img/assets.nintendo.com/976eb69d2d60e6bec2ee2f69f06aa6d058da2b2c",
+    rights:{ sourceUrl:"https://www.madkidgames.com/game/brain-on-dot-physics", developer:"MadKid Games", licenseName:"MadKid Games Embed", licenseUrl:"https://www.madkidgames.com", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر MadKid Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:3, slug:"angry-birds-2", title:"Angry Birds 2", category:"casual", tags:["طيور", "قذف", "مرح"],
+    desc:"قذف الطيور الغاضبة على الحصون وأسقط الخنازير الخضراء في الجزء الأشهر من السلسلة الأسطورية.",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.madkidgames.com/full/angry-birds-2",
+    thumbnail:"https://kimi-web-img.kimi.ai/img/images7.alphacoders.com/c42bfe9e0c2ed3f5cc018ea33f61ea15ad4a3a7e.jpg",
+    rights:{ sourceUrl:"https://www.madkidgames.com/game/angry-birds-2", developer:"MadKid Games", licenseName:"MadKid Games Embed", licenseUrl:"https://www.madkidgames.com", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر MadKid Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:4, slug:"johnny-trigger-action-shooter", title:"Johnny Trigger Action Shooter", category:"action", tags:["أكشن", "تصويب", "حركة"],
+    desc:"انطلق في معارك أكشن سينمائية بحركة بطيئة، اقفز وأطلق النار وأسقط العصابات بأناقة.",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.madkidgames.com/full/johnny-trigger-action-shooter",
+    thumbnail:"https://kimi-web-img.kimi.ai/img/img.poki-cdn.com/53ac82076ac57fce907be4d93b58ac146ff844bd.png",
+    rights:{ sourceUrl:"https://www.madkidgames.com/game/johnny-trigger-action-shooter", developer:"MadKid Games", licenseName:"MadKid Games Embed", licenseUrl:"https://www.madkidgames.com", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر MadKid Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:5, slug:"bowmasters-archery-shooting", title:"Bowmasters Archery Shooting", category:"skill", tags:["قوس", "تصويب", "مهارة"],
+    desc:"صوّب بقوسك بحساب دقيق للزاوية والقوة واهزم خصومك في مبارزات رماية ممتعة ومليئة بالضحك.",
+    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.madkidgames.com/full/bowmasters-archery-shooting",
+    thumbnail:"https://kimi-web-img.kimi.ai/img/static-images.aptoide.com/c58a1ec35995054a73a09318965a11d636b28cd5",
+    rights:{ sourceUrl:"https://www.madkidgames.com/game/bowmasters-archery-shooting", developer:"MadKid Games", licenseName:"MadKid Games Embed", licenseUrl:"https://www.madkidgames.com", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر MadKid Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:6, slug:"brain-it-on-physics-puzzles", title:"Brain It On: Physics Puzzles", category:"puzzle", tags:["رسم", "فيزياء", "ألغاز"],
+    desc:"ارسم الأشكال بنفسك واستخدم قوانين الفيزياء لحل ألغاز مبتكرة في واحدة من أذكى ألعاب الألغاز.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.madkidgames.com/full/brain-it-on-physics-puzzles",
+    thumbnail:"https://kimi-web-img.kimi.ai/img/static-images.aptoide.com/a30abd4d01101b30c1c5783a1d262f5153417a28",
+    rights:{ sourceUrl:"https://www.madkidgames.com/game/brain-it-on-physics-puzzles", developer:"MadKid Games", licenseName:"MadKid Games Embed", licenseUrl:"https://www.madkidgames.com", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر MadKid Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:7, slug:"geometry-dash-lite", title:"Geometry Dash Lite", category:"skill", tags:["هندسي", "إيقاع", "قفز"],
+    desc:"اقفز وتفادَ العوائق على إيقاع الموسيقى في النسخة الخفيفة من أشهر لعبة صعبة في العالم.",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/geometry-dash-lite",
+    thumbnail:"https://img.rocketgames.io/big/games/g/geometry-dash-lite/geometry-dash-lite.89a429.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/geometry-dash-lite", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:8, slug:"pixel-path", title:"Pixel Path", category:"puzzle", tags:["بكسل", "مسار", "ألغاز"],
+    desc:"ارسم المسار الصحيح ووجّه الشخصية عبر عوالم البكسل في ألغاز ممتعة تزداد صعوبة تدريجيًا.",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/pixel-path",
+    thumbnail:"https://kimi-web-img.kimi.ai/img/img.rocketgames.io/83fecd6e3756d8b5d360ff4d691629ac1ab1d0cb.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/pixel-path", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:9, slug:"snow-chase", title:"Snow Chase", category:"racing", tags:["ثلج", "مطاردة", "سرعة"],
+    desc:"انزلق على الثلج وهرب من المطاردة في سباق شتوي مليء بالمنعطفات الخطرة والإثارة.",
+    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/snow-chase",
+    thumbnail:"https://img.rocketgames.io/big/games/s/snow-chase/snow-chase.ed769b.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/snow-chase", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:10, slug:"going-balls", title:"Going Balls", category:"casual", tags:["كرة", "سباق", "منعطفات"],
+    desc:"دحرج كرتك بسرعة جنونية عبر مسارات مليئة بالمنعطفات والقفزات في لعبة الكرات الأكثر إدمانًا.",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/going-balls",
+    thumbnail:"https://img.rocketgames.io/big/games/g/going-balls/going-balls.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/going-balls", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:11, slug:"fallzone-io", title:"FallZone io", category:"action", tags:["سقوط", "آيو", "بقاء"],
+    desc:"قاتل واسقط خصومك في حفرة FallZone في معارك آيو سريعة — آخر من يقف على الأرض هو الفائز.",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/fallzone-io",
+    thumbnail:"https://kimi-web-img.kimi.ai/img/web-games.io/97f7147f47dbc24a09fcdc4ede518c2d847560ef.png",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/fallzone-io", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:12, slug:"geometry-dash", title:"Geometry Dash", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Geometry Dash — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:true, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/geometry-dash",
+    thumbnail:"https://img.rocketgames.io/big/games/g/geometry-dash/geometry-dash.d0b886.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/geometry-dash", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:13, slug:"geometry-dash-subzero", title:"Geometry Dash Subzero", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Geometry Dash Subzero — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/geometry-dash-subzero",
+    thumbnail:"https://img.rocketgames.io/big/games/g/geometry-dash-subzero/geometry-dash-subzero.e92d79.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/geometry-dash-subzero", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:14, slug:"geometry-dash-meltdown", title:"Geometry Dash Meltdown", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Geometry Dash Meltdown — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/geometry-dash-meltdown",
+    thumbnail:"https://img.rocketgames.io/big/games/g/geometry-dash-meltdown/geometry-dash-meltdown.e58673.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/geometry-dash-meltdown", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:15, slug:"geometry-dash-wave", title:"Geometry Dash Wave", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Geometry Dash Wave — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/geometry-dash-wave",
+    thumbnail:"https://img.rocketgames.io/big/games/g/geometry-dash-wave/geometry-dash-wave.fec014.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/geometry-dash-wave", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:16, slug:"plants-vs-zombies", title:"Plants vs Zombies", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Plants vs Zombies — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/plants-vs-zombies",
+    thumbnail:"https://img.rocketgames.io/big/games/p/plants-vs-zombies/plants-vs-zombies.195c08.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/plants-vs-zombies", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:17, slug:"happy-wheels", title:"Happy Wheels", category:"action", tags:["أكشن", "Rocket Games"],
+    desc:"انغمس في مغامرة أكشن مليئة بالإثارة والتحديات في Happy Wheels — هل أنت مستعد؟",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/happy-wheels",
+    thumbnail:"https://img.rocketgames.io/big/games/h/happy-wheels/happy-wheels.d59c84.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/happy-wheels", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:18, slug:"cuphead", title:"Cuphead", category:"action", tags:["أكشن", "Rocket Games"],
+    desc:"انغمس في مغامرة أكشن مليئة بالإثارة والتحديات في Cuphead — هل أنت مستعد؟",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/cuphead",
+    thumbnail:"https://img.rocketgames.io/big/games/c/cuphead/cuphead.d3b461.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/cuphead", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:19, slug:"2048", title:"2048", category:"puzzle", tags:["ألغاز", "Rocket Games"],
+    desc:"شغّل عقلك وحُل تحديات 2048 الذكية في لعبة ألغاز تزداد إدمانًا مع كل مستوى.",
+    featured:true, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/2048",
+    thumbnail:"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27480%27%20height%3D%27360%27%20viewBox%3D%270%200%20480%20360%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%231c2438%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%230b0f1c%27%2F%3E%3C%2FlinearGradient%3E%3Cfilter%20id%3D%27gl%27%20x%3D%27-40%25%27%20y%3D%27-40%25%27%20width%3D%27180%25%27%20height%3D%27180%25%27%3E%3CfeDropShadow%20dx%3D%270%27%20dy%3D%270%27%20stdDeviation%3D%2710%27%20flood-color%3D%27%237c5cff%27%20flood-opacity%3D%27.55%27%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Crect%20width%3D%27480%27%20height%3D%27360%27%20fill%3D%27url%28%23bg%29%27%2F%3E%3Crect%20x%3D%2788%27%20y%3D%2718%27%20width%3D%27304%27%20height%3D%27290%27%20rx%3D%2716%27%20fill%3D%27rgba%28255%2C255%2C255%2C.06%29%27%2F%3E%3Crect%20x%3D%2798%27%20y%3D%2728%27%20width%3D%2764%27%20height%3D%2762%27%20rx%3D%2710%27%20fill%3D%27%23eee4da%27%20stroke%3D%27rgba%280%2C0%2C0%2C.2%29%27%20stroke-width%3D%271%27%2F%3E%3Ctext%20x%3D%27130%27%20y%3D%2769%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%233a2e24%27%20text-anchor%3D%27middle%27%3E2%3C%2Ftext%3E%3Crect%20x%3D%27171%27%20y%3D%2728%27%20width%3D%2764%27%20height%3D%2762%27%20rx%3D%2710%27%20fill%3D%27%23ede0c8%27%20stroke%3D%27rgba%280%2C0%2C0%2C.2%29%27%20stroke-width%3D%271%27%2F%3E%3Ctext%20x%3D%27203%27%20y%3D%2769%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%233a2e24%27%20text-anchor%3D%27middle%27%3E4%3C%2Ftext%3E%3Crect%20x%3D%27244%27%20y%3D%2728%27%20width%3D%2764%27%20height%3D%2762%27%20rx%3D%2710%27%20fill%3D%27%23f2b179%27%20stroke%3D%27rgba%280%2C0%2C0%2C.2%29%27%20stroke-width%3D%271%27%2F%3E%3Ctext%20x%3D%27276%27%20y%3D%2769%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3E8%3C%2Ftext%3E%3Crect%20x%3D%27317%27%20y%3D%2728%27%20width%3D%2764%27%20height%3D%2762%27%20rx%3D%2710%27%20fill%3D%27%23f59563%27%20stroke%3D%27rgba%280%2C0%2C0%2C.2%29%27%20stroke-width%3D%271%27%2F%3E%3Ctext%20x%3D%27349%27%20y%3D%2769%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3E16%3C%2Ftext%3E%3Crect%20x%3D%2798%27%20y%3D%2798%27%20width%3D%2764%27%20height%3D%2762%27%20rx%3D%2710%27%20fill%3D%27%23ede0c8%27%20stroke%3D%27rgba%280%2C0%2C0%2C.2%29%27%20stroke-width%3D%271%27%2F%3E%3Ctext%20x%3D%27130%27%20y%3D%27139%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%233a2e24%27%20text-anchor%3D%27middle%27%3E4%3C%2Ftext%3E%3Crect%20x%3D%27171%27%20y%3D%2798%27%20width%3D%2764%27%20height%3D%2762%27%20rx%3D%2710%27%20fill%3D%27%23f2b179%27%20stroke%3D%27rgba%280%2C0%2C0%2C.2%29%27%20stroke-width%3D%271%27%2F%3E%3Ctext%20x%3D%27203%27%20y%3D%27139%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3E8%3C%2Ftext%3E%3Crect%20x%3D%27244%27%20y%3D%2798%27%20width%3D%2764%27%20height%3D%2762%27%20rx%3D%2710%27%20fill%3D%27%23f59563%27%20stroke%3D%27rgba%280%2C0%2C0%2C.2%29%27%20stroke-width%3D%271%27%2F%3E%3Ctext%20x%3D%27276%27%20y%3D%27139%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3E16%3C%2Ftext%3E%3Crect%20x%3D%27317%27%20y%3D%2798%27%20width%3D%2764%27%20height%3D%2762%27%20rx%3D%2710%27%20fill%3D%27%23f67c5f%27%20stroke%3D%27rgba%280%2C0%2C0%2C.2%29%27%20stroke-width%3D%271%27%2F%3E%3Ctext%20x%3D%27349%27%20y%3D%27139%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3E32%3C%2Ftext%3E%3Crect%20x%3D%2798%27%20y%3D%27168%27%20width%3D%2764%27%20height%3D%2762%27%20rx%3D%2710%27%20fill%3D%27%23f2b179%27%20stroke%3D%27rgba%280%2C0%2C0%2C.2%29%27%20stroke-width%3D%271%27%2F%3E%3Ctext%20x%3D%27130%27%20y%3D%27209%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3E8%3C%2Ftext%3E%3Crect%20x%3D%27171%27%20y%3D%27168%27%20width%3D%2764%27%20height%3D%2762%27%20rx%3D%2710%27%20fill%3D%27%23f59563%27%20stroke%3D%27rgba%280%2C0%2C0%2C.2%29%27%20stroke-width%3D%271%27%2F%3E%3Ctext%20x%3D%27203%27%20y%3D%27209%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3E16%3C%2Ftext%3E%3Crect%20x%3D%27244%27%20y%3D%27168%27%20width%3D%2764%27%20height%3D%2762%27%20rx%3D%2710%27%20fill%3D%27%23f67c5f%27%20stroke%3D%27rgba%280%2C0%2C0%2C.2%29%27%20stroke-width%3D%271%27%2F%3E%3Ctext%20x%3D%27276%27%20y%3D%27209%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3E32%3C%2Ftext%3E%3Crect%20x%3D%27317%27%20y%3D%27168%27%20width%3D%2764%27%20height%3D%2762%27%20rx%3D%2710%27%20fill%3D%27%23f65e3b%27%20stroke%3D%27rgba%280%2C0%2C0%2C.2%29%27%20stroke-width%3D%271%27%2F%3E%3Ctext%20x%3D%27349%27%20y%3D%27209%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3E64%3C%2Ftext%3E%3Crect%20x%3D%2798%27%20y%3D%27238%27%20width%3D%2764%27%20height%3D%2762%27%20rx%3D%2710%27%20fill%3D%27%23f59563%27%20stroke%3D%27rgba%280%2C0%2C0%2C.2%29%27%20stroke-width%3D%271%27%2F%3E%3Ctext%20x%3D%27130%27%20y%3D%27279%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3E16%3C%2Ftext%3E%3Crect%20x%3D%27171%27%20y%3D%27238%27%20width%3D%2764%27%20height%3D%2762%27%20rx%3D%2710%27%20fill%3D%27%23f67c5f%27%20stroke%3D%27rgba%280%2C0%2C0%2C.2%29%27%20stroke-width%3D%271%27%2F%3E%3Ctext%20x%3D%27203%27%20y%3D%27279%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3E32%3C%2Ftext%3E%3Crect%20x%3D%27244%27%20y%3D%27238%27%20width%3D%2764%27%20height%3D%2762%27%20rx%3D%2710%27%20fill%3D%27%23f65e3b%27%20stroke%3D%27rgba%280%2C0%2C0%2C.2%29%27%20stroke-width%3D%271%27%2F%3E%3Ctext%20x%3D%27276%27%20y%3D%27279%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3E64%3C%2Ftext%3E%3Crect%20x%3D%27317%27%20y%3D%27238%27%20width%3D%2764%27%20height%3D%2762%27%20rx%3D%2710%27%20fill%3D%27%23edc22e%27%20stroke%3D%27rgba%280%2C0%2C0%2C.2%29%27%20stroke-width%3D%271%27%2F%3E%3Ctext%20x%3D%27349%27%20y%3D%27279%27%20font-family%3D%27Arial%27%20font-size%3D%2720%27%20font-weight%3D%27900%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3E2048%3C%2Ftext%3E%3Ctext%20x%3D%2730%27%20y%3D%27330%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27900%27%20fill%3D%27rgba%28255%2C255%2C255%2C.92%29%27%3E2048%3C%2Ftext%3E%3C%2Fsvg%3E",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/2048", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:20, slug:"google-snake", title:"Google Snake", category:"arcade", tags:["أركيد", "Rocket Games"],
+    desc:"عش أجواء الأركيد الكلاسيكية مع Google Snake — بسيطة، سريعة، ومرحة بلا حدود.",
+    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/google-snake",
+    thumbnail:"https://img.rocketgames.io/big/games/g/google-snake/google-snake.4e3992.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/google-snake", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:21, slug:"google-pac-man", title:"Google Pac-Man", category:"arcade", tags:["أركيد", "Rocket Games"],
+    desc:"عش أجواء الأركيد الكلاسيكية مع Google Pac-Man — بسيطة، سريعة، ومرحة بلا حدود.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/google-pac-man",
+    thumbnail:"https://img.rocketgames.io/big/games/g/google-pac-man/google-pac-man.75cebb.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/google-pac-man", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:22, slug:"pacman", title:"Pacman", category:"arcade", tags:["أركيد", "Rocket Games"],
+    desc:"عش أجواء الأركيد الكلاسيكية مع Pacman — بسيطة، سريعة، ومرحة بلا حدود.",
+    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/pacman",
+    thumbnail:"https://img.rocketgames.io/big/games/p/pacman/pacman.a80964.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/pacman", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:23, slug:"run-3", title:"Run 3", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Run 3 — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:true, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/run-3",
+    thumbnail:"https://img.rocketgames.io/big/games/r/run-3/run-3.9198aa.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/run-3", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:24, slug:"tank-trouble", title:"Tank Trouble", category:"action", tags:["أكشن", "Rocket Games"],
+    desc:"انغمس في مغامرة أكشن مليئة بالإثارة والتحديات في Tank Trouble — هل أنت مستعد؟",
+    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/tank-trouble",
+    thumbnail:"https://img.rocketgames.io/big/games/t/tank-trouble/tank-trouble-2.d3fc55.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/tank-trouble", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:25, slug:"bloons-tower-defense-5", title:"Bloons Tower Defense 5", category:"strategy", tags:["إستراتيجية", "Rocket Games"],
+    desc:"خطط بذكاء وطوّر قواك خطوة بخطوة لتنتصر في Bloons Tower Defense 5 — تحدي استراتيجي حقيقي.",
+    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/bloons-tower-defense-5",
+    thumbnail:"https://img.rocketgames.io/big/games/b/bloons-tower-defense-5/bloons-tower-defense-5.206110.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/bloons-tower-defense-5", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:26, slug:"bloons-tower-defense-4", title:"Bloons Tower Defense 4", category:"strategy", tags:["إستراتيجية", "Rocket Games"],
+    desc:"خطط بذكاء وطوّر قواك خطوة بخطوة لتنتصر في Bloons Tower Defense 4 — تحدي استراتيجي حقيقي.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/bloons-tower-defense-4",
+    thumbnail:"https://img.rocketgames.io/big/games/b/bloons-tower-defense-4/bloons-tower-defense-4.7a0a3c.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/bloons-tower-defense-4", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:27, slug:"bloons-tower-defense-3", title:"Bloons Tower Defense 3", category:"strategy", tags:["إستراتيجية", "Rocket Games"],
+    desc:"خطط بذكاء وطوّر قواك خطوة بخطوة لتنتصر في Bloons Tower Defense 3 — تحدي استراتيجي حقيقي.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/bloons-tower-defense-3",
+    thumbnail:"https://img.rocketgames.io/big/games/b/bloons-tower-defense-3/bloons-tower-defense-3.96b232.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/bloons-tower-defense-3", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:28, slug:"wordle", title:"Wordle", category:"puzzle", tags:["ألغاز", "Rocket Games"],
+    desc:"شغّل عقلك وحُل تحديات Wordle الذكية في لعبة ألغاز تزداد إدمانًا مع كل مستوى.",
+    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/wordle",
+    thumbnail:"https://img.rocketgames.io/big/games/w/wordle/wordle.a206db.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/wordle", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:29, slug:"quordle", title:"Quordle", category:"puzzle", tags:["ألغاز", "Rocket Games"],
+    desc:"شغّل عقلك وحُل تحديات Quordle الذكية في لعبة ألغاز تزداد إدمانًا مع كل مستوى.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/quordle",
+    thumbnail:"https://img.rocketgames.io/big/games/q/quordle/quordle.14cc6b.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/quordle", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:30, slug:"doodle-jump", title:"Doodle Jump", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Doodle Jump — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/doodle-jump",
+    thumbnail:"https://img.rocketgames.io/big/games/d/doodle-jump/doodle-jump.aa1ed3.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/doodle-jump", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:31, slug:"papa-s-pizzeria", title:"Papa's Pizzeria", category:"cooking", tags:["طبخ", "Rocket Games"],
+    desc:"أدِر مطبخك وقدّم أشهى الأطباق لعملائك في Papa's Pizzeria — لعبة طبخ ممتعة تختبر سرعتك ودقتك.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/papas-pizzeria",
+    thumbnail:"https://img.rocketgames.io/big/games/p/papas-pizzeria/papa-s-pizzeria.eadaf4.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/papa-s-pizzeria", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:32, slug:"papa-s-burgeria", title:"Papa's Burgeria", category:"cooking", tags:["طبخ", "Rocket Games"],
+    desc:"أدِر مطبخك وقدّم أشهى الأطباق لعملائك في Papa's Burgeria — لعبة طبخ ممتعة تختبر سرعتك ودقتك.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/papas-burgeria",
+    thumbnail:"https://img.rocketgames.io/big/games/p/papas-burgeria/papa-s-burgeria.a580f1.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/papa-s-burgeria", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:33, slug:"papa-s-freezeria", title:"Papa's Freezeria", category:"cooking", tags:["طبخ", "Rocket Games"],
+    desc:"أدِر مطبخك وقدّم أشهى الأطباق لعملائك في Papa's Freezeria — لعبة طبخ ممتعة تختبر سرعتك ودقتك.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/papas-freezeria",
+    thumbnail:"https://img.rocketgames.io/big/games/p/papas-freezeria/papa-s-freezeria.8f713f.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/papa-s-freezeria", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:34, slug:"papa-s-pancakeria", title:"Papa's Pancakeria", category:"cooking", tags:["طبخ", "Rocket Games"],
+    desc:"أدِر مطبخك وقدّم أشهى الأطباق لعملائك في Papa's Pancakeria — لعبة طبخ ممتعة تختبر سرعتك ودقتك.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/papas-pancakeria",
+    thumbnail:"https://img.rocketgames.io/big/games/p/papas-pancakeria/papa-s-pancakeria.59733d.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/papa-s-pancakeria", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:35, slug:"papa-s-bakeria", title:"Papa's Bakeria", category:"cooking", tags:["طبخ", "Rocket Games"],
+    desc:"أدِر مطبخك وقدّم أشهى الأطباق لعملائك في Papa's Bakeria — لعبة طبخ ممتعة تختبر سرعتك ودقتك.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/papas-bakeria",
+    thumbnail:"https://img.rocketgames.io/big/games/p/papas-bakeria/papa-s-bakeria.4f965b.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/papa-s-bakeria", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:36, slug:"papa-s-wingeria", title:"Papa's Wingeria", category:"cooking", tags:["طبخ", "Rocket Games"],
+    desc:"أدِر مطبخك وقدّم أشهى الأطباق لعملائك في Papa's Wingeria — لعبة طبخ ممتعة تختبر سرعتك ودقتك.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/papas-wingeria",
+    thumbnail:"https://img.rocketgames.io/big/games/p/papas-wingeria/papa-s-wingeria.1d36e5.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/papa-s-wingeria", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:37, slug:"papa-s-scooperia", title:"Papa's Scooperia", category:"cooking", tags:["طبخ", "Rocket Games"],
+    desc:"أدِر مطبخك وقدّم أشهى الأطباق لعملائك في Papa's Scooperia — لعبة طبخ ممتعة تختبر سرعتك ودقتك.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/papas-scooperia",
+    thumbnail:"https://img.rocketgames.io/big/games/p/papas-scooperia/papa-s-scooperia.dff37d.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/papa-s-scooperia", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:38, slug:"papa-s-donuteria", title:"Papa's Donuteria", category:"cooking", tags:["طبخ", "Rocket Games"],
+    desc:"أدِر مطبخك وقدّم أشهى الأطباق لعملائك في Papa's Donuteria — لعبة طبخ ممتعة تختبر سرعتك ودقتك.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/papas-donuteria",
+    thumbnail:"https://img.rocketgames.io/big/games/p/papas-donuteria/papa-s-donuteria.13e500.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/papa-s-donuteria", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:39, slug:"papa-s-sushiria", title:"Papa's Sushiria", category:"cooking", tags:["طبخ", "Rocket Games"],
+    desc:"أدِر مطبخك وقدّم أشهى الأطباق لعملائك في Papa's Sushiria — لعبة طبخ ممتعة تختبر سرعتك ودقتك.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/papas-sushiria",
+    thumbnail:"https://img.rocketgames.io/big/games/p/papas-sushiria/papa-s-sushiria.61ce45.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/papa-s-sushiria", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:40, slug:"papa-s-taco-mia", title:"Papa's Taco Mia", category:"cooking", tags:["طبخ", "Rocket Games"],
+    desc:"أدِر مطبخك وقدّم أشهى الأطباق لعملائك في Papa's Taco Mia — لعبة طبخ ممتعة تختبر سرعتك ودقتك.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/papas-taco-mia",
+    thumbnail:"https://img.rocketgames.io/big/games/p/papas-taco-mia/papa-s-taco-mia.312d37.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/papa-s-taco-mia", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:41, slug:"papa-s-pastaria", title:"Papa's Pastaria", category:"cooking", tags:["طبخ", "Rocket Games"],
+    desc:"أدِر مطبخك وقدّم أشهى الأطباق لعملائك في Papa's Pastaria — لعبة طبخ ممتعة تختبر سرعتك ودقتك.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/papas-pastaria",
+    thumbnail:"https://img.rocketgames.io/big/games/p/papas-pastaria/papa-s-pastaria.83ed32.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/papa-s-pastaria", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:42, slug:"getting-over-it", title:"Getting Over It", category:"action", tags:["أكشن", "Rocket Games"],
+    desc:"انغمس في مغامرة أكشن مليئة بالإثارة والتحديات في Getting Over It — هل أنت مستعد؟",
+    featured:true, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/getting-over-it",
+    thumbnail:"https://img.rocketgames.io/big/games/g/getting-over-it/getting-over-it.576dd7.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/getting-over-it", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:43, slug:"age-of-war", title:"Age of War", category:"strategy", tags:["إستراتيجية", "Rocket Games"],
+    desc:"خطط بذكاء وطوّر قواك خطوة بخطوة لتنتصر في Age of War — تحدي استراتيجي حقيقي.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/age-of-war",
+    thumbnail:"https://img.rocketgames.io/big/games/a/age-of-war/age-of-war.d43946.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/age-of-war", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:44, slug:"age-of-war-2", title:"Age of War 2", category:"strategy", tags:["إستراتيجية", "Rocket Games"],
+    desc:"خطط بذكاء وطوّر قواك خطوة بخطوة لتنتصر في Age of War 2 — تحدي استراتيجي حقيقي.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/age-of-war-2",
+    thumbnail:"https://img.rocketgames.io/big/games/a/age-of-war-2/age-of-war-2.ae8270.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/age-of-war-2", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:45, slug:"gun-mayhem", title:"Gun Mayhem", category:"action", tags:["أكشن", "Rocket Games"],
+    desc:"انغمس في مغامرة أكشن مليئة بالإثارة والتحديات في Gun Mayhem — هل أنت مستعد؟",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/gun-mayhem",
+    thumbnail:"https://img.rocketgames.io/big/games/g/gun-mayhem/gun-mayhem.f1da96.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/gun-mayhem", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:46, slug:"gun-mayhem-2", title:"Gun Mayhem 2", category:"action", tags:["أكشن", "Rocket Games"],
+    desc:"انغمس في مغامرة أكشن مليئة بالإثارة والتحديات في Gun Mayhem 2 — هل أنت مستعد؟",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/gun-mayhem-2",
+    thumbnail:"https://img.rocketgames.io/big/games/g/gun-mayhem-2/gun-mayhem-2-more-mayhem.da2271.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/gun-mayhem-2", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:47, slug:"learn-to-fly", title:"Learn to Fly", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Learn to Fly — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/learn-to-fly",
+    thumbnail:"https://img.rocketgames.io/big/games/l/learn-to-fly/learn-to-fly.862757.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/learn-to-fly", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:48, slug:"learn-to-fly-2", title:"Learn to Fly 2", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Learn to Fly 2 — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/learn-to-fly-2",
+    thumbnail:"https://img.rocketgames.io/big/games/l/learn-to-fly-2/learn-to-fly-2.efca73.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/learn-to-fly-2", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:49, slug:"learn-to-fly-3", title:"Learn to Fly 3", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Learn to Fly 3 — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/learn-to-fly-3",
+    thumbnail:"https://img.rocketgames.io/big/games/l/learn-to-fly-3/learn-to-fly-3.b3bfeb.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/learn-to-fly-3", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:50, slug:"stickman-hook", title:"Stickman Hook", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Stickman Hook — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/stickman-hook",
+    thumbnail:"https://img.rocketgames.io/big/games/s/stickman-hook/stickman-hook.ee7dc0.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/stickman-hook", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:51, slug:"madalin-stunt-cars", title:"Madalin Stunt Cars", category:"racing", tags:["سباق", "Rocket Games"],
+    desc:"انطلق بأقصى سرعة ونفّذ حركات مذهلة في Madalin Stunt Cars — قيادة وسباقات لا تهدأ.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/madalin-stunt-cars",
+    thumbnail:"https://img.rocketgames.io/big/games/m/madalin-stunt-cars/madalin-stunt-cars.6b67c6.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/madalin-stunt-cars", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:52, slug:"madalin-stunt-cars-2", title:"Madalin Stunt Cars 2", category:"racing", tags:["سباق", "Rocket Games"],
+    desc:"انطلق بأقصى سرعة ونفّذ حركات مذهلة في Madalin Stunt Cars 2 — قيادة وسباقات لا تهدأ.",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/madalin-stunt-cars-2",
+    thumbnail:"https://img.rocketgames.io/big/games/m/madalin-stunt-cars-2/madalin-stunt-cars-2.26a7a4.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/madalin-stunt-cars-2", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:53, slug:"madalin-stunt-cars-3", title:"Madalin Stunt Cars 3", category:"racing", tags:["سباق", "Rocket Games"],
+    desc:"انطلق بأقصى سرعة ونفّذ حركات مذهلة في Madalin Stunt Cars 3 — قيادة وسباقات لا تهدأ.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/madalin-stunt-cars-3",
+    thumbnail:"https://img.rocketgames.io/big/games/m/madalin-stunt-cars-3/madalin-stunt-cars-3.a4c881.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/madalin-stunt-cars-3", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:54, slug:"madalin-cars-multiplayer", title:"Madalin Cars Multiplayer", category:"racing", tags:["سباق", "Rocket Games"],
+    desc:"انطلق بأقصى سرعة ونفّذ حركات مذهلة في Madalin Cars Multiplayer — قيادة وسباقات لا تهدأ.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/madalin-cars-multiplayer",
+    thumbnail:"https://img.rocketgames.io/big/games/m/madalin-cars-multiplayer/madalin-cars-multiplayer.a59c24.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/madalin-cars-multiplayer", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:55, slug:"earn-to-die", title:"Earn to Die", category:"racing", tags:["سباق", "Rocket Games"],
+    desc:"انطلق بأقصى سرعة ونفّذ حركات مذهلة في Earn to Die — قيادة وسباقات لا تهدأ.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/earn-to-die",
+    thumbnail:"https://img.rocketgames.io/big/games/e/earn-to-die/earn-to-die.093975.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/earn-to-die", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:56, slug:"earn-to-die-2", title:"Earn to Die 2", category:"racing", tags:["سباق", "Rocket Games"],
+    desc:"انطلق بأقصى سرعة ونفّذ حركات مذهلة في Earn to Die 2 — قيادة وسباقات لا تهدأ.",
+    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/earn-to-die-2",
+    thumbnail:"https://img.rocketgames.io/big/games/e/earn-to-die-2/earn-to-die-2.4fcf14.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/earn-to-die-2", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:57, slug:"the-impossible-quiz", title:"The Impossible Quiz", category:"puzzle", tags:["ألغاز", "Rocket Games"],
+    desc:"شغّل عقلك وحُل تحديات The Impossible Quiz الذكية في لعبة ألغاز تزداد إدمانًا مع كل مستوى.",
+    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/the-impossible-quiz",
+    thumbnail:"https://img.rocketgames.io/big/games/t/the-impossible-quiz/the-impossible-quiz.c83225.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/the-impossible-quiz", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:58, slug:"fancy-pants", title:"Fancy Pants", category:"action", tags:["أكشن", "Rocket Games"],
+    desc:"انغمس في مغامرة أكشن مليئة بالإثارة والتحديات في Fancy Pants — هل أنت مستعد؟",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/fancy-pants",
+    thumbnail:"https://img.rocketgames.io/big/games/f/fancy-pants/fancy-pants.26e478.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/fancy-pants", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:59, slug:"fancy-pants-2", title:"Fancy Pants 2", category:"action", tags:["أكشن", "Rocket Games"],
+    desc:"انغمس في مغامرة أكشن مليئة بالإثارة والتحديات في Fancy Pants 2 — هل أنت مستعد؟",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/fancy-pants-2",
+    thumbnail:"https://img.rocketgames.io/big/games/f/fancy-pants-2/fancy-pants-2.bc9838.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/fancy-pants-2", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:60, slug:"fancy-pants-3", title:"Fancy Pants 3", category:"action", tags:["أكشن", "Rocket Games"],
+    desc:"انغمس في مغامرة أكشن مليئة بالإثارة والتحديات في Fancy Pants 3 — هل أنت مستعد؟",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/fancy-pants-3",
+    thumbnail:"https://img.rocketgames.io/big/games/f/fancy-pants-3/fancy-pants-3.4c1b4c.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/fancy-pants-3", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:61, slug:"fancy-pants-4-part-1", title:"Fancy Pants 4: Part 1", category:"action", tags:["أكشن", "Rocket Games"],
+    desc:"انغمس في مغامرة أكشن مليئة بالإثارة والتحديات في Fancy Pants 4: Part 1 — هل أنت مستعد؟",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/fancy-pants-4-part-1",
+    thumbnail:"https://img.rocketgames.io/big/games/f/fancy-pants-4-part-1/fancy-pants-4-part-1.932329.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/fancy-pants-4-part-1", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:62, slug:"riddle-school", title:"Riddle School", category:"puzzle", tags:["ألغاز", "Rocket Games"],
+    desc:"شغّل عقلك وحُل تحديات Riddle School الذكية في لعبة ألغاز تزداد إدمانًا مع كل مستوى.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/riddle-school",
+    thumbnail:"https://img.rocketgames.io/big/games/r/riddle-school/riddle-school.b56ed3.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/riddle-school", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:63, slug:"riddle-school-2", title:"Riddle School 2", category:"puzzle", tags:["ألغاز", "Rocket Games"],
+    desc:"شغّل عقلك وحُل تحديات Riddle School 2 الذكية في لعبة ألغاز تزداد إدمانًا مع كل مستوى.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/riddle-school-2",
+    thumbnail:"https://img.rocketgames.io/big/games/r/riddle-school-2/riddle-school-2.78d3ed.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/riddle-school-2", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:64, slug:"riddle-school-3", title:"Riddle School 3", category:"puzzle", tags:["ألغاز", "Rocket Games"],
+    desc:"شغّل عقلك وحُل تحديات Riddle School 3 الذكية في لعبة ألغاز تزداد إدمانًا مع كل مستوى.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/riddle-school-3",
+    thumbnail:"https://img.rocketgames.io/big/games/r/riddle-school-3/riddle-school-3.ab53f1.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/riddle-school-3", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:65, slug:"riddle-school-5", title:"Riddle School 5", category:"puzzle", tags:["ألغاز", "Rocket Games"],
+    desc:"شغّل عقلك وحُل تحديات Riddle School 5 الذكية في لعبة ألغاز تزداد إدمانًا مع كل مستوى.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/riddle-school-5",
+    thumbnail:"https://img.rocketgames.io/big/games/r/riddle-school-5/riddle-school-5.ac6eb4.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/riddle-school-5", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:66, slug:"pizza-tower", title:"Pizza Tower", category:"cooking", tags:["طبخ", "Rocket Games"],
+    desc:"أدِر مطبخك وقدّم أشهى الأطباق لعملائك في Pizza Tower — لعبة طبخ ممتعة تختبر سرعتك ودقتك.",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/pizza-tower",
+    thumbnail:"https://img.rocketgames.io/big/games/p/pizza-tower/pizza-tower.09d5a5.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/pizza-tower", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:67, slug:"baldi-s-basics-in-education-and-learning", title:"Baldi's Basics in Education and Learning", category:"action", tags:["أكشن", "Rocket Games"],
+    desc:"انغمس في مغامرة أكشن مليئة بالإثارة والتحديات في Baldi's Basics in Education and Learning — هل أنت مستعد؟",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/baldi-s-basics-in-education-and-learning",
+    thumbnail:"https://img.rocketgames.io/big/games/b/baldi-s-basics-in-education-and-learning/baldi-s-basics-in-education-and-learning.7f1a09.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/baldi-s-basics-in-education-and-learning", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:68, slug:"a-dance-of-fire-and-ice", title:"A Dance of Fire and Ice", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في A Dance of Fire and Ice — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/a-dance-of-fire-and-ice",
+    thumbnail:"https://img.rocketgames.io/big/games/a/a-dance-of-fire-and-ice/a-dance-of-fire-and-ice.62325c.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/a-dance-of-fire-and-ice", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:69, slug:"idle-breakout", title:"Idle Breakout", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Idle Breakout — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/idle-breakout",
+    thumbnail:"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27480%27%20height%3D%27360%27%20viewBox%3D%270%200%20480%20360%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23141a2e%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%2305070c%27%2F%3E%3C%2FlinearGradient%3E%3Cfilter%20id%3D%27gl%27%20x%3D%27-40%25%27%20y%3D%27-40%25%27%20width%3D%27180%25%27%20height%3D%27180%25%27%3E%3CfeDropShadow%20dx%3D%270%27%20dy%3D%270%27%20stdDeviation%3D%2710%27%20flood-color%3D%27%237c5cff%27%20flood-opacity%3D%27.55%27%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Crect%20width%3D%27480%27%20height%3D%27360%27%20fill%3D%27url%28%23bg%29%27%2F%3E%3Crect%20x%3D%27185%27%20y%3D%27298%27%20width%3D%27110%27%20height%3D%2714%27%20rx%3D%277%27%20fill%3D%27%237c5cff%27%20filter%3D%27url%28%23gl%29%27%2F%3E%3Crect%20x%3D%2748%27%20y%3D%2736%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%23ef5350%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27114%27%20y%3D%2736%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%23f5a623%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27180%27%20y%3D%2736%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%23f5d623%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27246%27%20y%3D%2736%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%232ecc71%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27312%27%20y%3D%2736%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%2326c6da%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27378%27%20y%3D%2736%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%237c5cff%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%2748%27%20y%3D%2768%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%23f5a623%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27114%27%20y%3D%2768%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%23f5d623%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27180%27%20y%3D%2768%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%232ecc71%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27246%27%20y%3D%2768%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%2326c6da%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27312%27%20y%3D%2768%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%237c5cff%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27378%27%20y%3D%2768%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%23ef5350%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%2748%27%20y%3D%27100%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%23f5d623%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27114%27%20y%3D%27100%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%232ecc71%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27180%27%20y%3D%27100%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%2326c6da%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27246%27%20y%3D%27100%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%237c5cff%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27312%27%20y%3D%27100%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%23ef5350%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27378%27%20y%3D%27100%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%23f5a623%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%2748%27%20y%3D%27132%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%232ecc71%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27114%27%20y%3D%27132%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%2326c6da%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27180%27%20y%3D%27132%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%237c5cff%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27246%27%20y%3D%27132%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%23ef5350%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27312%27%20y%3D%27132%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%23f5a623%27%20opacity%3D%27.92%27%2F%3E%3Crect%20x%3D%27378%27%20y%3D%27132%27%20width%3D%2760%27%20height%3D%2724%27%20rx%3D%275%27%20fill%3D%27%23f5d623%27%20opacity%3D%27.92%27%2F%3E%3Ccircle%20cx%3D%27240%27%20cy%3D%27262%27%20r%3D%279%27%20fill%3D%27%23fff%27%2F%3E%3Ccircle%20cx%3D%27240%27%20cy%3D%27276%27%20r%3D%277.0%27%20fill%3D%27%23fff%27%20opacity%3D%270.35%27%2F%3E%3Ccircle%20cx%3D%27240%27%20cy%3D%27288%27%20r%3D%275.4%27%20fill%3D%27%23fff%27%20opacity%3D%270.24999999999999997%27%2F%3E%3Ccircle%20cx%3D%27240%27%20cy%3D%27298%27%20r%3D%273.8%27%20fill%3D%27%23fff%27%20opacity%3D%270.14999999999999997%27%2F%3E%3Ctext%20x%3D%2730%27%20y%3D%27330%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27900%27%20fill%3D%27rgba%28255%2C255%2C255%2C.92%29%27%3EIdle%20Breakout%3C%2Ftext%3E%3C%2Fsvg%3E",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/idle-breakout", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:70, slug:"duck-life", title:"Duck Life", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Duck Life — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/duck-life",
+    thumbnail:"https://img.rocketgames.io/big/games/d/duck-life/duck-life.c8dea1.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/duck-life", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:71, slug:"paper-minecraft", title:"Paper Minecraft", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Paper Minecraft — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:true, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/paper-minecraft",
+    thumbnail:"https://img.rocketgames.io/big/games/p/paper-minecraft/paper-minecraft.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/paper-minecraft", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:72, slug:"elastic-man", title:"Elastic Man", category:"action", tags:["أكشن", "Rocket Games"],
+    desc:"انغمس في مغامرة أكشن مليئة بالإثارة والتحديات في Elastic Man — هل أنت مستعد؟",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/elastic-man",
+    thumbnail:"https://img.rocketgames.io/big/games/e/elastic-man/elastic-man.4ad3ba.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/elastic-man", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:73, slug:"tomb-of-the-mask", title:"Tomb of the Mask", category:"action", tags:["أكشن", "Rocket Games"],
+    desc:"انغمس في مغامرة أكشن مليئة بالإثارة والتحديات في Tomb of the Mask — هل أنت مستعد؟",
+    featured:true, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/tomb-of-the-mask",
+    thumbnail:"https://img.rocketgames.io/big/games/t/tomb-of-the-mask/tomb-of-the-mask.7d4361.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/tomb-of-the-mask", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:74, slug:"sports-heads-football", title:"Sports Heads Football", category:"sports", tags:["رياضة", "Rocket Games"],
+    desc:"شارك في مباريات Sports Heads Football الحماسية وسجّل أهداف الفوز في لعبة رياضية سريعة وممتعة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/sports-heads-football",
+    thumbnail:"https://img.rocketgames.io/big/games/s/sports-heads-football/sports-heads-football.b340a4.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/sports-heads-football", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:75, slug:"sports-heads-football-championship", title:"Sports Heads Football Championship", category:"sports", tags:["رياضة", "Rocket Games"],
+    desc:"شارك في مباريات Sports Heads Football Championship الحماسية وسجّل أهداف الفوز في لعبة رياضية سريعة وممتعة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/sports-heads-football-championship",
+    thumbnail:"https://img.rocketgames.io/big/games/s/sports-heads-football-championship/sports-heads-football-championship.cc146f.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/sports-heads-football-championship", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:76, slug:"sports-heads-basketball", title:"Sports Heads Basketball", category:"sports", tags:["رياضة", "Rocket Games"],
+    desc:"شارك في مباريات Sports Heads Basketball الحماسية وسجّل أهداف الفوز في لعبة رياضية سريعة وممتعة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/sports-heads-basketball",
+    thumbnail:"https://img.rocketgames.io/big/games/s/sports-heads-basketball/sports-heads-basketball.6d1246.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/sports-heads-basketball", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:77, slug:"sports-heads-tennis", title:"Sports Heads Tennis", category:"sports", tags:["رياضة", "Rocket Games"],
+    desc:"شارك في مباريات Sports Heads Tennis الحماسية وسجّل أهداف الفوز في لعبة رياضية سريعة وممتعة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/sports-heads-tennis",
+    thumbnail:"https://img.rocketgames.io/big/games/s/sports-heads-tennis/sports-heads-tennis.f8ac65.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/sports-heads-tennis", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:78, slug:"ragdoll-archers", title:"Ragdoll Archers", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Ragdoll Archers — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/ragdoll-archers",
+    thumbnail:"https://img.rocketgames.io/big/games/r/ragdoll-archers/archery-ragdoll.862209.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/ragdoll-archers", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:79, slug:"get-yoked", title:"Get Yoked", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Get Yoked — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/get-yoked",
+    thumbnail:"https://img.rocketgames.io/big/games/g/get-yoked/get-yoked.c0ab40.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/get-yoked", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:80, slug:"speed-stars", title:"Speed Stars", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Speed Stars — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/speed-stars",
+    thumbnail:"https://img.rocketgames.io/big/games/s/speed-stars/speed-stars.a0c80f.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/speed-stars", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:81, slug:"slow-roads-io", title:"Slow Roads io", category:"racing", tags:["سباق", "Rocket Games"],
+    desc:"انطلق بأقصى سرعة ونفّذ حركات مذهلة في Slow Roads io — قيادة وسباقات لا تهدأ.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/slow-roads-io",
+    thumbnail:"https://img.rocketgames.io/big/games/s/slow-roads-io/slow-roads-io.adda0e.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/slow-roads-io", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:82, slug:"crazy-cattle-3d", title:"Crazy Cattle 3D", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Crazy Cattle 3D — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/crazy-cattle-3d",
+    thumbnail:"https://img.rocketgames.io/big/games/c/crazy-cattle-3d/crazy-cattle-3d.e9cd6a.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/crazy-cattle-3d", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:83, slug:"backyard-baseball", title:"Backyard Baseball", category:"sports", tags:["رياضة", "Rocket Games"],
+    desc:"شارك في مباريات Backyard Baseball الحماسية وسجّل أهداف الفوز في لعبة رياضية سريعة وممتعة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/backyard-baseball",
+    thumbnail:"https://img.rocketgames.io/big/games/b/backyard-baseball/backyard-baseball.ac00e1.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/backyard-baseball", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:84, slug:"super-liquid-soccer", title:"Super Liquid Soccer", category:"sports", tags:["رياضة", "Rocket Games"],
+    desc:"شارك في مباريات Super Liquid Soccer الحماسية وسجّل أهداف الفوز في لعبة رياضية سريعة وممتعة.",
+    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/super-liquid-soccer",
+    thumbnail:"https://img.rocketgames.io/big/games/s/super-liquid-soccer/super-liquid-soccer.b343c1.png",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/super-liquid-soccer", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:85, slug:"airplane-simulator", title:"Airplane Simulator", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Airplane Simulator — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/airplane-simulator",
+    thumbnail:"https://img.rocketgames.io/big/games/a/airplane-simulator/airplane-simulator.7dcae0.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/airplane-simulator", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:86, slug:"paper-flight", title:"Paper Flight", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Paper Flight — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/paper-flight",
+    thumbnail:"https://img.rocketgames.io/big/games/p/paper-flight/paper-flight.a2f2a0.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/paper-flight", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:87, slug:"paper-flight-2", title:"Paper Flight 2", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Paper Flight 2 — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/paper-flight-2",
+    thumbnail:"https://img.rocketgames.io/big/games/p/paper-flight-2/paper-flight-2.fde8fb.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/paper-flight-2", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:88, slug:"famidash", title:"Famidash", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Famidash — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/famidash",
+    thumbnail:"https://img.rocketgames.io/big/games/f/famidash/famidash.3d823c.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/famidash", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:89, slug:"roblox-clicker", title:"Roblox Clicker", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Roblox Clicker — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/roblox-clicker",
+    thumbnail:"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27480%27%20height%3D%27360%27%20viewBox%3D%270%200%20480%20360%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%2333101a%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23110408%27%2F%3E%3C%2FlinearGradient%3E%3Cfilter%20id%3D%27gl%27%20x%3D%27-40%25%27%20y%3D%27-40%25%27%20width%3D%27180%25%27%20height%3D%27180%25%27%3E%3CfeDropShadow%20dx%3D%270%27%20dy%3D%270%27%20stdDeviation%3D%2710%27%20flood-color%3D%27%237c5cff%27%20flood-opacity%3D%27.55%27%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Crect%20width%3D%27480%27%20height%3D%27360%27%20fill%3D%27url%28%23bg%29%27%2F%3E%3Crect%20x%3D%27195%27%20y%3D%2766%27%20width%3D%2790%27%20height%3D%2776%27%20rx%3D%2712%27%20fill%3D%27%23f5cd30%27%2F%3E%3Crect%20x%3D%27213%27%20y%3D%2792%27%20width%3D%2711%27%20height%3D%2717%27%20rx%3D%272%27%20fill%3D%27%2320242c%27%2F%3E%3Crect%20x%3D%27248%27%20y%3D%2792%27%20width%3D%2711%27%20height%3D%2717%27%20rx%3D%272%27%20fill%3D%27%2320242c%27%2F%3E%3Cpath%20d%3D%27M220%2C122%20q20%2C15%2040%2C0%27%20stroke%3D%27%2320242c%27%20stroke-width%3D%275%27%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%2F%3E%3Crect%20x%3D%27185%27%20y%3D%27146%27%20width%3D%27110%27%20height%3D%2782%27%20rx%3D%278%27%20fill%3D%27%233b6fd4%27%2F%3E%3Crect%20x%3D%27157%27%20y%3D%27150%27%20width%3D%2724%27%20height%3D%2772%27%20rx%3D%278%27%20fill%3D%27%23f5cd30%27%2F%3E%3Crect%20x%3D%27299%27%20y%3D%27150%27%20width%3D%2724%27%20height%3D%2772%27%20rx%3D%278%27%20fill%3D%27%23f5cd30%27%2F%3E%3Crect%20x%3D%27193%27%20y%3D%27230%27%20width%3D%2742%27%20height%3D%2762%27%20rx%3D%278%27%20fill%3D%27%232ecc71%27%2F%3E%3Crect%20x%3D%27247%27%20y%3D%27230%27%20width%3D%2742%27%20height%3D%2762%27%20rx%3D%278%27%20fill%3D%27%232ecc71%27%2F%3E%3Crect%20x%3D%2785%27%20y%3D%27120%27%20width%3D%2734%27%20height%3D%2734%27%20rx%3D%276%27%20fill%3D%27%233b6fd4%27%20opacity%3D%27.8%27%20transform%3D%27rotate%28-14%20102%20137%29%27%2F%3E%3Crect%20x%3D%27372%27%20y%3D%27170%27%20width%3D%2728%27%20height%3D%2728%27%20rx%3D%275%27%20fill%3D%27%23f5cd30%27%20opacity%3D%27.8%27%20transform%3D%27rotate%2812%20386%20184%29%27%2F%3E%3Ctext%20x%3D%2730%27%20y%3D%27330%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27900%27%20fill%3D%27rgba%28255%2C255%2C255%2C.92%29%27%3ERoblox%20Clicker%3C%2Ftext%3E%3C%2Fsvg%3E",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/roblox-clicker", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:90, slug:"tag", title:"Tag", category:"action", tags:["أكشن", "Rocket Games"],
+    desc:"انغمس في مغامرة أكشن مليئة بالإثارة والتحديات في Tag — هل أنت مستعد؟",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/tag",
+    thumbnail:"https://img.rocketgames.io/big/games/t/tag/tag.e9adb4.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/tag", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:91, slug:"blob-opera", title:"Blob Opera", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Blob Opera — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/blob-opera",
+    thumbnail:"https://img.rocketgames.io/big/games/b/blob-opera/blob-opera.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/blob-opera", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:92, slug:"theme-hotel", title:"Theme Hotel", category:"strategy", tags:["إستراتيجية", "Rocket Games"],
+    desc:"خطط بذكاء وطوّر قواك خطوة بخطوة لتنتصر في Theme Hotel — تحدي استراتيجي حقيقي.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/theme-hotel",
+    thumbnail:"https://img.rocketgames.io/big/games/t/theme-hotel/theme-hotel.b7af4e.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/theme-hotel", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:93, slug:"flappy-dunk", title:"Flappy Dunk", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Flappy Dunk — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/flappy-dunk",
+    thumbnail:"https://img.rocketgames.io/big/games/f/flappy-dunk/flappy-dunk.0d1167.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/flappy-dunk", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:94, slug:"candy-clicker-2", title:"Candy Clicker 2", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Candy Clicker 2 — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/candy-clicker-2",
+    thumbnail:"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27480%27%20height%3D%27360%27%20viewBox%3D%270%200%20480%20360%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%2338102e%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23150718%27%2F%3E%3C%2FlinearGradient%3E%3Cfilter%20id%3D%27gl%27%20x%3D%27-40%25%27%20y%3D%27-40%25%27%20width%3D%27180%25%27%20height%3D%27180%25%27%3E%3CfeDropShadow%20dx%3D%270%27%20dy%3D%270%27%20stdDeviation%3D%2710%27%20flood-color%3D%27%237c5cff%27%20flood-opacity%3D%27.55%27%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Crect%20width%3D%27480%27%20height%3D%27360%27%20fill%3D%27url%28%23bg%29%27%2F%3E%3Ccircle%20cx%3D%27120%27%20cy%3D%2780%27%20r%3D%2734%27%20fill%3D%27%23ff8fab%27%20opacity%3D%27.5%27%2F%3E%3Ccircle%20cx%3D%27390%27%20cy%3D%2770%27%20r%3D%2726%27%20fill%3D%27%23ffd166%27%20opacity%3D%27.5%27%2F%3E%3Ccircle%20cx%3D%27370%27%20cy%3D%27250%27%20r%3D%2730%27%20fill%3D%27%2306d6a0%27%20opacity%3D%27.45%27%2F%3E%3Cpolygon%20points%3D%27160%2C160%2092%2C108%20104%2C160%2092%2C212%27%20fill%3D%27%23e63946%27%2F%3E%3Cpolygon%20points%3D%27320%2C160%20388%2C108%20376%2C160%20388%2C212%27%20fill%3D%27%23e63946%27%2F%3E%3Ccircle%20cx%3D%27240%27%20cy%3D%27160%27%20r%3D%2782%27%20fill%3D%27%23ff4d6d%27%2F%3E%3Cellipse%20cx%3D%27240%27%20cy%3D%27160%27%20rx%3D%2782%27%20ry%3D%2726%27%20fill%3D%27%23fff%27%20opacity%3D%27.22%27%2F%3E%3Cellipse%20cx%3D%27240%27%20cy%3D%27160%27%20rx%3D%2726%27%20ry%3D%2782%27%20fill%3D%27%23fff%27%20opacity%3D%27.18%27%2F%3E%3Cellipse%20cx%3D%27212%27%20cy%3D%27126%27%20rx%3D%2724%27%20ry%3D%2712%27%20fill%3D%27%23fff%27%20opacity%3D%27.4%27%20transform%3D%27rotate%28-28%20212%20126%29%27%2F%3E%3Ctext%20x%3D%2730%27%20y%3D%27330%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27900%27%20fill%3D%27rgba%28255%2C255%2C255%2C.92%29%27%3ECandy%20Clicker%202%3C%2Ftext%3E%3C%2Fsvg%3E",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/candy-clicker-2", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:95, slug:"candy-clicker", title:"Candy Clicker", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Candy Clicker — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/candy-clicker",
+    thumbnail:"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27480%27%20height%3D%27360%27%20viewBox%3D%270%200%20480%20360%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%2338102e%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23150718%27%2F%3E%3C%2FlinearGradient%3E%3Cfilter%20id%3D%27gl%27%20x%3D%27-40%25%27%20y%3D%27-40%25%27%20width%3D%27180%25%27%20height%3D%27180%25%27%3E%3CfeDropShadow%20dx%3D%270%27%20dy%3D%270%27%20stdDeviation%3D%2710%27%20flood-color%3D%27%237c5cff%27%20flood-opacity%3D%27.55%27%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Crect%20width%3D%27480%27%20height%3D%27360%27%20fill%3D%27url%28%23bg%29%27%2F%3E%3Ccircle%20cx%3D%27120%27%20cy%3D%2780%27%20r%3D%2734%27%20fill%3D%27%23ff8fab%27%20opacity%3D%27.5%27%2F%3E%3Ccircle%20cx%3D%27390%27%20cy%3D%2770%27%20r%3D%2726%27%20fill%3D%27%23ffd166%27%20opacity%3D%27.5%27%2F%3E%3Ccircle%20cx%3D%27370%27%20cy%3D%27250%27%20r%3D%2730%27%20fill%3D%27%2306d6a0%27%20opacity%3D%27.45%27%2F%3E%3Cpolygon%20points%3D%27160%2C160%2092%2C108%20104%2C160%2092%2C212%27%20fill%3D%27%23e63946%27%2F%3E%3Cpolygon%20points%3D%27320%2C160%20388%2C108%20376%2C160%20388%2C212%27%20fill%3D%27%23e63946%27%2F%3E%3Ccircle%20cx%3D%27240%27%20cy%3D%27160%27%20r%3D%2782%27%20fill%3D%27%23ff4d6d%27%2F%3E%3Cellipse%20cx%3D%27240%27%20cy%3D%27160%27%20rx%3D%2782%27%20ry%3D%2726%27%20fill%3D%27%23fff%27%20opacity%3D%27.22%27%2F%3E%3Cellipse%20cx%3D%27240%27%20cy%3D%27160%27%20rx%3D%2726%27%20ry%3D%2782%27%20fill%3D%27%23fff%27%20opacity%3D%27.18%27%2F%3E%3Cellipse%20cx%3D%27212%27%20cy%3D%27126%27%20rx%3D%2724%27%20ry%3D%2712%27%20fill%3D%27%23fff%27%20opacity%3D%27.4%27%20transform%3D%27rotate%28-28%20212%20126%29%27%2F%3E%3Ctext%20x%3D%2730%27%20y%3D%27330%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27900%27%20fill%3D%27rgba%28255%2C255%2C255%2C.92%29%27%3ECandy%20Clicker%3C%2Ftext%3E%3C%2Fsvg%3E",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/candy-clicker", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:96, slug:"escaping-the-prison", title:"Escaping the Prison", category:"action", tags:["أكشن", "Rocket Games"],
+    desc:"انغمس في مغامرة أكشن مليئة بالإثارة والتحديات في Escaping the Prison — هل أنت مستعد؟",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/escaping-the-prison",
+    thumbnail:"https://img.rocketgames.io/big/games/e/escaping-the-prison/escaping-the-prison.ecfcf8.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/escaping-the-prison", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:97, slug:"cluster-rush", title:"Cluster Rush", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Cluster Rush — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/cluster-rush",
+    thumbnail:"https://img.rocketgames.io/big/games/c/cluster-rush/cluster-rush.5c9f51.png",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/cluster-rush", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:98, slug:"duck-duck-clicker", title:"Duck Duck Clicker", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Duck Duck Clicker — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/duck-duck-clicker",
+    thumbnail:"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27480%27%20height%3D%27360%27%20viewBox%3D%270%200%20480%20360%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%230c332c%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23051310%27%2F%3E%3C%2FlinearGradient%3E%3Cfilter%20id%3D%27gl%27%20x%3D%27-40%25%27%20y%3D%27-40%25%27%20width%3D%27180%25%27%20height%3D%27180%25%27%3E%3CfeDropShadow%20dx%3D%270%27%20dy%3D%270%27%20stdDeviation%3D%2710%27%20flood-color%3D%27%237c5cff%27%20flood-opacity%3D%27.55%27%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Crect%20width%3D%27480%27%20height%3D%27360%27%20fill%3D%27url%28%23bg%29%27%2F%3E%3Cellipse%20cx%3D%27240%27%20cy%3D%27272%27%20rx%3D%27175%27%20ry%3D%2724%27%20fill%3D%27%2326c6da%27%20opacity%3D%27.22%27%2F%3E%3Cellipse%20cx%3D%27240%27%20cy%3D%27272%27%20rx%3D%27120%27%20ry%3D%2714%27%20fill%3D%27%2326c6da%27%20opacity%3D%27.28%27%2F%3E%3Cellipse%20cx%3D%27232%27%20cy%3D%27195%27%20rx%3D%2796%27%20ry%3D%2764%27%20fill%3D%27%23ffd93b%27%2F%3E%3Cpath%20d%3D%27M170%2C200%20a60%2C38%200%200%200%20105%2C15%27%20fill%3D%27%23f0b90b%27%2F%3E%3Ccircle%20cx%3D%27308%27%20cy%3D%27118%27%20r%3D%2748%27%20fill%3D%27%23ffd93b%27%2F%3E%3Cpolygon%20points%3D%27346%2C108%20402%2C120%20346%2C136%27%20fill%3D%27%23ff9f1c%27%2F%3E%3Ccircle%20cx%3D%27320%27%20cy%3D%27106%27%20r%3D%277%27%20fill%3D%27%231b1b1b%27%2F%3E%3Ccircle%20cx%3D%27322%27%20cy%3D%27103%27%20r%3D%272.2%27%20fill%3D%27%23fff%27%2F%3E%3Ctext%20x%3D%2795%27%20y%3D%2790%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%232ecc71%27%3E%2B1%3C%2Ftext%3E%3Ctext%20x%3D%2730%27%20y%3D%27330%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27900%27%20fill%3D%27rgba%28255%2C255%2C255%2C.92%29%27%3EDuck%20Duck%20Clicker%3C%2Ftext%3E%3C%2Fsvg%3E",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/duck-duck-clicker", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:99, slug:"duck-duck-clicker-3d", title:"Duck Duck Clicker 3D", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Duck Duck Clicker 3D — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/duck-duck-clicker-3d",
+    thumbnail:"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27480%27%20height%3D%27360%27%20viewBox%3D%270%200%20480%20360%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%230c332c%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23051310%27%2F%3E%3C%2FlinearGradient%3E%3Cfilter%20id%3D%27gl%27%20x%3D%27-40%25%27%20y%3D%27-40%25%27%20width%3D%27180%25%27%20height%3D%27180%25%27%3E%3CfeDropShadow%20dx%3D%270%27%20dy%3D%270%27%20stdDeviation%3D%2710%27%20flood-color%3D%27%237c5cff%27%20flood-opacity%3D%27.55%27%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Crect%20width%3D%27480%27%20height%3D%27360%27%20fill%3D%27url%28%23bg%29%27%2F%3E%3Cellipse%20cx%3D%27240%27%20cy%3D%27272%27%20rx%3D%27175%27%20ry%3D%2724%27%20fill%3D%27%2326c6da%27%20opacity%3D%27.22%27%2F%3E%3Cellipse%20cx%3D%27240%27%20cy%3D%27272%27%20rx%3D%27120%27%20ry%3D%2714%27%20fill%3D%27%2326c6da%27%20opacity%3D%27.28%27%2F%3E%3Cellipse%20cx%3D%27232%27%20cy%3D%27195%27%20rx%3D%2796%27%20ry%3D%2764%27%20fill%3D%27%23ffd93b%27%2F%3E%3Cpath%20d%3D%27M170%2C200%20a60%2C38%200%200%200%20105%2C15%27%20fill%3D%27%23f0b90b%27%2F%3E%3Ccircle%20cx%3D%27308%27%20cy%3D%27118%27%20r%3D%2748%27%20fill%3D%27%23ffd93b%27%2F%3E%3Cpolygon%20points%3D%27346%2C108%20402%2C120%20346%2C136%27%20fill%3D%27%23ff9f1c%27%2F%3E%3Ccircle%20cx%3D%27320%27%20cy%3D%27106%27%20r%3D%277%27%20fill%3D%27%231b1b1b%27%2F%3E%3Ccircle%20cx%3D%27322%27%20cy%3D%27103%27%20r%3D%272.2%27%20fill%3D%27%23fff%27%2F%3E%3Ctext%20x%3D%2795%27%20y%3D%2790%27%20font-family%3D%27Arial%27%20font-size%3D%2726%27%20font-weight%3D%27900%27%20fill%3D%27%232ecc71%27%3E%2B1%3C%2Ftext%3E%3Ctext%20x%3D%2730%27%20y%3D%27330%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27900%27%20fill%3D%27rgba%28255%2C255%2C255%2C.92%29%27%3EDuck%20Clicker%203D%3C%2Ftext%3E%3C%2Fsvg%3E",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/duck-duck-clicker-3d", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:100, slug:"whopper-clicker", title:"Whopper Clicker", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Whopper Clicker — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/whopper-clicker",
+    thumbnail:"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27480%27%20height%3D%27360%27%20viewBox%3D%270%200%20480%20360%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%232f1c10%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23130a05%27%2F%3E%3C%2FlinearGradient%3E%3Cfilter%20id%3D%27gl%27%20x%3D%27-40%25%27%20y%3D%27-40%25%27%20width%3D%27180%25%27%20height%3D%27180%25%27%3E%3CfeDropShadow%20dx%3D%270%27%20dy%3D%270%27%20stdDeviation%3D%2710%27%20flood-color%3D%27%237c5cff%27%20flood-opacity%3D%27.55%27%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Crect%20width%3D%27480%27%20height%3D%27360%27%20fill%3D%27url%28%23bg%29%27%2F%3E%3Cellipse%20cx%3D%27240%27%20cy%3D%27308%27%20rx%3D%27160%27%20ry%3D%2718%27%20fill%3D%27rgba%280%2C0%2C0%2C.4%29%27%2F%3E%3Crect%20x%3D%27152%27%20y%3D%27250%27%20width%3D%27176%27%20height%3D%2732%27%20rx%3D%2715%27%20fill%3D%27%23e0a04e%27%2F%3E%3Crect%20x%3D%27146%27%20y%3D%27230%27%20width%3D%27188%27%20height%3D%2720%27%20rx%3D%2710%27%20fill%3D%27%235a3a22%27%2F%3E%3Crect%20x%3D%27152%27%20y%3D%27212%27%20width%3D%27176%27%20height%3D%2716%27%20rx%3D%276%27%20fill%3D%27%23ffb830%27%2F%3E%3Cpath%20d%3D%27M152%2C214%20l14%2C16%2014%2C-14%2014%2C14%2014%2C-14%2014%2C14%2014%2C-14%2014%2C14%2014%2C-14%2014%2C14%2014%2C-14%2014%2C14%27%20stroke%3D%27%237bc95e%27%20stroke-width%3D%279%27%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%2F%3E%3Cpath%20d%3D%27M152%2C208%20a88%2C54%200%200%201%20176%2C0%20z%27%20fill%3D%27%23e8a958%27%2F%3E%3Cellipse%20cx%3D%27200%27%20cy%3D%27168%27%20rx%3D%275%27%20ry%3D%273%27%20fill%3D%27%23fff2cc%27%2F%3E%3Cellipse%20cx%3D%27240%27%20cy%3D%27158%27%20rx%3D%275%27%20ry%3D%273%27%20fill%3D%27%23fff2cc%27%2F%3E%3Cellipse%20cx%3D%27280%27%20cy%3D%27168%27%20rx%3D%275%27%20ry%3D%273%27%20fill%3D%27%23fff2cc%27%2F%3E%3Cellipse%20cx%3D%27220%27%20cy%3D%27182%27%20rx%3D%275%27%20ry%3D%273%27%20fill%3D%27%23fff2cc%27%2F%3E%3Cellipse%20cx%3D%27260%27%20cy%3D%27182%27%20rx%3D%275%27%20ry%3D%273%27%20fill%3D%27%23fff2cc%27%2F%3E%3Ctext%20x%3D%2730%27%20y%3D%27330%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27900%27%20fill%3D%27rgba%28255%2C255%2C255%2C.92%29%27%3EWhopper%20Clicker%3C%2Ftext%3E%3C%2Fsvg%3E",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/whopper-clicker", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:101, slug:"spacebar-clicker", title:"Spacebar Clicker", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Spacebar Clicker — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/spacebar-clicker",
+    thumbnail:"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27480%27%20height%3D%27360%27%20viewBox%3D%270%200%20480%20360%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23221a3a%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%230a0d13%27%2F%3E%3C%2FlinearGradient%3E%3Cfilter%20id%3D%27gl%27%20x%3D%27-40%25%27%20y%3D%27-40%25%27%20width%3D%27180%25%27%20height%3D%27180%25%27%3E%3CfeDropShadow%20dx%3D%270%27%20dy%3D%270%27%20stdDeviation%3D%2710%27%20flood-color%3D%27%237c5cff%27%20flood-opacity%3D%27.55%27%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Crect%20width%3D%27480%27%20height%3D%27360%27%20fill%3D%27url%28%23bg%29%27%2F%3E%3Cellipse%20cx%3D%27240%27%20cy%3D%27315%27%20rx%3D%27210%27%20ry%3D%2720%27%20fill%3D%27rgba%28124%2C92%2C255%2C.12%29%27%2F%3E%3Crect%20x%3D%2745%27%20y%3D%27150%27%20width%3D%27390%27%20height%3D%27152%27%20rx%3D%2716%27%20fill%3D%27%23202a40%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.09%29%27%2F%3E%3Crect%20x%3D%2757%27%20y%3D%27162%27%20width%3D%2738%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%232b3752%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.07%29%27%2F%3E%3Crect%20x%3D%27103%27%20y%3D%27162%27%20width%3D%2738%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%232b3752%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.07%29%27%2F%3E%3Crect%20x%3D%27149%27%20y%3D%27162%27%20width%3D%2738%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%232b3752%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.07%29%27%2F%3E%3Crect%20x%3D%27195%27%20y%3D%27162%27%20width%3D%2738%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%232b3752%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.07%29%27%2F%3E%3Crect%20x%3D%27241%27%20y%3D%27162%27%20width%3D%2738%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%232b3752%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.07%29%27%2F%3E%3Crect%20x%3D%27287%27%20y%3D%27162%27%20width%3D%2738%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%232b3752%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.07%29%27%2F%3E%3Crect%20x%3D%27333%27%20y%3D%27162%27%20width%3D%2738%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%232b3752%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.07%29%27%2F%3E%3Crect%20x%3D%27379%27%20y%3D%27162%27%20width%3D%2738%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%232b3752%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.07%29%27%2F%3E%3Crect%20x%3D%2757%27%20y%3D%27204%27%20width%3D%2738%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%232b3752%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.07%29%27%2F%3E%3Crect%20x%3D%27103%27%20y%3D%27204%27%20width%3D%2738%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%232b3752%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.07%29%27%2F%3E%3Crect%20x%3D%27149%27%20y%3D%27204%27%20width%3D%2738%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%232b3752%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.07%29%27%2F%3E%3Crect%20x%3D%27195%27%20y%3D%27204%27%20width%3D%2738%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%232b3752%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.07%29%27%2F%3E%3Crect%20x%3D%27241%27%20y%3D%27204%27%20width%3D%2738%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%232b3752%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.07%29%27%2F%3E%3Crect%20x%3D%27287%27%20y%3D%27204%27%20width%3D%2738%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%232b3752%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.07%29%27%2F%3E%3Crect%20x%3D%27333%27%20y%3D%27204%27%20width%3D%2738%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%232b3752%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.07%29%27%2F%3E%3Crect%20x%3D%27379%27%20y%3D%27204%27%20width%3D%2738%27%20height%3D%2732%27%20rx%3D%277%27%20fill%3D%27%232b3752%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.07%29%27%2F%3E%3Crect%20x%3D%2795%27%20y%3D%27248%27%20width%3D%27290%27%20height%3D%2740%27%20rx%3D%2710%27%20fill%3D%27%237c5cff%27%20filter%3D%27url%28%23gl%29%27%2F%3E%3Ctext%20x%3D%27240%27%20y%3D%27274%27%20font-family%3D%27Arial%27%20font-size%3D%2715%27%20font-weight%3D%27900%27%20fill%3D%27%23fff%27%20text-anchor%3D%27middle%27%20letter-spacing%3D%276%27%3ESPACE%3C%2Ftext%3E%3Ctext%20x%3D%2795%27%20y%3D%2795%27%20font-family%3D%27Arial%27%20font-size%3D%2730%27%20font-weight%3D%27900%27%20fill%3D%27%232ecc71%27%20opacity%3D%27.9%27%3E%2B1%3C%2Ftext%3E%3Ctext%20x%3D%27360%27%20y%3D%2780%27%20font-family%3D%27Arial%27%20font-size%3D%2722%27%20font-weight%3D%27900%27%20fill%3D%27%23f5a623%27%20opacity%3D%27.9%27%3E%2B12%3C%2Ftext%3E%3Ctext%20x%3D%27390%27%20y%3D%27130%27%20font-family%3D%27Arial%27%20font-size%3D%2717%27%20font-weight%3D%27900%27%20fill%3D%27%2326c6da%27%20opacity%3D%27.85%27%3E%2B7%3C%2Ftext%3E%3Cpolygon%20points%3D%27300%2C205%20300%2C235%20308%2C226%20322%2C240%20330%2C232%20316%2C218%20328%2C212%27%20fill%3D%27%23fff%27%2F%3E%3Ctext%20x%3D%2730%27%20y%3D%27330%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27900%27%20fill%3D%27rgba%28255%2C255%2C255%2C.92%29%27%3ESpacebar%20Clicker%3C%2Ftext%3E%3C%2Fsvg%3E",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/spacebar-clicker", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:102, slug:"planet-clicker", title:"Planet Clicker", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Planet Clicker — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/planet-clicker",
+    thumbnail:"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27480%27%20height%3D%27360%27%20viewBox%3D%270%200%20480%20360%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23101a3d%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%2305070c%27%2F%3E%3C%2FlinearGradient%3E%3Cfilter%20id%3D%27gl%27%20x%3D%27-40%25%27%20y%3D%27-40%25%27%20width%3D%27180%25%27%20height%3D%27180%25%27%3E%3CfeDropShadow%20dx%3D%270%27%20dy%3D%270%27%20stdDeviation%3D%2710%27%20flood-color%3D%27%237c5cff%27%20flood-opacity%3D%27.55%27%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Crect%20width%3D%27480%27%20height%3D%27360%27%20fill%3D%27url%28%23bg%29%27%2F%3E%3Ccircle%20cx%3D%27110%27%20cy%3D%2770%27%20r%3D%272.5%27%20fill%3D%27%23fff%27%20opacity%3D%27.8%27%2F%3E%3Ccircle%20cx%3D%27180%27%20cy%3D%2745%27%20r%3D%272%27%20fill%3D%27%23fff%27%20opacity%3D%27.6%27%2F%3E%3Ccircle%20cx%3D%27330%27%20cy%3D%2760%27%20r%3D%272.5%27%20fill%3D%27%23fff%27%20opacity%3D%27.8%27%2F%3E%3Ccircle%20cx%3D%27410%27%20cy%3D%27120%27%20r%3D%272%27%20fill%3D%27%23fff%27%20opacity%3D%27.6%27%2F%3E%3Ccircle%20cx%3D%2780%27%20cy%3D%27180%27%20r%3D%272%27%20fill%3D%27%23fff%27%20opacity%3D%27.5%27%2F%3E%3Ccircle%20cx%3D%27430%27%20cy%3D%27220%27%20r%3D%272.5%27%20fill%3D%27%23fff%27%20opacity%3D%27.7%27%2F%3E%3Ccircle%20cx%3D%27150%27%20cy%3D%27260%27%20r%3D%272%27%20fill%3D%27%23fff%27%20opacity%3D%27.5%27%2F%3E%3Ccircle%20cx%3D%27240%27%20cy%3D%27160%27%20r%3D%2792%27%20fill%3D%27%237c5cff%27%20opacity%3D%27.18%27%2F%3E%3Ccircle%20cx%3D%27240%27%20cy%3D%27160%27%20r%3D%2770%27%20fill%3D%27%2326c6da%27%2F%3E%3Cpath%20d%3D%27M185%2C130%20a70%2C70%200%200%201%2060%2C-38%27%20stroke%3D%27%237c5cff%27%20stroke-width%3D%2716%27%20fill%3D%27none%27%20opacity%3D%27.55%27%20stroke-linecap%3D%27round%27%2F%3E%3Cellipse%20cx%3D%27240%27%20cy%3D%27160%27%20rx%3D%27118%27%20ry%3D%2726%27%20fill%3D%27none%27%20stroke%3D%27%238ab4ff%27%20stroke-width%3D%276%27%20opacity%3D%27.65%27%20transform%3D%27rotate%28-16%20240%20160%29%27%2F%3E%3Ccircle%20cx%3D%27352%27%20cy%3D%2792%27%20r%3D%2713%27%20fill%3D%27%23cfd6e4%27%2F%3E%3Ctext%20x%3D%2730%27%20y%3D%27330%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27900%27%20fill%3D%27rgba%28255%2C255%2C255%2C.92%29%27%3EPlanet%20Clicker%3C%2Ftext%3E%3C%2Fsvg%3E",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/planet-clicker", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:103, slug:"tomb-runner", title:"Tomb Runner", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Tomb Runner — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:true, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/tomb-runner",
+    thumbnail:"https://img.rocketgames.io/big/games/t/tomb-runner/tomb-runner.ee6ce6.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/tomb-runner", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:104, slug:"blocke-blast", title:"Blocke Blast", category:"casual", tags:["كاجوال", "Rocket Games"],
+    desc:"استمتع بأوقات مرحة مع Blocke Blast — لعبة خفيفة تناسب جميع الأعمار.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/blocke-blast",
+    thumbnail:"data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27480%27%20height%3D%27360%27%20viewBox%3D%270%200%20480%20360%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23131a3f%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%2306081a%27%2F%3E%3C%2FlinearGradient%3E%3Cfilter%20id%3D%27gl%27%20x%3D%27-40%25%27%20y%3D%27-40%25%27%20width%3D%27180%25%27%20height%3D%27180%25%27%3E%3CfeDropShadow%20dx%3D%270%27%20dy%3D%270%27%20stdDeviation%3D%2710%27%20flood-color%3D%27%237c5cff%27%20flood-opacity%3D%27.55%27%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Crect%20width%3D%27480%27%20height%3D%27360%27%20fill%3D%27url%28%23bg%29%27%2F%3E%3Ccircle%20cx%3D%27240%27%20cy%3D%27150%27%20r%3D%2795%27%20fill%3D%27%23fff%27%20opacity%3D%27.07%27%2F%3E%3Crect%20x%3D%2772%27%20y%3D%2762%27%20width%3D%2752%27%20height%3D%2752%27%20rx%3D%2710%27%20fill%3D%27%23ef5350%27%20opacity%3D%27.9%27%20transform%3D%27rotate%28-12%2098%2088%29%27%2F%3E%3Crect%20x%3D%27142%27%20y%3D%2762%27%20width%3D%2752%27%20height%3D%2752%27%20rx%3D%2710%27%20fill%3D%27%2326c6da%27%20opacity%3D%27.9%27%20transform%3D%27rotate%281%20168%2088%29%27%2F%3E%3Crect%20x%3D%27212%27%20y%3D%2762%27%20width%3D%2752%27%20height%3D%2752%27%20rx%3D%2710%27%20fill%3D%27%232ecc71%27%20opacity%3D%27.9%27%20transform%3D%27rotate%28-10%20238%2088%29%27%2F%3E%3Crect%20x%3D%27282%27%20y%3D%2762%27%20width%3D%2752%27%20height%3D%2752%27%20rx%3D%2710%27%20fill%3D%27%23f5a623%27%20opacity%3D%27.9%27%20transform%3D%27rotate%283%20308%2088%29%27%2F%3E%3Crect%20x%3D%27352%27%20y%3D%2762%27%20width%3D%2752%27%20height%3D%2752%27%20rx%3D%2710%27%20fill%3D%27%237c5cff%27%20opacity%3D%27.9%27%20transform%3D%27rotate%28-8%20378%2088%29%27%2F%3E%3Crect%20x%3D%2790%27%20y%3D%27138%27%20width%3D%2752%27%20height%3D%2752%27%20rx%3D%2710%27%20fill%3D%27%23ef5350%27%20opacity%3D%27.9%27%20transform%3D%27rotate%285%20116%20164%29%27%2F%3E%3Crect%20x%3D%27160%27%20y%3D%27138%27%20width%3D%2752%27%20height%3D%2752%27%20rx%3D%2710%27%20fill%3D%27%2326c6da%27%20opacity%3D%27.9%27%20transform%3D%27rotate%28-6%20186%20164%29%27%2F%3E%3Crect%20x%3D%27230%27%20y%3D%27138%27%20width%3D%2752%27%20height%3D%2752%27%20rx%3D%2710%27%20fill%3D%27%232ecc71%27%20opacity%3D%27.9%27%20transform%3D%27rotate%287%20256%20164%29%27%2F%3E%3Crect%20x%3D%27300%27%20y%3D%27138%27%20width%3D%2752%27%20height%3D%2752%27%20rx%3D%2710%27%20fill%3D%27%23f5a623%27%20opacity%3D%27.9%27%20transform%3D%27rotate%28-4%20326%20164%29%27%2F%3E%3Crect%20x%3D%27370%27%20y%3D%27138%27%20width%3D%2752%27%20height%3D%2752%27%20rx%3D%2710%27%20fill%3D%27%237c5cff%27%20opacity%3D%27.9%27%20transform%3D%27rotate%289%20396%20164%29%27%2F%3E%3Crect%20x%3D%2772%27%20y%3D%27214%27%20width%3D%2752%27%20height%3D%2752%27%20rx%3D%2710%27%20fill%3D%27%23ef5350%27%20opacity%3D%27.9%27%20transform%3D%27rotate%28-2%2098%20240%29%27%2F%3E%3Crect%20x%3D%27142%27%20y%3D%27214%27%20width%3D%2752%27%20height%3D%2752%27%20rx%3D%2710%27%20fill%3D%27%2326c6da%27%20opacity%3D%27.9%27%20transform%3D%27rotate%2811%20168%20240%29%27%2F%3E%3Crect%20x%3D%27212%27%20y%3D%27214%27%20width%3D%2752%27%20height%3D%2752%27%20rx%3D%2710%27%20fill%3D%27%232ecc71%27%20opacity%3D%27.9%27%20transform%3D%27rotate%280%20238%20240%29%27%2F%3E%3Crect%20x%3D%27282%27%20y%3D%27214%27%20width%3D%2752%27%20height%3D%2752%27%20rx%3D%2710%27%20fill%3D%27%23f5a623%27%20opacity%3D%27.9%27%20transform%3D%27rotate%28-11%20308%20240%29%27%2F%3E%3Crect%20x%3D%27352%27%20y%3D%27214%27%20width%3D%2752%27%20height%3D%2752%27%20rx%3D%2710%27%20fill%3D%27%237c5cff%27%20opacity%3D%27.9%27%20transform%3D%27rotate%282%20378%20240%29%27%2F%3E%3Ctext%20x%3D%2730%27%20y%3D%27330%27%20font-family%3D%27Arial%27%20font-size%3D%2734%27%20font-weight%3D%27900%27%20fill%3D%27rgba%28255%2C255%2C255%2C.92%29%27%3EBlocke%20Blast%3C%2Ftext%3E%3C%2Fsvg%3E",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/blocke-blast", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:105, slug:"ballistic-chickens", title:"Ballistic Chickens", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Ballistic Chickens — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/ballistic-chickens",
+    thumbnail:"https://img.rocketgames.io/big/games/b/ballistic-chickens/ballistic-chickens.98156c.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/ballistic-chickens", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:106, slug:"ballistic-chickens-2", title:"Ballistic Chickens 2", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Ballistic Chickens 2 — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/ballistic-chickens-2",
+    thumbnail:"https://img.rocketgames.io/big/games/b/ballistic-chickens-2/ballistic-chickens-2.481569.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/ballistic-chickens-2", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:107, slug:"rolly-vortex", title:"Rolly Vortex", category:"skill", tags:["مهارة", "Rocket Games"],
+    desc:"اختبر دقتك وسرعة ردود أفعالك في Rolly Vortex — لعبة مهارات تتحدى حدودك في كل محاولة.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/rolly-vortex",
+    thumbnail:"https://img.rocketgames.io/big/games/r/rolly-vortex/rolly-vortex.b7555e.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/rolly-vortex", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
+  { id:108, slug:"pico-park", title:"Pico Park", category:"puzzle", tags:["ألغاز", "Rocket Games"],
+    desc:"شغّل عقلك وحُل تحديات Pico Park الذكية في لعبة ألغاز تزداد إدمانًا مع كل مستوى.",
+    featured:false, trending:false, multiplayer:false, addedAt:"2026-09-22", type:'iframe',
+    gameUrl:"https://www.rocketgames.io/embed/pico-park",
+    thumbnail:"https://img.rocketgames.io/big/games/p/pico-park/pico-park.3c7753.jpg",
+    rights:{ sourceUrl:"https://www.rocketgames.io/game/pico-park", developer:"Rocket Games", licenseName:"Rocket Games Embed", licenseUrl:"https://www.rocketgames.io", embedAllowed:true, attributionRequired:true, attributionText:"اللعبة حقيقية وتعمل مباشرة داخل المنصة عبر مصدر Rocket Games الرسمي", verified:true, verificationDate:"2026-09-22", type:'iframe' } },
 ];
 
-/* ---------- Thumbnails (original generated art — owned by A.A.A.M) ---------- */
+
+/* ---------- فلترة الألعاب: نستبعد أي لعبة ناقصها الاسم أو رابط التشغيل أو الصورة ---------- */
+const __validGame = g => {
+  if(!g || !g.title || !g.title.trim()) return false;
+  if(!g.gameUrl || !/^https:\/\/[\w.-]+\.\w{2,}\/\S+$/i.test(g.gameUrl)) return false;
+  if(!g.thumbnail || !/^(https:\/\/[\w.-]+\.\w{2,}\/\S+|data:image\/svg\+xml)/i.test(g.thumbnail)) return false;
+  return true;
+};
+const __removed = GAMES.filter(g=>!__validGame(g)).map(g=>g.slug);
+if(__removed.length) console.warn('[AAM] تم استبعاد ألعاب ناقصة البيانات:', __removed);
+GAMES = GAMES.filter(__validGame);
+/* ----------------------------------------------------------------------------------------- */
+
+/* ---------- Thumbnails (original generated art — owned by AAM) ---------- */
 function hashStr(s){let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return Math.abs(h);}
 function thumbURI(g){
   const cat=CATEGORIES.find(c=>c.id===g.category)||CATEGORIES[0];
@@ -921,10 +1285,10 @@ window.AAAM={GAMES,CATEGORIES,bySlug,catName,esc,store};
 <script>
 'use strict';
 /* =====================================================
-   A.A.A.M — Application Core
+   AAM — Application Core
    ===================================================== */
 
-const SITE = { name:'A.A.A.M', description:'منصة الألعاب العربية', accent:'#7c5cff' };
+const SITE = { name:'AAM', description:'منصة الألعاب العربية', accent:'#7c5cff' };
 
 let favs=new Set(store.get('favorites',[]));
 let recent=store.get('recent',[]);
@@ -1049,16 +1413,35 @@ function initCarousels(){
     setTimeout(upd,300);
   });
 }
+/* حوض التسخين: حتى 3 إطارات خفية تُحمّل الألعاب مسبقًا — عند الضغط تنتقل اللعبة فورًا بدون انتظار */
+const WARM_POOL=[];
+function warmGame(slug){
+  const g=bySlug(slug); if(!g)return;
+  if(WARM_POOL.some(f=>f.__slug===slug))return;
+  try{
+    const f=document.createElement('iframe');
+    f.style.display='none';f.setAttribute('aria-hidden','true');f.__slug=slug;
+    f.src=g.gameUrl;
+    document.body.appendChild(f);
+    WARM_POOL.push(f);
+    if(WARM_POOL.length>3){const old=WARM_POOL.shift();try{old.remove();}catch(e){}}
+  }catch(e){}
+}
 function bindCards(root=document){
   $$('.card',root).forEach(c=>{
-    const go=()=>{showGameVideoAd();location.hash='#/game/'+encodeURIComponent(c.dataset.slug);};
+    const go=()=>{location.hash='#/game/'+encodeURIComponent(c.dataset.slug);};
+    c.addEventListener('pointerenter',()=>warmGame(c.dataset.slug));
+    c.addEventListener('touchstart',()=>warmGame(c.dataset.slug),{passive:true});
     c.addEventListener('click',e=>{
       if(e.target.closest('.fav-btn'))return;
       go();
     });
     c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});
   });
-  $$('.fav-btn',root).forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();toggleFav(b.dataset.fav);}));
+  $$('.fav-btn',root).forEach(b=>{
+    if(b.dataset.favBound)return; b.dataset.favBound='1'; /* منع الربط المزدوج */
+    b.addEventListener('click',e=>{e.stopPropagation();e.preventDefault();toggleFav(b.dataset.fav);});
+  });
   $$('img[data-fb]',root).forEach(im=>{im.onerror=()=>{im.onerror=null;im.src=im.dataset.fb;};});
 }
 
@@ -1076,9 +1459,10 @@ function section(title,icon,inner,viewAllHref,sub=''){
 function pageHome(){
   const featured=GAMES.filter(g=>g.featured);
   const trending=GAMES.filter(g=>g.trending);
+  const priority=PRIORITY_SLUGS.map(bySlug).filter(Boolean);
   const news=[...GAMES].sort((a,b)=>b.addedAt.localeCompare(a.addedAt));
   const cont=recent.map(bySlug).filter(Boolean).slice(0,6);
-  const heroList=featured.slice(0,3);
+  const heroList=priority.length?priority.slice(0,8):featured.slice(0,3);
   const hero=heroList[0];
   setTimeout(()=>initHero(heroList),0);
   return `
@@ -1095,6 +1479,7 @@ function pageHome(){
     </div>
     <div class="hero-dots" id="heroDots">${heroList.map((_,i)=>`<button class="${i===0?'on':''}" aria-label="شريحة ${i+1}"></button>`).join('')}</div>
   </div>
+  ${section('الأكثر لعبًا','trophy',carousel(heroList),'#/trending','أكثر الألعاب التي يفتحها الزوار الآن')}
   ${cont.length?section('أكمل اللعب','history',carousel(cont),'#/recent'):''}
   ${section('الرائجة الآن','fire',carousel(trending),'#/trending')}
   ${section('وصل حديثًا','clock',carousel(news.slice(0,8)),'#/new')}
@@ -1110,8 +1495,9 @@ function pageHome(){
 let heroTimer=null, heroIdx=0;
 function initHero(list){
   clearInterval(heroTimer);
-  if(!list.length||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(!list.length||!$('#heroBg')||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   heroIdx=0;
+  try{warmGame(list[0].slug);$('#hero').addEventListener('pointerenter',()=>warmGame(list[heroIdx].slug));}catch(e){}
   const bg=$('#heroBg'),t=$('#heroTitle'),d=$('#heroDesc'),dots=$$('#heroDots button');
   heroTimer=setInterval(()=>{
     heroIdx=(heroIdx+1)%list.length;
@@ -1170,49 +1556,7 @@ function pageSearch(q){
     :emptyState('اكتب كلمة بحث','ابحث باسم اللعبة أو التصنيف','#/','العودة للرئيسية')}`;
 }
 
-/* ---------- GAME VIDEO AD (Gamemonetize) — يظهر عند نقر أي لعبة ---------- */
-function closeGameVideoAd(){
-  const w=document.getElementById('gmVideoWrap');
-  if(w) w.remove();
-  document.body.classList.remove('locked');
-}
-function showGameVideoAd(){
-  if(document.getElementById('gmVideoWrap')) return;
-  const wrap=document.createElement('div');
-  wrap.id='gmVideoWrap';
-  wrap.style.cssText='position:fixed;inset:0;z-index:500;background:rgba(4,6,10,.82);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:18px;';
-  wrap.innerHTML=`
-    <div style="position:relative;width:min(720px,100%);">
-      <!-- مكان ظهور مشغل الفيديو على موقعك -->
-      <div id="gamemonetize-video"></div>
-      <button id="gmSkipBtn" type="button" style="position:absolute;top:10px;inset-inline-end:10px;z-index:2;display:none;padding:8px 18px;border-radius:99px;background:rgba(10,13,19,.9);color:#fff;font-weight:800;font-size:13px;border:1px solid rgba(255,255,255,.25);cursor:pointer;font-family:var(--font);">تخطي الإعلان ✕</button>
-    </div>`;
-  document.body.appendChild(wrap);
-  document.body.classList.add('locked');
-  /* كود البرمجة الخاص بالمنصة */
-  window.VIDEO_OPTIONS = {
-      gameid : "4kci7og3klgj0ivy2wz3gdvd9dth5e7n",
-      width  : "100%",
-      height : "480px",
-      color  : "#3f007e",
-      getAds  : "true" // تم تعديلها هنا لتفعيل الإعلانات والربح
-  };
-  (function (a, b, c) {
-      var d = a.getElementsByTagName(b)[0];
-      if (!a.getElementById(c)) {
-          a = a.createElement(b);
-          a.id = c;
-          a.src = "https://gamemonetize.com";
-          d.parentNode.insertBefore(a, d);
-      }
-  })(document, "script", "gamemonetize-video-api");
-  const skipBtn=document.getElementById('gmSkipBtn');
-  setTimeout(()=>{ if(skipBtn) skipBtn.style.display='block'; }, 5000);
-  if(skipBtn) skipBtn.addEventListener('click', closeGameVideoAd);
-  wrap.addEventListener('click', e=>{ if(e.target===wrap && skipBtn && skipBtn.style.display==='block') closeGameVideoAd(); });
-}
-
-/* ---------- INLINE GAMES (A.A.A.M Originals) ---------- */
+/* ---------- INLINE GAMES (AAM Originals) ---------- */
 let cleanupFns=[];
 function onCleanup(fn){cleanupFns.push(fn);}
 function runCleanup(){cleanupFns.forEach(f=>{try{f()}catch(e){}});cleanupFns=[];}
@@ -1220,13 +1564,13 @@ function runCleanup(){cleanupFns.forEach(f=>{try{f()}catch(e){}});cleanupFns=[];
 
 /* ---------- Legal / Static pages ---------- */
 function pageAbout(){
-  return `<div class="page-head"><h1 class="page-title">${ICONS.info} عن منصة A.A.A.M</h1></div>
+  return `<div class="page-head"><h1 class="page-title">${ICONS.info} عن منصة AAM</h1></div>
   <div class="legal">
-    <p>A.A.A.M منصة ألعاب عربية حديثة تهدف إلى تقديم تجربة اكتشاف ولعب استثنائية باللغة العربية وبتصميم داكن أنيق يراعي الأداء والسرعة.</p>
+    <p>AAM منصة ألعاب عربية حديثة تهدف إلى تقديم تجربة اكتشاف ولعب استثنائية باللغة العربية وبتصميم داكن أنيق يراعي الأداء والسرعة.</p>
     <h2>ماذا نقدم؟</h2>
     <ul>
       <li>ألعاب HTML5 حقيقية مشهورة تُشغَّل مباشرة داخل المنصة في نفس الصفحة.</li>
-      <li>ألعاب HTML5 حقيقية من منصة GameDistribution بتراخيص توزيع رسمية مع ذكر المصدر في صفحة كل لعبة.</li>
+      <li>ألعاب HTML5 حقيقية من منصة MadKid Games بتراخيص توزيع رسمية مع ذكر المصدر في صفحة كل لعبة.</li>
       <li>تصنيفات منظمة، بحث فوري، مفضلة، وسجل لعب محلي على جهازك.</li>
     </ul>
     <h2>مبدأ الحقوق</h2>
@@ -1235,7 +1579,7 @@ function pageAbout(){
 }
 function pageLegal(kind){
   const pages={
-    privacy:{t:'سياسة الخصوصية',b:`<p>نحترم خصوصيتك. لا تجمع A.A.A.M أي بيانات شخصية لتصفح المنصة.</p>
+    privacy:{t:'سياسة الخصوصية',b:`<p>نحترم خصوصيتك. لا تجمع AAM أي بيانات شخصية لتصفح المنصة.</p>
       <h2>ما الذي نخزنه؟</h2>
       <ul><li>المفضلة وسجل اللعب — تُحفظ محليًا على جهازك فقط (LocalStorage) ولا تُرسل إلى أي خادم.</li><li>تفضيلات العرض مثل حالة القائمة الجانبية.</li></ul>
       <h2>الألعاب الخارجية</h2>
@@ -1243,14 +1587,14 @@ function pageLegal(kind){
       <h2>التواصل</h2>
       <p>عند استخدام نموذج التواصل أو الإبلاغ، تُستخدم بياناتك للرد على طلبك فقط ولا تُباع أو تُشارك.</p>
       <p style="color:var(--text-3);font-size:13px">هذه الصفحة توضيحية وليست استشارة قانونية.</p>`},
-    terms:{t:'شروط الاستخدام',b:`<p>باستخدامك A.A.A.M فأنت توافق على الشروط التالية.</p>
+    terms:{t:'شروط الاستخدام',b:`<p>باستخدامك AAM فأنت توافق على الشروط التالية.</p>
       <h2>الاستخدام المقبول</h2>
       <ul><li>المنصة مقدمة للتسلية الشخصية.</li><li>يُمنع إساءة استخدام نماذج الإرسال أو الإبلاغ.</li><li>يُمنع محاولة تعطيل المنصة أو التحايل على أنظمة الحماية.</li></ul>
       <h2>الملكية الفكرية</h2>
-      <p>الألعاب الأصلية والهوية البصرية لـ A.A.A.M ملك للمنصة. الألعاب الخارجية ملك لمطوريها ومنشورة بموجب تراخيصها الموثقة في صفحة كل لعبة.</p>
+      <p>الألعاب الأصلية والهوية البصرية لـ AAM ملك للمنصة. الألعاب الخارجية ملك لمطوريها ومنشورة بموجب تراخيصها الموثقة في صفحة كل لعبة.</p>
       <h2>إخلاء مسؤولية</h2>
       <p>تُقدَّم المنصة "كما هي". نعمل على توثيق حقوق المحتوى بدقة، لكن لا يمكن ضمان خلو أي نظام من الأخطاء بشكل مطلق — لذلك نوفر قناة إبلاغ سريعة لمعالجة أي ملاحظة.</p>`},
-    copyright:{t:'سياسة حقوق المحتوى',b:`<p>تلتزم A.A.A.M بمنهج محافظ وواضح بشأن حقوق المحتوى.</p>
+    copyright:{t:'سياسة حقوق المحتوى',b:`<p>تلتزم AAM بمنهج محافظ وواضح بشأن حقوق المحتوى.</p>
       <h2>قواعد النشر</h2>
       <ul><li>لا ننشر لعبة خارجية دون مصدر رسمي موثق.</li><li>لا ننشر دون ترخيص مؤكد من المصدر الرسمي (لا نفترض ولا نخمّن).</li><li>لا نضمّن لعبة إلا إذا كان تضمينها مسموحًا بها، وإلا نوجّهك لموقع المطور.</li><li>لا ننشر ألعابًا مقرصنة أو معدلة دون إذن.</li></ul>
       <h2>النسبة والإسناد</h2>
@@ -1306,7 +1650,7 @@ function pageContact(){
     ()=>toast('تم إرسال رسالتك بنجاح — سنعاود التواصل قريبًا','success'));
 }
 function pageSubmit(){
-  return formPage('أرسل لعبتك','هل طوّرت لعبة وتريد نشرها على A.A.A.M؟ املأ النموذج وسيراجعها فريقنا. لا تُنشر أي لعبة تلقائيًا.',
+  return formPage('أرسل لعبتك','هل طوّرت لعبة وتريد نشرها على AAM؟ املأ النموذج وسيراجعها فريقنا. لا تُنشر أي لعبة تلقائيًا.',
     F('اسم اللعبة',input('text','اسم اللعبة','gname'))+
     F('اسم المطور / الاستوديو',input('text','مطور اللعبة','dev'))+
     F('رابط اللعبة',input('url','https://...','gurl'))+
@@ -1370,49 +1714,58 @@ function initGamePage(g){
   if(!frame) return;
   const showNote=html=>{note.innerHTML=html;note.style.display='flex';note.style.opacity='1';};
   const hideNote=()=>{note.style.opacity='0';setTimeout(()=>{note.style.display='none';},420);};
-  /* بناء رابط التشغيل ووضعه مباشرة في iframe.src — بلا redirect ولا روابط خارجية.
-     gd_sdk_referrer_url يُضبط ليكون رابط صفحة اللعبة — وهذا الاستخدام الرسمي الموثق من GameDistribution */
-  let playUrl=g.gameUrl;
-  try{
-    const u=new URL(g.gameUrl);
-    u.searchParams.set('gd_sdk_referrer_url', location.href);
-    playUrl=u.toString();
-  }catch(e){}
+  /* روابط MadKid Games تُشغَّل مباشرة داخل نفس الصفحة عبر iframe — لا redirect ولا روابط خارجية. */
+  const playUrl=g.gameUrl;
   frame.title=g.title;
   const onLoad=()=>hideNote();
-  frame.addEventListener('load',onLoad);
-  frame.src=playUrl;   /* اللعبة تُحمَّل داخل iframe فقط */
-  /* إذا لم تُزل شاشة التحميل خلال 25 ثانية: رسالة عدم التوفر (بدون أي رابط خارجي) */
+  /* هل اللعبة محمّلة مسبقًا أثناء التمرير فوق البطاقة؟ ننقل الإطار كما هو — تظهر اللعبة فورًا */
+  const warm=WARM_POOL.find(f=>f.__slug===g.slug);
+  if(warm){
+    const wi=WARM_POOL.indexOf(warm); if(wi>-1)WARM_POOL.splice(wi,1);
+    frame.replaceWith(warm);
+    warm.removeAttribute('style'); warm.removeAttribute('aria-hidden');
+    warm.id='gameFrame'; warm.title=g.title;
+    setTimeout(hideNote,500);
+  } else {
+    frame.src=playUrl;   /* اللعبة تُحمَّل مباشرة داخل iframe عبر المصدر الرسمي — داخل نفس الصفحة فقط */
+  }
+  const liveFrame=$('#gameFrame');
+  liveFrame.addEventListener('load',onLoad);
+  /* رسالة التمهّل فقط بعد 90 ثانية كاملة — لا نحكم على اللعبة بالتعطّل بسبب بطء الاتصال */
   const to=setTimeout(()=>{
     if(note.style.display!=='none'){
-      showNote('<div style="text-align:center"><div style="font-size:36px;margin-bottom:8px">⚠️</div>'
-        +'<b>هذه اللعبة غير متاحة للتشغيل داخل الموقع حاليًا.</b><br>'
-        +'<span style="font-size:12.5px">قد يقيّد المصدر تشغيل هذه اللعبة على هذا النطاق.</span><br><br>'
+      showNote('<div style="text-align:center"><div style="font-size:36px;margin-bottom:8px">⏳</div>'
+        +'<b>اللعبة ما زالت تُحمَّل — الاتصال بطيء حاليًا.</b><br>'
+        +'<span style="font-size:12.5px">اللعبة متاحة وقد تحتاج وقتًا أطول قليلًا. اضغط إعادة المحاولة أو انتظر.</span><br><br>'
         +'<button class="btn btn-secondary" id="retryBtn">إعادة المحاولة</button>&nbsp;'
         +'<a class="btn btn-primary" href="#/">استكشف ألعابًا أخرى</a></div>');
       const rb=document.getElementById('retryBtn');
-      if(rb) rb.addEventListener('click',()=>{showNote('<span><span class="spin"></span>&nbsp; جاري تحميل اللعبة...</span>');frame.src='about:blank';setTimeout(()=>{frame.src=playUrl;},80);});
+      if(rb) rb.addEventListener('click',()=>{showNote('<span><span class="spin"></span>&nbsp; جاري تحميل اللعبة...</span>');liveFrame.src='about:blank';setTimeout(()=>{liveFrame.src=playUrl;},80);});
     }
-  },25000);
+  },90000);
   /* أزرار التحكم: ملء الشاشة + إعادة التحميل */
   const fsBtn=$('#fsBtn'), reloadBtn=$('#reloadBtn');
   const onFs=()=>{if(document.fullscreenElement){document.exitFullscreen();}else if(wrap.requestFullscreen){wrap.requestFullscreen();}};
-  const onReload=()=>{frame.src='about:blank';setTimeout(()=>{frame.src=playUrl;},80);};
+  const onReload=()=>{liveFrame.src='about:blank';setTimeout(()=>{liveFrame.src=playUrl;},80);};
   const onFsChange=()=>wrap.classList.toggle('fs',!!document.fullscreenElement);
+  const fsBtnTop=$('#fsBtnTop');
   if(fsBtn)fsBtn.addEventListener('click',onFs);
+  if(fsBtnTop)fsBtnTop.addEventListener('click',onFs);
   if(reloadBtn)reloadBtn.addEventListener('click',onReload);
   document.addEventListener('fullscreenchange',onFsChange);
   /* تنظيف كامل عند مغادرة الصفحة (يُستدعى من route() عبر runCleanup) */
   onCleanup(()=>{
     clearTimeout(to);
-    frame.removeEventListener('load',onLoad);
+    liveFrame.removeEventListener('load',onLoad);
     document.removeEventListener('fullscreenchange',onFsChange);
-    frame.src='about:blank';
+    liveFrame.src='about:blank';
+    WARM_POOL.forEach(f=>{try{f.remove();}catch(e){}});WARM_POOL.length=0;
   });
 }
 function pageGame(slug){
   const g=bySlug(slug);
   if(!g) return page404();
+  if(!g.cover) g.cover=g.thumbnail;
   /* تسجيل اللعبة في سجل اللعب (نفس مفتاح التخزين المستخدم في بقية المنصة) */
   addRecent(g.slug);
   const r=g.rights||{};
@@ -1426,11 +1779,12 @@ function pageGame(slug){
   </nav>
   <div class="game-head">
     <div>
-      <h1>${esc(g.title)}</h1>
+      <h1 id="gameTitle">${esc(g.title)}</h1>
       <div class="card-meta" style="margin-top:6px"><span class="cat">${esc(catName(g.category))}</span><span class="dot"></span><span>${esc(g.tags.join(' · '))}</span></div>
     </div>
     <div class="game-actions">
-      <button class="btn btn-ghost" id="backBtn">‹ رجوع</button>
+      <button class="btn btn-ghost" id="backBtn">→ العودة إلى الألعاب</button>
+      <button class="btn btn-secondary" id="fsBtnTop">⛶ ملء الشاشة</button>
       <button class="btn btn-secondary" id="shareBtn">${ICONS.share} مشاركة</button>
       <button class="btn btn-danger" id="reportBtn">${ICONS.warn} إبلاغ</button>
     </div>
@@ -1439,15 +1793,18 @@ function pageGame(slug){
   <div class="player-wrap" id="playerWrap">
     <iframe id="gameFrame"
       title="${esc(g.title)}"
+      fetchpriority="high"
       width="100%" height="100%"
       frameborder="0" scrolling="no"
+      referrerpolicy="no-referrer"
+      loading="eager"
       allowfullscreen
       allow="fullscreen; autoplay; gamepad; pointer-lock; encrypted-media; picture-in-picture"></iframe>
     <div class="load-note" id="loadNote"><span><span class="spin"></span>&nbsp; جاري تحميل اللعبة...</span></div>
     <div class="player-bar">
       <button class="icon-btn" id="fsBtn" title="ملء الشاشة" aria-label="ملء الشاشة" style="color:#fff">${ICONS.expand}</button>
       <button class="icon-btn" id="reloadBtn" title="إعادة تحميل اللعبة" aria-label="إعادة تحميل اللعبة" style="color:#fff">&#8635;</button>
-      <span>${esc(g.title)} — A.A.A.M</span>
+      <span>${esc(g.title)} — AAM</span>
     </div>
   </div>
   <p class="game-desc">${esc(g.desc)}</p>
@@ -1479,23 +1836,23 @@ function route(){
   let html='', active='home';
   window.scrollTo({top:0});
   switch(parts[0]){
-    case 'game': { const gg=bySlug(parts[1]||''); html=gg?pageGame(parts[1]):page404(); setMeta(gg?gg.title:'صفحة غير موجودة', gg?('العب '+gg.title+' مباشرة داخل A.A.A.M'):'404'); break; }
-    case '': html=pageHome(); active='home'; setMeta('منصة الألعاب العربية','اكتشف والعب ألعابًا حقيقية على A.A.A.M'); break;
-    case 'new': html=pageList('الجديدة','clock',[...GAMES].sort((a,b)=>b.addedAt.localeCompare(a.addedAt)),'آخر الألعاب المضافة للمنصة مرتبة حسب تاريخ الإضافة.'); active='new'; setMeta('الجديدة','أحدث الألعاب على A.A.A.M'); break;
-    case 'trending': html=pageList('الرائجة','fire',GAMES.filter(g=>g.trending),'الألعاب الأكثر رواجًا لدى مجتمع المنصة (بيانات تجريبية للعرض).'); active='trending'; setMeta('الرائجة','ألعاب رائجة على A.A.A.M'); break;
-    case 'featured': html=pageList('المختارة','star',GAMES.filter(g=>g.featured),'مختارات فريق A.A.A.M من أفضل الألعاب على المنصة.'); active='featured'; setMeta('المختارة','ألعاب مختارة بعناية على A.A.A.M'); break;
-    case 'multiplayer': html=pageList('تعدد اللاعبين','users',GAMES.filter(g=>g.multiplayer),'لا توجد ألعاب جماعية متاحة حاليًا — ننشر فقط ألعابًا حقيقية مرخصة تسمح بالتشغيل داخل المنصة.'); active='multiplayer'; setMeta('تعدد اللاعبين','ألعاب جماعية على A.A.A.M'); break;
-    case 'favorites': html=pageFavorites(); active='favorites'; setMeta('المفضلة','ألعابك المفضلة على A.A.A.M'); break;
-    case 'recent': html=pageRecent(); active='recent'; setMeta('آخر ما لعبت','سجل ألعابك على A.A.A.M'); break;
-    case 'search': html=pageSearch(decodeURIComponent(parts[1]||'')); setMeta('البحث','ابحث في ألعاب A.A.A.M'); break;
-    case 'category': html=pageCategory(parts[1]); active='cat:'+parts[1]; setMeta(catName(parts[1]),'ألعاب '+catName(parts[1])+' على A.A.A.M'); break;
-    case 'about': html=pageAbout(); active='about'; setMeta('عن المنصة','تعرّف على A.A.A.M'); break;
-    case 'privacy': html=pageLegal('privacy'); setMeta('سياسة الخصوصية','خصوصيتك على A.A.A.M'); break;
-    case 'terms': html=pageLegal('terms'); setMeta('شروط الاستخدام','شروط استخدام A.A.A.M'); break;
-    case 'copyright': html=pageLegal('copyright'); setMeta('سياسة حقوق المحتوى','حقوق المحتوى في A.A.A.M'); break;
-    case 'contact': html=pageContact(); active='contact'; setMeta('تواصل معنا','تواصل مع فريق A.A.A.M'); break;
-    case 'submit-game': html=pageSubmit(); active='submit'; setMeta('أرسل لعبتك','انشر لعبتك على A.A.A.M'); break;
-    case 'report': html=pageReport(); setMeta('الإبلاغ عن مشكلة','أبلغ عن مشكلة في A.A.A.M'); break;
+    case 'game': { const gg=bySlug(parts[1]||''); html=gg?pageGame(parts[1]):page404(); setMeta(gg?gg.title:'صفحة غير موجودة', gg?('العب '+gg.title+' مباشرة داخل AAM'):'404'); break; }
+    case '': html=pageHome(); active='home'; setMeta('منصة الألعاب العربية','اكتشف والعب ألعابًا حقيقية على AAM'); break;
+    case 'new': html=pageList('الجديدة','clock',[...GAMES].sort((a,b)=>b.addedAt.localeCompare(a.addedAt)),'آخر الألعاب المضافة للمنصة مرتبة حسب تاريخ الإضافة.'); active='new'; setMeta('الجديدة','أحدث الألعاب على AAM'); break;
+    case 'trending': html=pageList('الرائجة','fire',GAMES.filter(g=>g.trending),'الألعاب الأكثر رواجًا لدى مجتمع المنصة (بيانات تجريبية للعرض).'); active='trending'; setMeta('الرائجة','ألعاب رائجة على AAM'); break;
+    case 'featured': html=pageList('المختارة','star',GAMES.filter(g=>g.featured),'مختارات فريق AAM من أفضل الألعاب على المنصة.'); active='featured'; setMeta('المختارة','ألعاب مختارة بعناية على AAM'); break;
+    case 'multiplayer': html=pageList('تعدد اللاعبين','users',GAMES.filter(g=>g.multiplayer),'لا توجد ألعاب جماعية متاحة حاليًا — ننشر فقط ألعابًا حقيقية مرخصة تسمح بالتشغيل داخل المنصة.'); active='multiplayer'; setMeta('تعدد اللاعبين','ألعاب جماعية على AAM'); break;
+    case 'favorites': html=pageFavorites(); active='favorites'; setMeta('المفضلة','ألعابك المفضلة على AAM'); break;
+    case 'recent': html=pageRecent(); active='recent'; setMeta('آخر ما لعبت','سجل ألعابك على AAM'); break;
+    case 'search': { let q=''; try{q=decodeURIComponent(parts[1]||'')}catch(e){q=parts[1]||''} html=pageSearch(q); break; } setMeta('البحث','ابحث في ألعاب AAM'); break;
+    case 'category': html=pageCategory(parts[1]); active='cat:'+parts[1]; setMeta(catName(parts[1]),'ألعاب '+catName(parts[1])+' على AAM'); break;
+    case 'about': html=pageAbout(); active='about'; setMeta('عن المنصة','تعرّف على AAM'); break;
+    case 'privacy': html=pageLegal('privacy'); setMeta('سياسة الخصوصية','خصوصيتك على AAM'); break;
+    case 'terms': html=pageLegal('terms'); setMeta('شروط الاستخدام','شروط استخدام AAM'); break;
+    case 'copyright': html=pageLegal('copyright'); setMeta('سياسة حقوق المحتوى','حقوق المحتوى في AAM'); break;
+    case 'contact': html=pageContact(); active='contact'; setMeta('تواصل معنا','تواصل مع فريق AAM'); break;
+    case 'submit-game': html=pageSubmit(); active='submit'; setMeta('أرسل لعبتك','انشر لعبتك على AAM'); break;
+    case 'report': html=pageReport(); setMeta('الإبلاغ عن مشكلة','أبلغ عن مشكلة في AAM'); break;
     default: html=page404(); setMeta('صفحة غير موجودة','404');
   }
   buildSidebar(active);
@@ -1504,10 +1861,14 @@ function route(){
   bindCards(page);
   initCarousels();
   /* page-specific binds */
-  $$('[data-fav]',page).forEach(b=>b.addEventListener('click',()=>{
-    toggleFav(b.dataset.fav);
-    const txt=b.querySelector('[data-favtxt]'); if(txt)txt.textContent=favs.has(b.dataset.fav)?'في المفضلة':'المفضلة';
-  }));
+  $$('[data-fav]',page).forEach(b=>{
+    if(b.classList.contains('fav-btn')||b.dataset.favBound)return; /* قلب البطاقة مربوط في bindCards */
+    b.dataset.favBound='1';
+    b.addEventListener('click',()=>{
+      toggleFav(b.dataset.fav);
+      const txt=b.querySelector('[data-favtxt]'); if(txt)txt.textContent=favs.has(b.dataset.fav)?'في المفضلة':'المفضلة';
+    });
+  });
   const bb=$('#backBtn',page);
   if(bb)bb.onclick=()=>{if(history.length>1)history.back();else location.hash='#/';};
   const sh=$('#shareBtn',page);
@@ -1592,12 +1953,8 @@ $('#favBtn').addEventListener('click',()=>location.hash='#/favorites');
 
 /* ---------- Boot ---------- */
 route();
+/* تسخين فوري لألعاب الأولوية — تفتح مباشرة عند الضغط على "العب الآن" */
+addEventListener('load',()=>{PRIORITY_SLUGS.slice(0,3).forEach((s,i)=>setTimeout(()=>warmGame(s),400+i*1500));});
 </script>
-</body>
-</html>
-
-  <script>
-    
-  </script>
 </body>
 </html>
